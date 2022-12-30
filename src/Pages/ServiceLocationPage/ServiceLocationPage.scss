@@ -1,0 +1,55 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--service-location-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--service-location-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+@include tablet {
+  .fae--service-location-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--service-location-page-wrapper {
+    width: 95%;
+  }
+  // .fae--service-location-page-container {
+  //   padding-bottom: 20rem !important;
+  // }
+  .fae--service-location-card-container {
+    padding: 13px;
+  }
+  .fae--service-location-page-container {
+    padding-bottom: 20rem !important;
+    padding:10px;
+  } 
+  .fae--service-location-card-container .fae--service-location-card-content p:nth-child(1) {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .fae-location-heading{
+    flex:"flex-end"
+  }
+  .fae-want-service-text{
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@include onlyDesktop {
+  .fae--service-location-page-container { 
+    padding-bottom: 166px;
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--user-info-page-layout-main-container {
+  @include flex(none, none);
+    min-height: 60vh;  
+    border: 70px solid #f7f7f7;  
+    
+    background-color: #f7f7f7;
+    box-shadow:rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+} 
+// .fae-vouchers-page-main-container div {
+//   background-color: white; 
+//   // width: 100%; 
+// }
+.fae--user-info-tabs-main-container { 
+  box-shadow: 0px 0px 7px 0px #0808084d;
+  background-color: #ffffff;
+}
+.fae--user-info-page-layout-pages-data { 
+  width: 100%;
+  background-color: white;
+  padding: 20px 11px 101px;
+  border-radius: 4px;
+  box-shadow:0px 0px 7px 0px #0808084d;
+  margin-top: 6px;
+}
+.fae--user-info-page-layout-pages-data {
+  margin: 6px 22px;
+  box-shadow: 0px 0px 8px 3px #1c1c1c24;
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px;
+}
+@include mobile {
+  .fae--user-info-page-layout-main-container{
+    border: 8px solid #f7f7f7; 
+    // margin-bottom: 139px;
+ }
+ .fae--user-info-page-layout-pages-data {
+    margin: 6px 2px; 
+    //padding: 20px 20px 22rem !important;
+    min-height: 34rem;
+ } 
+}
+@include tablet {
+  .side-tabs-user-info {
+    display: none;
+  }
+}
+
+
+
+#country-flags h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+#country-flags p {
+  line-height: 18px;
+  font-size: 13px;
+  margin: initial;
+}
+ 
+@media (max-width:600px) {
+  .masonry-item {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: left;
+    width: 46%;
+  }
+  #country-flags h2 {
+    font-size: 13px; 
+    margin: 0;
+    padding: 9px 0px;
+ }
+ #country-flags p {
+  line-height: 13px;
+  font-size: 10px;
+  margin: initial;
+ }
+}

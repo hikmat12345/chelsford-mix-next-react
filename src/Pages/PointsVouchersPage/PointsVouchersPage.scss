@@ -1,0 +1,33 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--points-vouchers-page-main-container {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.fae--voucher-card-page-unit-container {
+  width: 49%;
+  position: relative;
+}
+
+.points-voucher-page-price-tag {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  @include flex(center, center);
+}
+
+@include mobile {
+  .fae--voucher-card-page-unit-container {
+    width: 100%;
+  }
+}
+.fae-noresult-container{
+  display: block;
+  margin: auto;
+}

@@ -1,0 +1,13 @@
+<svg id="Dashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_17" data-name="Path 17" d="M0,0H24V24H0Z" fill="#db0406"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_88" data-name="Mask Group 88" clip-path="url(#clip-path)">
+    <g id="dashboard-line_1_" data-name="dashboard-line (1)">
+      <path id="Path_9136" data-name="Path 9136" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_9137" data-name="Path 9137" d="M12.5,20.5v-10h8v10Zm-10-8V2.5h8v10Zm6-2v-6h-4v6Zm-6,10v-6h8v6Zm2-2h4v-2h-4Zm10,0h4v-6h-4Zm-2-16h8v6h-8Zm2,2v2h4v-2Z" transform="translate(0.5 0.5)" fill="#db0406"/>
+    </g>
+  </g>
+</svg>

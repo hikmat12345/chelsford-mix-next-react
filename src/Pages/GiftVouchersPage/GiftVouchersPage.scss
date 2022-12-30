@@ -1,0 +1,217 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--gift-vouchers-page-main-container {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.fae--voucher-card-page-unit-container {
+  width: 49%;
+  position: relative;
+}
+
+.fae--gift-voucher-transfer-form {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gifts-voucher-page-price-tag {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+  bottom: 10px;
+  left: 15px;
+  @include flex(center, center);
+}
+.fae-add-voucher{
+  background-color: #dc0000;
+  color: white;
+  padding: 9px 12px 8px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: none;
+}
+@include mobile {
+  .fae--voucher-card-page-unit-container {
+    width: 100%;
+  }
+  .fae-voucher-poup-row{
+    display: block !important;
+    padding-top: 0px !important;
+  }
+  .fae-voucher-popup-fields { 
+    padding-top: 13px;
+  }
+  .fae-voucher-popup-btns { 
+    display: flex;
+  }
+  .fae-voucher-poup-row .fae-voucher-popup-grid-col:nth-child(1) {
+    margin-right: 0px !important;
+ }
+ .fae-add-voucher-container {
+  padding: 1px !important;
+ }
+ .fae--gift-vouchers-page-main-container{
+  overflow-x:auto
+ }
+ #customers td, #customers th {
+  padding: 2px;
+  font-size: 12px;
+ }
+}
+.fae-VoucherCard-text-open{
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #707070;
+}
+.fae-serviceVouchersPageTopbtn{
+  justify-content: end;
+  text-align: end;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+}
+// popup css  
+.fae-voucher-poup-row {
+  display: flex;
+  padding-top: 20px;
+}
+.fae-voucher-popup-fields{
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500; 
+  color: #4a4a4a;
+} 
+.fae-voucher-popup-grid-col {
+  flex: auto;
+}
+.fae-voucher-poup-row .fae-voucher-popup-grid-col:nth-child(1) { 
+  margin-right: 10px; 
+}
+.fae-add-voucher-container {
+  padding: 17px;
+}
+.fae-add-voucher-container .primary-shadow-box {
+  box-shadow: initial;
+  background-color: #dee7e9b3;
+  padding: 3px;
+}
+.fae-voucher-popup-btns {
+  float: right;
+  padding-top: 19px;
+  padding-bottom: 16px;
+}
+.fae-voucher-popup-buttons {
+  border: initial;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: #a9a9a9;
+  border-radius: 2px;
+  margin: 0 8px 0 0;
+  padding: 10px 35px;
+}
+.fae-voucher-popup-btns .fae-voucher-popup-buttons:nth-child(2){
+  background-color: #db0406;
+  color: #fff;
+}
+.fae-voucher-popup-para{
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #707070;
+}
+.fae-voucher-popup-assign{
+  margin: 1px 135px 1px 0;
+  font-size: 14px;
+  font-weight: 600; 
+  line-height: 2.86; 
+  text-align: left;
+  color: #4a4a4a;
+} 
+.fae-voucher-space{
+  padding-top: 0px;
+}
+.fae-voucher-popup-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+.fae-VoucherCard-title{
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a9a9a9;
+}
+.fae-vouchercard-textopen{
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: right;
+  color: #5fdf5a;
+  cursor: pointer;
+}
+.fae-VoucherCard-text-open{
+  margin-left: auto;
+}
+.fae-voucher-popup-formname{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.fae-voucher-popup-form{
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+}
+.fae-voucher-popup-name{
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: right;
+  color: #4a4a4a;
+  margin-left: auto;
+}
+.fae-voucher-popup-formcontainer{
+  padding: 10px;
+}
+.fae-voucher-popup-formcontainer hr{
+  height:2px;
+  border-width:0;
+  color:  #e8e8e8;
+  background-color:  #e8e8e8;
+  margin-bottom: 15px;
+}
+.fae-voucher-popup-button {
+  width: 100%; 
+  margin: 20px 0 0;
+  padding: 10px;
+}

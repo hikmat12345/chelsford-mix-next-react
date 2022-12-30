@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_14362" data-name="Group 14362" transform="translate(-85 -138)">
+    <rect id="Rectangle_332" data-name="Rectangle 332" width="23.812" height="23.812" transform="translate(85 138)" fill="none"/>
+    <g id="Page-1" transform="translate(85 139)">
+      <g id="manage-Voucher" transform="translate(0 0)">
+        <path id="Path" d="M14.137,22.313l1.283-.675,1.283.675-.245-1.43L17.5,19.872l-1.435-.209-.642-1.3-.642,1.3-1.435.209,1.038,1.011Z" transform="translate(-3.42 -4.881)" fill="#db0406" fill-rule="evenodd"/>
+        <path id="Shape" d="M0,15.873H.7a.7.7,0,0,1,.7.687V19.31A.7.7,0,0,1,.7,20H0v5.5H24V20h-.7a.7.7,0,0,1-.7-.687V16.56a.7.7,0,0,1,.7-.687H24v-5.5H0Zm10.45.321L12,13.126l1.55,3.068,3.464.493-2.507,2.389.592,3.372L12,20.856,8.9,22.447l.592-3.372L6.986,16.687Z" transform="translate(0 -2.495)" fill="#db0406" fill-rule="evenodd"/>
+        <path id="Path-2" data-name="Path" d="M23.74,5.473l.635-.366L21.445,0,9.989,6.643H23.571l-.1-.17A.732.732,0,0,1,23.74,5.473Z" transform="translate(-3.192)" fill="#db0406" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+@import "../../../App.scss";
+@import "../../../mediaQueries.scss";
+
+.fae--navbar-items-section-container {
+  @include flex(none, center);
+  width: 100%;
+  color: #ffffff;
+}
+
+.fae--navbar-items-section-greeting {
+  width: 15%;
+}
+
+.fae--navbar-items-section-dropdown-items {
+  width: 15%;
+  @include flex(flex-end, center);
+  gap: 5px;
+}
+
+.fae--navbar-items-section-items-container {
+  @include flex(center, center);
+  width: 70%;
+}
+
+.fae--navbar-items-section-items {
+  width: 80%;
+}
+
+.fae--navbar-items-section-dropdown-items-item {
+  cursor: pointer;
+}
+
+.fae--navbar-items-section-dropdown-items {
+  width: 15%;
+}
+
+.fae--navbar-items-section-greeting {
+  cursor: pointer;
+}
+
+.fae--nav-bar-items-for-mobile-container {
+  display: none;
+}

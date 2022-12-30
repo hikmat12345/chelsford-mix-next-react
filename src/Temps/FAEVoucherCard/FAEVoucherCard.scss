@@ -1,0 +1,116 @@
+@import "../../mediaQueries.scss";
+.fae-voucher-card { 
+    margin: 11px;
+    border-radius: 4px;
+    box-shadow: 0 0 6px 0  rgba(0,0,0,0.2);
+    background-color: #fff;
+    cursor: pointer;
+}
+  
+  .fae-voucher-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .fae-voucher-container { 
+    height: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+ }
+ .fae-VoucherService-img {
+  background-position: center;
+  background-size: cover;
+  min-width: 315px;
+  position: relative;
+  min-height: 154px;
+  border-radius: 4px 4px 0px 0px;
+}
+.fae-VoucherService-img ul {
+  font-size: 10px;
+  list-style: none;
+}
+
+.service-card-data, .gift-card-data {
+  position: absolute;
+  bottom: 10px;
+  padding: 0;
+  right: 0;
+  left: 44%; 
+  display: flex;
+}
+.service-card-data ul li:nth-child(1){
+   color: white;
+}
+.gift-card-data ul li:nth-child(1){
+  color: black;
+}
+.fae-VoucherCard-Btn {
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #db0406;
+    align-self: flex-end;
+    margin-left: auto;
+    position: relative;
+}
+  .fae-VoucherCard-text{
+    width: 50px;
+    height: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+  .gift-card-data { 
+    color: red;
+   }
+   .service-card-data { 
+     color: #d7b567;
+   }
+   .fae-service-prices { 
+    float: right;
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+}
+  .fae-VoucherCard-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8b8b8b;
+  }
+  .fae-VoucherCard-titleasign{
+    width: 152px; 
+    margin: 3px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+    
+  }
+  .fae-VoucherCard-titlesett{
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+    text-align: start;
+    width: 33%;
+  } 
+  @include mobile {
+    .fae-voucher-card {
+      margin: 5px; 
+    }
+    .fae-VoucherService-img { 
+      min-width: inherit; 
+    }  
+  }

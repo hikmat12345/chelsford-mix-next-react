@@ -1,0 +1,41 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--sub-industries-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+
+}
+
+.fae--sub-industries-page-wrapper {
+  width: 55%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+@include tablet {
+  .fae--sub-industries-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include tablet {
+  .fae--sub-industries-page-wrapper {
+    width: 95%;
+  }
+}
+@include mobile{
+.fae--sub-industry .fae--text {
+  font-size: 15px !important;
+  font-weight: 500;
+  color: black;
+ }
+ .fae--sub-industries-page-container{
+  padding-top: 7px;
+ }
+//  .fae--service-card-image-container img {
+//     height: 108px;
+//     object-fit: fill;
+//   }
+}

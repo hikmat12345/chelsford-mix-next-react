@@ -1,0 +1,107 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--payment-details-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--payment-details-cards-wrapper {
+  width: 100%;
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: $default-section-gap;
+}
+.fae-img-card-brand {
+  width: 56px;
+  height: 35px;
+  margin-top: 4px;
+}
+.fae--payment-details-add-button {
+  cursor: pointer;
+}
+.fae--payment-details-action { 
+  border: 1px solid red;
+  border-radius: 30px;
+}
+.fae--payment-details-heading-button-wrapper {
+  @include flex(space-between, center);
+}
+
+.fae--paymet-details-card-wrapper {
+  width: 47%;
+  padding: 10px 10px;
+  background-color: #f9f9f9;
+  @include flex(space-between, center);
+}
+
+.fae--payment-details-action {
+  cursor: pointer;
+}
+
+.fae--payment-card-unit-actions {
+  @include flex(center, center);
+  gap: 5px;
+}
+
+@include tablet {
+  .fae--paymet-details-card-wrapper {
+    width: 100%;
+  }
+}
+
+
+ 
+
+.popup-content {
+  width: 256px; 
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute !important;
+  left: 0;
+  font-size: 18px;
+  right: 0;
+}
+.close {
+  float: right;
+  top: 0;
+  position: absolute;
+  right: 7px;
+  font-size: 31px;
+  cursor: pointer;
+}
+.popup-arrow { display: none;}
+[data-popup=tooltip].popup-overlay {
+  background: #46333338;
+}
+.popup-sure-btn {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  text-align: right;
+  padding: 6px 16px;
+  width: 30px;
+  margin-left: auto;
+  float: right;
+  cursor: pointer;
+  margin-top: 13px;
+  position: absolute;
+  bottom: 11px;
+}
+.popup-content-con{
+    display: grid;
+ } 
+#popup-root .popup-content {
+  top: 40%;
+  bottom: 40%;
+  height: 65px;
+}
+.change-icon svg { 
+  font-size: 15px;
+}
+.fae-change-country-popup {
+  justify-content: center;
+  padding: 10px 41px;
+}

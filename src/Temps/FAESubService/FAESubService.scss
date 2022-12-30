@@ -1,0 +1,43 @@
+@import "../../App.scss";
+
+.fae--sub-service-main-container {
+  flex-direction: column;
+}
+
+.fae--sub-service-container {
+  width: 95%;
+  @include flex(space-between, center);
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.fae--sub-service-wrapper {
+  @include flex(none, center);
+  gap: 20px;
+}
+
+.fae--sub-service-price-and-online-button {
+  @include flex(center, flex-end);
+  flex-direction: column;
+}
+
+.fae--sub-service-padding-bottom {
+  padding-bottom: 10px;
+}
+
+.fae--sub-service-online-and-discount-wrapper {
+  @include flex(space-between, center);
+  width: 70%;
+}
+
+.fae--sub-service-discount-text {
+  background-color: $primary-bg;
+  padding: 3px;
+  border-radius: 0 0 5px 5px;
+}
+
+.fae--sub-service-online-text {
+  background-color: #626262;
+  padding: 3px;
+  border-radius: 0 0 5px 5px;
+}

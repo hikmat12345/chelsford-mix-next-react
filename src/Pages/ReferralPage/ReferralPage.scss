@@ -1,0 +1,202 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.column-direction {
+  @include flex(center, center);
+  flex-direction: column;
+}
+
+.referral-page-referral-list-main-container {
+  @include flex(space-between, center);
+  width: 95%;
+  padding: 0px 20px 10px 20px;
+  border-bottom: 1px solid #ececec;
+}
+
+.referral-page-bonus-explanation {
+  @extend .column-direction;
+  background-color: #f9f9f9;
+  width: 65%;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.referral-page-terms-and-conditions {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 5px;
+  width: 95%;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.referral-page-list-wrapper {
+  width: 95%;
+  @include flex(none, center);
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.referral-page-list-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.refferal-bouns-text-announcement{
+  font-style: italic;
+  color: black;
+}
+.referral-page-list-items {
+  @include flex(space-between, center);
+  width: 100%;
+}
+
+.referral-page-mbile-and-email-field {
+  @include flex(space-between, center);
+  width: 100%;
+}
+
+.referral-page-details-container {
+  @include flex(space-around, center);
+  width: 95%;
+}
+
+.referral-page-details-wrapper {
+  @include flex(center, flex-start);
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referral-page-list-box {
+  width: 60%;
+  flex-direction: column;
+}
+
+.referral-page-bonus-text-container {
+  @include flex(space-evenly, center);
+  flex-direction: column;
+  gap: 80px;
+}
+
+.referral-page-bonus-text-wrapper {
+  @include flex(center, center);
+  gap: 10px;
+}
+
+.fae--referral-page-offer-container {
+  @include flex(space-evenly, center);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 65%;
+  margin-top: 30px;
+  gap: $default-section-gap;
+  padding-top: 10px;
+}
+
+.fae--referral-page-mail-container {
+  @extend .column-direction;
+  background-color: #ebebeb;
+  width: 65%;
+  gap: 30px;
+}
+
+.fae--referral-page-email-field {
+  width: 60%;
+  @extend .column-direction;
+  gap: $default-section-gap;
+}
+
+.fae--referral-page-invite-button {
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+}
+
+.fae--referral-page-social-links {
+  @include flex(center, center);
+  gap: 10px;
+}
+
+@include tablet {
+  .fae--referral-page-offer-container {
+    width: 100%;
+    margin-top: 0;
+  }
+  .fae--referral-page-mail-container {
+    width: 100%;
+  }
+  .fae--referral-page-email-field {
+    width: 70%;
+  }
+  .referral-page-list-box {
+    width: 70%;
+  }
+  .referral-page-bonus-explanation {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@include mobile {
+  .fae--referral-page-email-field {
+    width: 95%;
+  }
+  .referral-page-image {
+    width: 50%;
+  }
+  .referral-page-list-box {
+    width: 95%;
+  }
+  .referral-page-terms-and-conditions {
+    margin: 0px 4px !important;
+    width: initial;
+    padding: 10px;
+    border-radius: 9px;
+  }
+  .shadow-box-padding {
+    padding: 4px 0px;
+  }
+  .fae--referral-page-mail-container, .referral-page-bonus-explanation {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: initial;
+    background-color: #cac8c88a;
+  }
+  .referral-page-mbile-and-email-field {
+    display: block;
+  }
+  .referral-page-mbile-and-email-field .fae-or-text {
+    font-size: 11px;
+    text-align: center;
+    padding: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
+ .referral-page-details-container img {
+  width: 45%; 
+ }
+ .referral-page-bonus-explanation {
+  grid-gap: 30px;
+  gap: 15px;
+  padding-top: 2px;
+}
+.referral-page-bonus-text-container p.fae--text.heading.primary-text-color {
+   
+  padding-left: 9px;
+  font-size: 12px; 
+  padding-top: 4px;
+}
+}
+.referral-page-bonus-text-container p.fae--text.heading.primary-text-color {
+  display: flex;
+  padding-left: 9px;
+  padding-right: 8px;
+}
+
+.fae--referral-page-mail-container { 
+  gap: 16px;
+}.fae--text-field-container { 
+    gap: 0px; 
+ }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="20" height="20" transform="translate(145 180)" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="Legal" transform="translate(-145 -180)" clip-path="url(#clip-path)">
+    <g id="shield-check-line" transform="translate(145 180)">
+      <path id="Path_21" data-name="Path 21" d="M0,0H20V20H0Z" fill="none"/>
+      <path id="Path_22" data-name="Path 22" d="M10,.833l6.847,1.522a.834.834,0,0,1,.653.813v8.322a5,5,0,0,1-2.227,4.16L10,19.167,4.727,15.651A5,5,0,0,1,2.5,11.492V3.168a.834.834,0,0,1,.652-.813Zm0,1.707-5.833,1.3v7.654a3.333,3.333,0,0,0,1.484,2.773L10,17.164l4.349-2.9a3.332,3.332,0,0,0,1.484-2.773V3.837L10,2.542Zm3.71,4.311L14.889,8.03l-5.3,5.3L6.05,9.8,7.228,8.619l2.357,2.357L13.71,6.851Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

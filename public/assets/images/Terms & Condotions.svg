@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="20" height="20" transform="translate(145 180)" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="Terms_Condotions" data-name="Terms &amp; Condotions" transform="translate(-145 -180)" clip-path="url(#clip-path)">
+    <g id="newspaper-line" transform="translate(145 180)">
+      <path id="Path_27" data-name="Path 27" d="M0,0H20V20H0Z" fill="none"/>
+      <path id="Path_28" data-name="Path 28" d="M13.333,16.667V3.333h-10v12.5a.833.833,0,0,0,.833.833Zm2.5,1.667H4.167a2.5,2.5,0,0,1-2.5-2.5V2.5A.833.833,0,0,1,2.5,1.667H14.167A.833.833,0,0,1,15,2.5V8.333h3.333v7.5A2.5,2.5,0,0,1,15.833,18.333ZM15,10v5.833a.833.833,0,1,0,1.667,0V10ZM5,5h5v5H5ZM6.667,6.667V8.333H8.333V6.667ZM5,10.833h6.667V12.5H5Zm0,2.5h6.667V15H5Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

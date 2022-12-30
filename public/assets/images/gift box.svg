@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="20" height="20" transform="translate(3912 250)" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="gift_box" data-name="gift box" transform="translate(-3912 -250)" clip-path="url(#clip-path)">
+    <g id="gift-line" transform="translate(3912 250)">
+      <path id="Path_37" data-name="Path 37" d="M0,0H20V20H0Z" fill="none"/>
+      <path id="Path_38" data-name="Path 38" d="M12.5,1.667a3.333,3.333,0,0,1,2.887,5h3.78V8.333H17.5v8.333a.833.833,0,0,1-.833.833H3.333a.833.833,0,0,1-.833-.833V8.333H.833V6.667h3.78A3.333,3.333,0,0,1,10,2.8a3.319,3.319,0,0,1,2.5-1.129ZM9.167,8.333h-5v7.5h5Zm6.667,0h-5v7.5h5Zm-8.333-5a1.667,1.667,0,0,0-.125,3.329l.125,0H9.167V5A1.667,1.667,0,0,0,7.752,3.352l-.128-.015Zm5,0a1.667,1.667,0,0,0-1.662,1.542l0,.125V6.667H12.5a1.667,1.667,0,0,0,1.663-1.542l0-.125A1.667,1.667,0,0,0,12.5,3.333Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2909" data-name="Rectangle 2909" width="24" height="24" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="Addresses" clip-path="url(#clip-path)">
+    <g id="map-pin-line_4_" data-name="map-pin-line (4)">
+      <path id="Path_29359" data-name="Path 29359" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_29360" data-name="Path 29360" d="M12,20.9l4.95-4.95a7,7,0,1,0-9.9,0Zm0,2.828L5.636,17.364a9,9,0,1,1,12.728,0ZM12,13a2,2,0,1,0-2-2A2,2,0,0,0,12,13Zm0,2a4,4,0,1,1,4-4A4,4,0,0,1,12,15Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

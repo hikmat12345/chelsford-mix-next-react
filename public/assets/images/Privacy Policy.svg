@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8" data-name="Rectangle 8" width="20" height="20" transform="translate(145 181)" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="Privacy_Policy" data-name="Privacy Policy" transform="translate(-145 -181)" clip-path="url(#clip-path)">
+    <g id="shield-star-line" transform="translate(145 181)">
+      <path id="Path_25" data-name="Path 25" d="M0,0H20V20H0Z" fill="none"/>
+      <path id="Path_26" data-name="Path 26" d="M4.167,3.837v7.654a3.333,3.333,0,0,0,1.484,2.773L10,17.164l4.349-2.9a3.333,3.333,0,0,0,1.484-2.773V3.837L10,2.542ZM3.152,2.355,10,.833l6.847,1.522a.833.833,0,0,1,.653.813v8.322a5,5,0,0,1-2.226,4.16L10,19.167,4.727,15.651A5,5,0,0,1,2.5,11.492V3.168a.833.833,0,0,1,.652-.813ZM10,11.25,7.551,12.537l.467-2.727L6.037,7.879l2.738-.4L10,5l1.225,2.481,2.738.4L11.982,9.811l.467,2.727Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

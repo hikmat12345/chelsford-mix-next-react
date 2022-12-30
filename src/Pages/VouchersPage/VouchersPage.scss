@@ -1,0 +1,36 @@
+@import "../../App.scss";
+
+.fae-vouchers-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column; 
+}
+.fae-vouchers-page-main-container .fae--tabs-tab-size {
+  background-color: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 1px;
+  margin: 7px 10px 0px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a9a9a9;
+}
+.fae--tabs.service-voucher p:last-child{
+  margin-left: auto;
+}
+.tabs-active-tab {  
+  border-bottom: 2px solid red;
+  color: #db0406 !important;
+}
+.gift-voucher-detail, .service-voucher-detail{
+  display: none;
+}
+.fae-manage-voucher-text {
+  padding: 14px 0px 2px 15px;
+}

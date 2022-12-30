@@ -1,0 +1,199 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+.fae--session-bookings-page-bookings-wrapper {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+  width: 100%;
+}
+
+.fae--session-bookings-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+.fae-session-list .fae--booking-sessions-wrapper {
+  display: flex;
+}
+.fae-session-list.fae--booking-detail-page-address-wrapper {
+  width: 46%;
+  margin-top: -83px;
+  padding-bottom: 20px;
+} 
+
+p.fae--text.fae--booking-detail-page-info-headers.paragraph.tertiary-text-color.undefined {
+  padding-bottom: 3px;
+}
+.fae-session-list .pointer{
+  margin-top: 3px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.fae-not-booking {
+  background-color: #d3d1d1;
+  color: black;
+  font-weight: 700;
+}
+.fae-session-list .pointer.active-sessions {
+ // background-color: #dddfde;
+}
+
+.fae-sup-number {
+  position: absolute;
+  top: -1px;
+  background-color: #d5cdcd;
+  border-radius: 2rem;
+  color: black;
+  width: 2px;
+  font-size: 10px;
+  padding: 8px;
+  height: 5px;
+  line-height: 9px;
+  right: -3px;
+  padding: 4px 9px 9px 6px;
+}
+.active-sessions {
+  background-color: #bdbdbd;
+  color: white;
+  font-weight: 700;
+}
+.fae-avaiable-booking {
+  background-color: red;
+  width: 35px!important;
+  height: inherit !important;
+  color: #f9f9f9;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: -1px;
+  padding: 4px;
+  font-weight: bold;
+  display: initial !important;
+}
+.completed-sessions {
+  background-color: #ffdfdf;
+}
+
+.completed-sessions-stroke {
+  width: 30px;
+  height: 1px;
+  background-color: rgba(190, 100, 100, 1);
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.non-active-sessions {
+  background-color: rgba(244, 244, 244, 1);
+  font-size: 17px;
+}
+
+// .checked-sessions { 
+//   background-color: #be6464;
+// }
+.checked-sessions:before {
+  content: "/";
+  font-size: 40px;
+  color: #f33b3b;
+  left: 13px;
+  position: absolute;
+  font-family: initial;
+  transform: rotate(9deg);
+  width: 30px;
+  top: -7px;
+  height: 1px;
+}
+.fae--booking-sessions-wrapper{
+  position: relative;
+}
+.fae-session-list .pointer {
+  position: relative;
+}
+
+@media screen  and (max-width:1300px){
+  .fae-session-list.fae--booking-detail-page-address-wrapper {
+    width: 20%;
+    margin-top: -76px;
+    padding-bottom: 20px;
+    display: block;
+    margin-left: auto;
+  }
+  .fae-session-list .pointer{  
+    width: 20px;
+    height: 20px; 
+  }
+}
+@include onlyDesktop
+{ 
+  .fae-session-list .fae--booking-sessions-wrapper { 
+    width: 760px;
+    overflow: auto;
+  } 
+  .fae--booking-card-service-name {
+      margin-left: -9px;
+      margin-top: -50px;
+  }
+  .fae-session-list .pointer{ 
+    min-width: 33px; 
+  }
+}
+@include mobile
+{ 
+  //  .fae-session-list.fae--booking-detail-page-address-wrapper 
+  // {
+  //     width: 82%; 
+  //     padding-bottom: 5px; 
+  //     display: flex; 
+  //     margin-left: auto; 
+  //     margin-top: -63px; 
+  //     line-height: 23px;
+  //     font-size: 11px; 
+  //  }
+   .fae-session-list .fae--booking-sessions-wrapper { 
+    flex-wrap: wrap; 
+    gap: 2px;
+  }
+  .fae--session-bookings-page-bookings-wrapper .shadow-box-padding { 
+    margin-top: 20px;
+    // min-height: 81px;
+    display: initial;
+  }
+  .fae-sup-number { 
+    padding: 3px 6px 6px 3px;
+} 
+.fae-avaiable-booking { 
+  width: 25px!important; 
+  font-size: 10px;
+  padding: 4px;
+  font-weight: initial; 
+ }
+ .fae-session-list.fae--booking-detail-page-address-wrapper {
+  background-color: #f9f9f9;
+  width: 100%;
+  padding-bottom: 5px;
+  display: flex;
+  margin-top: -19px !important;
+  margin-left: auto;
+  line-height: 23px;
+  padding: 3px;
+  font-size: 11px;
+}
+.fae-avaiable-booking div:nth-child(2){
+  margin-top: -12px;
+ }
+ .fae-avaiable-booking { 
+  height: 28px !important;
+  padding: 2px; 
+}
+.checked-sessions:before {
+  content: "/";
+  font-size: 25px; 
+  left: 8px; 
+  width: 10px;
+  top: -1px; 
+ }
+}

@@ -1,0 +1,66 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--service-content-page-container {
+  @include flex(none, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae-service-content-page-advertisement {
+  @include flex(none, none);
+  background-color: $primary-button-bg;
+}
+
+.fae-service-content-page-advertisement-content {
+  @include flex(center, center);
+  width: 50%;
+  background-repeat: no-repeat;
+}
+
+.fae-service-content-page-advertisement-video {
+  width: 50%;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.fae--red-bg-content-container {
+  @include flex(center, center);
+  background-color: #f7f7f7;
+  padding: 9px;
+}
+
+.fae--service-description-page-action-button {
+  min-height: 31px;
+  min-width: 135px;
+}
+
+@include tablet {
+  .fae-service-content-page-advertisement {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .fae-service-content-page-advertisement-content {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .fae-service-content-page-advertisement-video {
+    width: 100%;
+    justify-content: center;
+  }
+  .fae--service-content-page-service-description-tab {
+    padding-bottom: 16px;
+    gap: 10px;
+}
+  .fae--red-bg-content-container {
+    padding: 9px;
+  }
+  .fae--service-content-page-advertisement-for-mobile {
+    @include flex(center, center);
+    text-align: center;
+  }
+  .fae--advertisement-default-wrapper { 
+    grid-gap: 70px;
+    gap: 15px;
+ }
+}

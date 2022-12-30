@@ -1,0 +1,8 @@
+@import "../../App.scss";
+
+.fae-bookings-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}

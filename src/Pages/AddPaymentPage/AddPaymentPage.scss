@@ -1,0 +1,133 @@
+
+  @import "../../App.scss";
+  @import "../../mediaQueries.scss";
+  
+  .alert {
+    text-align: center;
+    margin-top: 20px;
+  } 
+  .card-addpay-input-field {
+    outline: initial;
+    width: 94%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    margin: 8px 0px;
+} 
+select.card-addpay-input-field {
+  width: 97%;
+  padding: 9px;
+}
+  .card-input-field:focus{outline: none;}
+  .fae--shadow-box{margin-bottom: 20px;}
+   label{font-size: 12px;}
+  .PaymentForm{width: 100%;}
+  .card-detail-container{
+    box-shadow: 1px 3px 7px #adadb0;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .card-heading {
+    padding: 5px;
+    color: #444444;
+    font-weight: bold;
+    font-size: 14px;
+}
+  .fae-payment-card-page .fae--user-info-page-layout-pages-data {
+    margin: 6px 22px;
+    box-shadow: 0px 0px 8px 3px #1c1c1c24;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+  .billing-detail{display: flex; gap: 10px;}
+  .billing-detail div{width: 100%;}
+  .fae-addpayment-container{
+    width: 600px;
+    height: auto;
+    padding: 10px;
+  }
+ .fae-payand_add-card {
+        height: auto;
+        background-color: #ffffff29;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin-top: 10px;
+        border-radius: 10px;
+       
+  }
+  .fae-payand_add-form{
+    width: 96%;
+    padding: 13px;
+  }
+  .fae-pay-process-btn {
+    width: 98%;
+    padding: 9px 0px;
+    font-size: 20px;
+    margin: 2px 0px;
+  }
+.fae-paynow-card-top {
+  display: flex;
+  flex-direction: row;
+  background-color: #FBE5E6;
+  padding: 20px 15px 20px 15px;
+  border-radius: 10px 10px 0 0;
+}
+.fae-paynow-card-above {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px 0 10px 0;
+}
+.fae-paynow-logo {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+}
+.fae-paynow-created-on {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  text-align: end;
+}
+.fae-card-input-flexing{
+  display: flex;
+  
+}
+.fae-card-input-flexing input:nth-child(1), .fae-card-input-flexing input:nth-child(2) {
+  padding: 9px !important; 
+}
+.card-addpay-input-field::placeholder {
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+}
+.fae-card-input-flexing input:nth-child(1) {
+//  width: 100%;
+ margin-right: 9px;
+}
+.fae-card-input-flexing input:nth-child(2) {
+  
+  margin-right: 4px;
+ }
+ .fae-card-input-flexing {
+  width: 98%;
+ }
+ @include mobile {
+  .card-addpay-input-field { 
+    width: 91%;
+  }
+  .fae-paynow-card-top { 
+    padding: 11px 15px; 
+  }
+  .payment-method #zsiq_float img.grayscl {
+    display: none;
+  }
+  .fae-card-input-flexing input:nth-child(1), select.card-addpay-input-field {
+    margin-right: 9px;
+    background-color: white;
+}
+}

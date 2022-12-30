@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.fae--upcoming-bookings-page-bookings-wrapper {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+  width: 100%;
+}
+
+.fae--upcoming-bookings-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}

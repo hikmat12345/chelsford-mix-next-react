@@ -1,0 +1,31 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--training-selection-page-main-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+.fae--training-selection-page-main-container .paragraph {
+  font-size: 15px ;
+  font-weight: bold;
+}
+
+
+.fae--training-selection-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 30px;
+}
+
+@include tablet {
+  .fae--training-selection-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--training-selection-page-wrapper {
+    width: 95%;
+  }
+}

@@ -1,0 +1,196 @@
+@import "../../mediaQueries.scss";
+@import "../../App.scss";
+
+.random-design-container {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.red-text {
+  color: red;
+}
+
+.fae--summary-wrapper {
+  // background-color: #eaeaea;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fae--summary-duration-and-price {
+  @include flex(space-between, center);
+  width: 80%;
+}
+
+.fae--summary-date-and-time {
+  @include flex(space-between, center);
+  width: 80%;
+}
+
+.details-and-method-container {
+  width: 60%; 
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-and-methods-heading {
+  text-align: center;
+}
+
+.details-and-method-wrapper {
+  background-color: #eaeaea;
+  border-radius: 5px;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-and-method-wrapper-header {
+  width: 96%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-and-method-wrapper-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-and-method-wrapper-body > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-and-method-wrapper-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #aeaeae;
+}
+
+.fae--summary-address-and-location-container {
+  @include flex(center, center);
+  flex-direction: column;
+}
+.summary-voucher-field {
+  box-shadow: none;
+  padding: 0;
+}
+
+.voucher-body-wrapper {
+  @include flex(center, center);
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fae--summary-address-field {
+  text-align: center;
+}
+
+.summary-info-headers {
+  font-weight: 100;
+}
+
+.line-break {
+  border-bottom: solid 1px #ededed;
+  padding-bottom: 10px;
+}
+
+.top-line-break {
+  border-top: solid 1px #ededed;
+  padding-top: 10px;
+}
+
+.summary-page-each-info-unit {
+  width: 95%;
+  @include flex(space-between, center);
+}
+
+.summary-info-text {
+  font-size: 14px;
+}
+
+.summary-sub-total {
+  color: rgba(99, 99, 99, 1);
+  font-size: 18px;
+}
+
+@include tablet {
+  .details-and-method-container {
+    width: 95%;
+  }
+  .fae--summary-address-field {
+    width: 80%;
+  }
+}
+@include mobile {
+  .fae-success-sum {
+    width: 25%; 
+    margin-top: -44px;
+  }
+  .fae-success-sum div:nth-child(1){
+    font-size: 11px;
+  }
+  .shadow-box-padding {
+    padding: 6px 0px !important;
+    gap: 3px !important;
+    margin-bottom: 4px;
+  }
+  .random-design-container { 
+    gap: 6px;
+    padding-top: 10px;
+ }
+}
+
+.fae--voucher-field {
+  width: 97% !important; 
+  border: 1px solid #e2e2e2;
+}
+.discount-code-icon img {
+  width: 13%;
+  margin-top: -23px;
+  text-align: right;
+  margin-left: auto;
+}
+.discount-code-icon {
+  position: relative; 
+}
+.fae--discount-field {
+  width: 96% !important; 
+  border: 1px solid #e2e2e2;
+  padding: 5px;
+}
+.fae-success-sum-icon img{ 
+  text-align: center; 
+  height: 23px;
+  width: 30px; 
+}
+ .fae-success-sum{
+  width: 22%;
+  display: flex;
+  float: right;
+  margin-left: auto;
+  right: 0;
+  position: relative;
+  margin-top: -26px;
+}
+.fae-success-sum-icon {
+  width: 30px;
+  display: flex;
+  float: right;
+  margin-left: auto;
+  right: 0;
+  position: relative;
+  margin-top: -4px;
+}
+

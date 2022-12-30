@@ -1,0 +1,33 @@
+// @import "../../App.scss";
+// @import "../../mediaQueries.scss";
+
+.fae--service-card {
+ // @include flex(none, none);
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.fae--service-card-image-or-video {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.fae--card-content {
+  padding: 2px 10px;
+}
+
+.primary {
+ // @include flex(space-between, center);
+}
+
+.fae--service-card-text-mobile {
+  font-size: 15px;
+}
+
+@include mobile {
+  .fae--service-card-text-mobile {
+    font-size: 10px;
+  }
+}

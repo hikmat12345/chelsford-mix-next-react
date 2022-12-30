@@ -1,0 +1,12 @@
+@import "../../App.scss";
+
+.fae--consent-page-container {
+  @include flex(center, center);
+}
+
+.fae--consent-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}

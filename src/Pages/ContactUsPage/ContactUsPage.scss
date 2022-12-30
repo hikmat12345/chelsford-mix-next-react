@@ -1,0 +1,771 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+.fae--contact-us-page-main-container {
+  @include flex(center, center);
+  background-color: #f4f4f4;
+}
+
+.fae--contact-us-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fae--contact-us-page-helping-buttons {
+  @include flex(space-evenly, center);
+  width: 100%;
+}
+
+.fae--contact-us-page-helping-button {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fae--contact-us-page-address-info {
+  @include flex(center, center);
+  flex-direction: column;
+}
+
+.fae--contact-us-page-form {
+  @include flex(center, center);
+  width: 75%;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.fae--contact-us-page-form-button {
+  border-radius: 5px;
+  height: 31px;
+}
+
+@include tablet {
+  .fae--contact-us-page-wrapper {
+    width: 80%;
+  }
+  .fae--contact-us-page-form {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--contact-us-page-wrapper {
+    width: 95%;
+  }
+  .fae--contact-us-page-form {
+    width: 95%;
+  }
+}
+
+ 
+  .contentContainer { 
+    align-items: initial !important;
+}
+
+// chelsford contact js page 
+ 
+.destop-banner {
+    display: block;
+}
+.mobile-banner {
+    display: none;
+}
+
+.primarybtn {
+    color: white;
+    font-family: 'Roboto';
+    background-color: #D9BD3E;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 6px;
+    padding: 14px 44px;
+}
+.submitbtn {
+    color: white;
+    font-family: 'Roboto';
+    background-color: #D9BD3E;
+    border: none;
+    float: right;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 6px;
+    padding: 14px 44px;
+}
+/* contact form section  */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.contact-form-section .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form-section .row .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+.contact-form-section .row .formContainer .contentContainer h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 35px;
+    color: #110B57 !important;
+}
+.contact-form-section .row .formContainer .contentContainer p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #A2A2A2 !important;
+}
+.contact-form-section .row .formContainer .contentContainer p span {
+    font-weight: 500;
+    color: #7D7D7D !important;
+}
+.contact-form-section .row .formbox {
+    width: 100%;
+}
+.contact-form-section .row .formbox input {
+    // height: 53px;
+}
+.contact-form-section .row .imageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+.contactFormInput {
+    background: #F3F7FF;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* feature contact section */
+.chelsford-social-icons {
+    width: 80%;
+    background-color: transparent !important;
+}
+.chelsford-social-icons ul {
+    display: flex;
+    width: 80%;
+    background-color: transparent !important;
+    justify-content: space-between;
+}
+.chelsford-social-icons ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0F0A4A;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+}
+.chelsford-social-icons ul li i {
+    color: white;
+    font-size: 16px;
+}
+
+/* feature courses section */
+.contact-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #F3F7FF;
+    justify-content: center;
+    align-items: center;
+}
+.contact-feature .row {
+    display: flex;
+    width: 80%;
+}
+.contact-feature .headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-feature .headerContainer h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #110B57 !important;
+}
+.contact-feature .headerContainer p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #7D7D7D !important;
+    padding: 10px 80px;
+}
+.contact-feature .coursesContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 4;
+}
+.contact-feature .coursesContainer .introCard {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 370px;
+    background: #1F105A;
+    border-radius: 8px 0px 0px 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.contact-feature .coursesContainer .introCard h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    width: 90%;
+    text-align: left;
+    color: #E7EDFC !important;
+}
+.contact-feature .coursesContainer .introCard p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    width: 90%;
+    text-align: left;
+    color: #FFFFFF !important;
+}
+.contact-feature .coursesContainer .course-card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 370px;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+.contact-feature .coursesContainer .course-card img {
+    width: 37px;
+    height: 37px;
+}
+.contact-feature .coursesContainer .course-card h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: none;
+    text-align: left;
+    color: #1F105A !important;
+}
+.contact-feature .coursesContainer .course-card p {
+    font-family: 'Roboto' !important;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #565656 !important;
+}
+.contact-feature .coursesContainer .course-card a {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    color: #D9BD3E !important;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.contact-feature .coursesContainer .course-card a::after {
+    content: '\2192';
+    position: absolute;
+    opacity: 0;  
+    font-size: 20px;
+    transition: 0.5s;
+ }
+ .contact-feature .coursesContainer .course-card a:hover{
+    padding-right: 5px;
+    padding-left:5px;
+    text-decoration: none;
+  }
+  
+.contact-feature .coursesContainer .course-card a:hover:after {
+    opacity: 1;
+  }
+.contact-feature .coursesContainer div:nth-child(2){
+    background: #eceff4;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(3){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(4){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(5){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(6){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(7){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(8){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(9){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(10){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(11){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(12){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(13){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(14){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(15){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(16){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(17){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(18){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(19){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(20){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(21){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(22){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(23){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(24){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(25){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(26){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(27){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(28){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+.contact-feature .coursesContainer div:nth-child(29){
+    background: #F3F7FF;
+    border-radius: 8px 0px 0px 8px;
+}
+.contact-feature .coursesContainer div:nth-child(30){
+    background: #EBF1FF;
+    border-radius: 0px;
+}
+.contact-feature .coursesContainer div:nth-child(31){
+    background: #E7EDFC;
+    border-radius: 0px;   
+}
+.contact-feature .coursesContainer div:nth-child(32){
+    background: #DFE7FB;
+    border-radius: 0px 8px 8px 0px;
+}
+
+/* content page section 6 */
+
+.courses-page-section-6 {
+    background: #E7EDFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px; 
+}
+.courses-page-section-6 .row {
+    width: 80%;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #110B57 !important;
+    padding-bottom: 10px;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol .description {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;   
+    color: #a2a2a2 !important;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol .description span {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;   
+    color: #7d7d7d !important;
+}
+.courses-page-section-6 .row .bookingContainer  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+@media screen and (max-width: 960px) {
+
+    /* banner */
+.destop-banner {
+    display: none;
+}
+.mobile-banner {
+    display: block;
+}
+
+.primarybtn {
+    color: white;
+    font-family: 'Roboto';
+    background-color: #D9BD3E;
+    font-size: 15px;
+    line-height: 27px;
+    border-radius: 6px;
+    padding: 6px 20px;
+}
+/* contact form section  */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.contact-form-section .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-section .row .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.contact-form-section .row .formContainer .contentContainer h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #110B57 !important;
+}
+.contact-form-section .row .formContainer .contentContainer p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #A2A2A2 !important;
+}
+.contact-form-section .row .formContainer .contentContainer p span {
+    font-weight: 500;
+    color: #7D7D7D !important;
+}
+.contact-form-section .row .formbox {
+    width: 100%;
+}
+.contact-form-section .row .formbox input {
+    // height: 53px;
+}
+.contact-form-section .row .imageContainer {
+  display: none;
+    // display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.contactFormInput {
+    background: #F3F7FF;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* feature courses section */
+.contact-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.contact-feature .row {
+    display: flex;
+    width: 100%;
+}
+.contact-feature .headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-feature .headerContainer h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 47px;
+    color: #110B57 !important;
+}
+.contact-feature .headerContainer p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #7D7D7D !important;
+    padding: 1px 10px;
+}
+.contact-feature .coursesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.contact-feature .coursesContainer .introCard {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 370px;
+    background: #1F105A;
+    border-radius: 8px 0px 0px 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.contact-feature .coursesContainer .introCard h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    width: 90%;
+    text-align: center;
+    color: #E7EDFC !important;
+}
+.contact-feature .coursesContainer .introCard p {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    width: 90%;
+    text-align: center;
+    color: #FFFFFF !important;
+}
+.contact-feature .coursesContainer .course-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 370px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+.contact-feature .coursesContainer .course-card img {
+    width: 37px;
+    height: 37px;
+}
+.contact-feature .coursesContainer .course-card h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: none;
+    text-align: left;
+    color: #1F105A !important;
+}
+.contact-feature .coursesContainer .course-card p {
+    font-family: 'Roboto' !important;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #565656 !important;
+}
+.contact-feature .coursesContainer .course-card a {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    color: #D9BD3E !important;
+}
+
+
+/* content page section 6 */
+
+.courses-page-section-6 {
+    background: #E7EDFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px; 
+}
+.courses-page-section-6 .row {
+    width: 80%;
+    flex-direction: column;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #110B57 !important;
+    padding-bottom: 10px;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol .description {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;   
+    color: #a2a2a2 !important;
+}
+.courses-page-section-6 .row .coursesDiscriptionCol .description span {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;   
+    color: #7d7d7d !important;
+}
+.courses-page-section-6 .row .bookingContainer  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+}
+
+
+/* extra smal devices */
+
+@media screen and (max-width: 375px) {
+
+    /* banner */
+.destop-banner {
+    display: none;
+}
+.mobile-banner {
+    display: block;
+}
+
+
+.primarybtn {
+    color: white;
+    font-family: 'Roboto';
+    background-color: #D9BD3E;
+    font-size: 15px;
+    line-height: 27px;
+    border-radius: 6px;
+    padding: 6px 20px;
+}
+
+
+}
