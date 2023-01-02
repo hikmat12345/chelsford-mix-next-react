@@ -35,13 +35,14 @@
   .fae--mobile-nav-bar-actions-wrapper {
     @include flex(center, center);
     gap: 10px;
+    position: relative;
+    z-index: 99;
   }
   .fae--navbar-search-section-search {
     margin: 0px 10px;
   }
   .fae--navbar-items-for-mobile-wrapper {
     width: 98%;
-    position: relative;
-    z-index: 99;
-}
+   
+  }
 }

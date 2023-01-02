@@ -16,6 +16,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "./LandingPage.scss";  
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 
  
@@ -38,6 +39,7 @@ const LandingPage = ({
           <SubContainer />
           <CetagoryContainer />
           <VideoContainer />
+          <Testimonial/>
           <About /> 
     </div>
       </>

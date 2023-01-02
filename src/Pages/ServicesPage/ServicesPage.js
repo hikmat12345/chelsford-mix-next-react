@@ -29,7 +29,8 @@ export const ServicesPage = ({
   error,
   userCountryId,
   propsCountryId,
-  propsIndustryName
+  propsIndustryName,
+  con_padding_props
 }) => {
   const { industry } = useParams();
   const industryName = addSpaces(propsIndustryName, "-");
@@ -43,10 +44,10 @@ export const ServicesPage = ({
   if (loading) {
     return <FAELoading type="video" loaderImage={loaderImage} height="630px" />;
   } 
-  const doPadding= services?.length<4 ?(services.length==1 ?{paddingBottom: 254}:{paddingBottom: 220}): {paddingBottom: 254}
+  const doPadding= services?.length<4 ?(services.length==1 ? 254: 220):  254
   return (
     <>
-      <div className="fae--services-page-container dpb"  style={doPadding}>
+      <div className="fae--services-page-container dpb"  style={{paddingBottom:con_padding_props?con_padding_props:doPadding}}>
           {/* <FAETitle
             label={industryName}
             logo={getFileSrcFromPublicFolder("title_logo.svg")}

@@ -11,7 +11,9 @@
   flex-direction: column;
   gap: 22px;
 }
-
+.fae--contact-us-page-form p {
+    margin: 0px;
+}
 .fae--contact-us-page-helping-buttons {
   @include flex(space-evenly, center);
   width: 100%;

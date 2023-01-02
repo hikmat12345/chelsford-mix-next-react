@@ -13,7 +13,7 @@ import "../chelsfordCSS.css"
               achieve your goals. Some of the most in demand courses we offer.
             </p>
           </div>
-          <ServicesPage   propsCountryId={1} propsIndustryName={"Laser-Training"}/>
+          <ServicesPage con_padding_props={30}   propsCountryId={1} propsIndustryName={"Laser-Training"}/>
           {/* <div className="home_Feature">
             <div role="listbox">
               <div className="item">
