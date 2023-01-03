@@ -602,14 +602,14 @@ const App = ({
               auth={userSignedInStatus}
               redirectPath={authRedirectPath}
             />
-            {/* <FAEGuardedRoute
+            <FAEGuardedRoute
               path="/your-bookings/:jobtype"
               component={BookingsPage}
               exact
               auth={userSignedInStatus}
               redirectPath={authRedirectPath}
-            /> */}
-            {/* <FAEGuardedRoute
+            />
+            <FAEGuardedRoute
               path="/your-bookings/:service/details"
               component={BookingDetailPage}
               exact
@@ -622,8 +622,8 @@ const App = ({
               exact
               auth={userSignedInStatus}
               redirectPath={authRedirectPath}
-            /> */}
-            {/* <FAEGuardedRoute
+            />
+            <FAEGuardedRoute
               path="/your-bookings/:service/consent"
               component={ConsentPage}
               exact
@@ -636,7 +636,7 @@ const App = ({
               exact
               auth={userSignedInStatus}
               redirectPath={authRedirectPath}
-            /> */}
+            />
             {/* <FAEGuardedRoute
               path="/your-experts"
               component={UserInfoPageLayout}

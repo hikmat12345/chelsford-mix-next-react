@@ -26,10 +26,10 @@ const BookingsPage = () => {
                 label: "Upcoming",
                 value: "upcoming",
               },
-              {
-                label: "Session",
-                value: "session",
-              },
+              // {
+              //   label: "Session",
+              //   value: "session",
+              // },
               {
                 label: "Completed",
                 value: "completed",
@@ -41,7 +41,7 @@ const BookingsPage = () => {
           />
           {jobtype === "upcoming" && <UpcomingBookingsPage />}
           {jobtype === "completed" && <CompletedBookinsgPage />}
-          {jobtype === "session" && <SessionBookingsPage />}
+          {/* {jobtype === "session" && <SessionBookingsPage />} */}
         </div>
       </UserInfoPageLayout>
     </>

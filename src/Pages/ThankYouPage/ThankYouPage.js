@@ -62,9 +62,9 @@ const ThankYouPage = ({
               </div>
             </div>
           </div>
-          {/* <FAEButton onClick={() => history.push("/your-bookings/upcoming")}>
+          <FAEButton onClick={() => history.push("/your-bookings/upcoming")}>
             See your Bookings
-          </FAEButton> */}
+          </FAEButton>
         </div>
       </div>
     </>

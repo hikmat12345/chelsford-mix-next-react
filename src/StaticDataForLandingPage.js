@@ -56,11 +56,11 @@ export const navBarDropDownInfoLogedIn = {
       icon:  <img src={getFileSrcFromPublicFolder("profile.svg")} />,
       onClick: () => history.push("/profile"),
    },
-  //  {
-  //     label: "Your Bookings",
-  //     icon: <img src={getFileSrcFromPublicFolder("orders.svg")} />,
-  //     onClick: () => history.push("/your-bookings/upcoming"),
-  //  },
+   {
+      label: "Your Bookings",
+      icon: <img src={getFileSrcFromPublicFolder("orders.svg")} />,
+      onClick: () => history.push("/your-bookings/upcoming"),
+   },
   //  {
   //     label: "Your Addresses",
   //     icon: <img src={getFileSrcFromPublicFolder("addresses.svg")} />,
@@ -149,11 +149,11 @@ export const signedInMobileMenu = [
      icon:  <img src={getFileSrcFromPublicFolder("profile.svg")} />,
      onClick: () => history.push("/profile"),
   },
-  // {
-  //    label: "Your Bookings",
-  //    icon: <img src={getFileSrcFromPublicFolder("orders.svg")} />,
-  //    onClick: () => history.push("/your-bookings/upcoming"),
-  // },
+  {
+     label: "Your Bookings",
+     icon: <img src={getFileSrcFromPublicFolder("orders.svg")} />,
+     onClick: () => history.push("/your-bookings/upcoming"),
+  },
   // {
   //    label: "Your Addresses",
   //    icon: <img src={getFileSrcFromPublicFolder("addresses.svg")} />,

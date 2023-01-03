@@ -9,13 +9,13 @@
 
 .fae-sidebar-icon {
   padding: 0px 9px 0px 1px;
-  color: #ec1e27;
+  color: #1e185f;
   width: 26px;
 }
 .fae--user-info-tab {
   text-decoration: none;
   cursor: pointer;
-  height: 40px;
+  height: 49px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -35,7 +35,7 @@
    margin-left: auto;
  }
 .active-tab {
-  border-left: red solid 3px;
+  border-left: rgb(34, 0, 112) solid 3px;
   border-radius: 3px;
   background-color: #ffffff;
 }

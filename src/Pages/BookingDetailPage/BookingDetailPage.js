@@ -420,7 +420,7 @@ const BookingDetailPage = ({
                     )}
               </FAEText>
             )}
-            {(providerName.trim() !==""  || providerId !== 0) &&(
+            {/* {(providerName.trim() !==""  || providerId !== 0) &&(
                 <p                  
                       className="fae-text fae--bokking-detail-action-button" data-fae-id={providerId} data-title={providerName}
                     >
@@ -432,7 +432,7 @@ const BookingDetailPage = ({
                       />
                       Call
                 </p>
-            )}
+            )} */}
               {completeSession > 0 ? (
                 ""
               ) : (  

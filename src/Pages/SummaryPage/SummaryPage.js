@@ -176,58 +176,7 @@ const SummaryPage = ({
     applyDiscountCodeObjectEmpty() 
     if((defaultPaymentMethodId[0]?.id =="" ||  defaultPaymentMethodId[0]?.id ==null ||  defaultPaymentMethodId[0]?.id ==undefined) && userCountryId !==171){
       FAEToaster({message:"Please select or add your payment card.", toaster:"error"})
-    }
-    if(LinkUserCountry){  
-        setCookies('summary_detail', { ...state, usercountryId:state.countryId, setuserid:state.userId, currencySymbol:state.currencySymbol=="£"?"GBP":"PKR", isReferralReceiver:"", selectedSessions:state.numberOfSessions, latitude: "",
-          longitude:"", UbookingId:state.bookingId,totalAmount:state.subTotal, returnUrl:state.setReturnUrl, Vouchercode:state.voucherCode, availableProviderId:providerId,  paymentMethod: defaultPaymentMethodId[0]?.id,
-          bookingDate:bookingDate,
-          bookingTime:bookingTime,
-          duration:duration,
-          serviceId:serviceId,
-        }) 
-         oneTimeHoldPayment({
-          userId: state?.userId,
-          cartId: state?.cartId,
-          bookingId:  state?.bookingId,
-          paymentAmount: state?.subTotal,
-          currency:state?.currencySymbol=="£"?"GBP":"PKR",
-          returnUrl:state?.setReturnUrl,
-          paymentMethodId: defaultPaymentMethodId[0]?.id,
-        }).then(async(resp) => {
-          if (resp.error === false && resp.code === 0) { 
-              //    it is thank you page call  
-                const captureObj={
-                  paymentAmount: state.subTotal,
-                  bookingId: state.bookingId,
-                  generalBookingId:state.generalBookingId ? state.generalBookingId:0,
-                  stripePaymentMethodId: resp?.setupIntentResponseDetail?.paymentMethodId,
-                  countryId: state?.countryId,
-                  voucherCode: state?.voucherCode?voucherCode:"",
-                  cartId:  state?.cartId,
-                  userId: state?.userId,
-                  transactionId: resp?.setupIntentResponseDetail?.transactionId,
-                  returnUrl: state.setReturnUrl,
-                }
-                  oneTimeCapture(captureObj).then(result => {
-                    if(result?.code==0 && result?.error ==false){ 
-                        history.push({pathname:"/payment-success", state:{...state, ...getCookies("summary_detail"), summarypage:true}}) 
-                    } else {
-                        setContent(result?.message);
-                        setOpen(true);  
-                    }
-                }); 
-              } else if (resp.error === false && resp.code === 10) {
-            //    it is thank you page call  
-                await   window.location.assign(`${resp?.redirectUrl}`);
-            } else if (resp.error == true && resp.code==1) {
-              setContent(resp?.message);
-              setOpen(true);
-           } else {
-             setContent(resp?.message);
-                setOpen(true);
-           } 
-        }) 
-    } else {
+    } 
         if (freeConsultation) { 
             saveCodBooking({
               email,
@@ -266,8 +215,7 @@ const SummaryPage = ({
                   email, 
                   userId:getCookies("userId")  
             }) &&  setStatus(true) 
-        }
-      }   
+        }   
    } 
 
   useEffect( async() => {  
@@ -366,8 +314,7 @@ const SummaryPage = ({
             cartid:cartId
         },
       }); 
-      // setHoldPaymentResponseToEmpty(); 
-    } else {
+     } else {
       FAEToaster({
         toaster:"error",
         message:createBookingResp?.message, 

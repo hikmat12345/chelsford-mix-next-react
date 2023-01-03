@@ -17,11 +17,11 @@ const userInfoTabs = [
     svgIconSrc:  getFileSrcFromPublicFolder("icons/profileIcon.svg"),
     onClick: () => history.push("/profile"),
   },
-  // {
-  //   label: "Your Bookings",
-  //   svgIconSrc:  getFileSrcFromPublicFolder("icons/bookingGreyColor.svg"),
-  //   onClick: () => history.push("/your-bookings/upcoming"),
-  // }, 
+  {
+    label: "Your Bookings",
+    svgIconSrc:  getFileSrcFromPublicFolder("icons/bookingGreyColor.svg"),
+    onClick: () => history.push("/your-bookings/upcoming"),
+  }, 
   // {
   //   label: "Your Addresses",
   //   svgIconSrc:  getFileSrcFromPublicFolder("icons/locationgrey.svg"),

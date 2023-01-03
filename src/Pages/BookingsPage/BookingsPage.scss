@@ -6,3 +6,6 @@
   flex-direction: column;
   gap: $default-section-gap;
 }
+.tabs-active-tab {
+  background-color: #1e185f !important;
+}
