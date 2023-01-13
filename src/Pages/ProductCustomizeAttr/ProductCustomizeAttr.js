@@ -15,7 +15,7 @@ import history from '../../history';
 import FAEPopup from '../../Temps/FAEPopup/FAEPopup';
 
 function ProductCustomizeAttr(props) {
-  const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+  const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
   const preState= props.location.state  
 
   const [fieldAnswers, setFieldAnswers] = useState([]);
@@ -127,7 +127,7 @@ function ProductCustomizeAttr(props) {
               className="fae--service-attributes-page-attributes-form" >
             <div className="fae--cart-page-wrapper"> 
                 { reduxStore?.productsReducer?.loading && (
-                <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+                <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
                 )}   
                {!reduxStore?.productsReducer?.loading &&
                  <>
@@ -309,7 +309,7 @@ function ProductCustomizeAttr(props) {
                               <FAELoading
                                 loaderImage={loaderImage}
                                 height="200px"
-                                type="video"
+                                type="svg"
                               />
                             )}
                           </div>
@@ -345,7 +345,7 @@ function ProductCustomizeAttr(props) {
                               <FAELoading
                                 loaderImage={loaderImage}
                                 height="200px"
-                                type="video" />
+                                type="svg" />
                             )}
                           </div>
                         </div>

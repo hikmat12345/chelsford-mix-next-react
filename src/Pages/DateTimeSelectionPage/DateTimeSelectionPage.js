@@ -24,7 +24,7 @@ import history from "../../history";
 //scss
 import "./DateTimeSelectionPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const DateTimeSelectionPage = ({
   loading, 
@@ -42,7 +42,7 @@ const DateTimeSelectionPage = ({
 }) => { 
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Schedule`;
+  document.title = `Chelsford | ${serviceName} - Schedule`;
   const location = useLocation();
    
   const { state } = location;

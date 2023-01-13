@@ -24,7 +24,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./ServiceContentPage.scss";
 import "./contentDetail.css";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
 
 const ServiceContentPage = ({ 
@@ -69,7 +69,7 @@ const ServiceContentPage = ({
     isOnline,
     hasProducts
   } = (serviceDescription !== null &&  serviceDescription !== undefined) ? serviceDescription :{};
-  document.title = `Expert | ${serviceName}`;
+  document.title = `Chelsford | ${serviceName}`;
   document.getElementsByTagName("META")[2].content = meta_Description;
  
   useEffect(() => {
@@ -209,10 +209,11 @@ function sendwithStates(pathname,   subservice, freeConsultation){
  
   return (
     <>
-      {/* {loading && (
-        <FAELoading loaderImage={loaderImage} type="video" height="630px" />
-      )} */}
-       
+      {loading && (
+        <FAELoading loaderImage={loaderImage} type="svg" height="630px" />
+      )}
+        {!loading && (
+          <>
           <FAEServiceDescription
             className="fae--service-content-page-service-description-tab"
             actionButtonProps={{
@@ -220,7 +221,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             }}
             placeholder={placeholder}
             textOnImage={isOnline && !isInClinic && !isInHouse && "Only Online"}
-            isFreeConsultation={isFreeConsultation}
+            isFreeConsultation={false}
             src={imagePath}
             bookingButtonClicked={() =>
               !isProfileCompleted && userSignedInStatus
@@ -323,7 +324,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                1
+                <span>1</span>
               </div>
               <p className="py-5">Level 2 Infection Control</p>
             </div>
@@ -332,7 +333,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                2
+                <span>2</span>
               </div>
               <p className="py-5">Client Communication</p>
             </div>
@@ -341,7 +342,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                3
+                <span>3</span>
               </div>
               <p className="py-5">Facial Massage &amp; Skincare</p>
             </div>
@@ -350,7 +351,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                4
+                <span>4</span>
               </div>
               <p className="py-5">Facials Electrics</p>
             </div>
@@ -359,7 +360,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                5
+                <span>5</span>
               </div>
               <p className="py-5">Body Electrics</p>
             </div>
@@ -368,7 +369,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                6
+                <span>6</span>
               </div>
               <p className="py-5">Electrolysis</p>
             </div>
@@ -377,7 +378,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                7
+                <span>7</span>
               </div>
               <p className="py-5">Body Massage</p>
             </div>
@@ -386,7 +387,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                8
+                <span>8</span>
               </div>
               <p className="py-5">Skin Tightening</p>
             </div>
@@ -397,7 +398,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-               9
+              <span>9</span>
               </div>
               <p className="py-5">Indian Head Massage</p>
             </div>
@@ -406,7 +407,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                10
+                <span>10</span>
               </div>
               <p className="py-5">Core of Knowledge</p>
             </div>
@@ -415,7 +416,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                11
+                <span>11</span>
               </div>
               <p className="py-5">Hazards and Safety</p>
             </div>
@@ -424,7 +425,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                12
+                <span>12</span>
               </div>
               <p className="py-5"> Fitzpatrick Skin Types</p>
             </div>
@@ -433,7 +434,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                13
+                <span>13</span>
               </div>
               <p className="py-5">Hair Biology</p>
             </div>
@@ -442,7 +443,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                14
+                <span>14</span>
               </div>
               <p className="py-5">Laser Hair Reduction</p>
             </div>
@@ -451,7 +452,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                15
+                <span>15</span>
               </div>
               <p className="py-5">Vascular</p>
             </div>
@@ -460,7 +461,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                16
+                <span>16</span>
               </div>
               <p className="py-5"> Pigmented Lesions</p>
             </div>
@@ -469,7 +470,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
       <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
               <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                17
+                <span>17</span>
               </div>
               <p className="py-5">Aromatherapy Pre Blended Oils</p>
             </div>
@@ -514,9 +515,9 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                         <li>
                           <button className="tablinks" onClick={(e)=>openCity(e, 'Study_Options')}>Study Options</button>
                         </li> 
-                        <li>
+                        {/* <li>
                           <button className="tablinks" id="openCity(event, 'Tuition_Fees')">Tuition Fees</button>
-                        </li> 
+                        </li>  */}
                     </ul>
                   </div>
                 
@@ -695,7 +696,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                         </div>
                     </div><h3>CPD MICRONEEDLING DIPLOMA.</h3>
                     <p>Learn how to improve Scarring, Blemishes & Collagen</p>
-                    <a href="/course/cpd-microneedling-diploma">Explore More</a>
+                    <a href="/services/cpd-microneedling-diploma">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -704,7 +705,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                         </div>
                     </div><h3>CPD ADVANCED PLASMA FIBROBLAST</h3>
                     <p>Learn Plasma Non-Surgical Eye Lift procedure & Wrinkle Removal.</p>
-                    <a href="/course/cpd-advanced-plasma-fibroblast">Explore More</a>
+                    <a href="/services/cpd-advanced-plasma-fibroblast">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -714,7 +715,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                     </div>
                     <h3>CPD ADVANCED CHEMICAL PEELS</h3>
                     <p>Learn to use Chemical Peels to treat various skin conditions.</p>
-                    <a href="/course/cpd-advanced-chemical-peels">Explore More</a>
+                    <a href="/services/cpd-advanced-chemical-peels">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -724,7 +725,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                     </div>
                     <h3>VTCT LEVEL 4 SKIN BLEMISH REMOVAL</h3>
                     <p>Learn Advanced techniques to remove Skin tags, Milia & Veins.</p>
-                    <a href="/course/level-4-laser-and-blemish-removal">Explore More</a>
+                    <a href="/services/level-4-laser-and-blemish-removal">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -732,9 +733,9 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                             <i className="fa fa-graduation-cap" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <h3>VTCT LEVEL 4 LASER & IPL TREATMENTS</h3>
+                    <h3>VTCT LEVEL 2 AND 3 NVQ BEAUTRY THERAPY</h3>
                     <p>Necessary Qualification to enter the world of Lasers & IPL.</p>
-                    <a href="/course/vtct-level-4-laser-and-ipl-treatments">Explore More</a>
+                    <a href="/services/VTCT-Level-2-and-3-NVQ-Beauty-Therapy">Explore More</a>
                 </div>
                 
             </div>
@@ -748,30 +749,32 @@ function sendwithStates(pathname,   subservice, freeConsultation){
               <div className="col-md-7">
                 <div className="coursesDiscriptionCol">
                     <h2>Get Qualified and Start Today</h2>
-                    <p className="description">We'll ensure that you reach a high standard of education and are competent in your chosen subject of study so you can move straight into the job industry. Enrol Today!</p> 
+                    <p className="description">We'll ensure that you reach a high standard of education and are competent in your chosen subject of study so you can move straight into the job industry. Enroll Today!</p> 
                 </div> 
               </div>
             <div className="col-md-2"> </div>
             <div className="col-md-3">
-                <div className="bookingContainer">
+                {/* <div className="bookingContainer">
                     <button type="button" className="btn btn-default" style={{background: "#D9BD3E",borderRadius: "5px",top: "35px",bottom: 0,position: "relative"}}><a href="{{ url('course/booking/'.$product['slug'] ) }}"  style={{color:" #fff", fontSize: "22px",fontWeight: 500}}>View Dates & Book</a></button>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>  
 
 {/* // <!-- footer sticky icons on mobile  --> */}
-
+{/* 
      <div className="contact-source">
        <div className="contact-btns">
          <button type="button" className="btn btn-default" ><a href="tel:0800 955 0054" ><img  src={getFileSrcFromPublicFolder("icon/call_icon-svg.png")} alt="call us" /></a></button>
          <button type="button" className="btn btn-default " ><a href="{{ url('course/booking/'.$product['slug'] ) }}" >View Dates & Book</a></button>
          <button type="button" className="btn btn-default" ><a href="mailto:team@chelsford.com" ><img  src={getFileSrcFromPublicFolder("icon/chat_icon_svg.png")} alt="chat us" /></a></button>
        </div>
-    </div>
+    </div> */}
   
-    </>
-  );
+         </>
+       )}
+   </>
+  )
 };
 
 const mapStateToProps = ({

@@ -132,7 +132,7 @@ const setReturnUrl= `${document.domain=='localhost'?'https://expert-dev.findanex
            });
        }
     },[]); 
-    const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+    const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
     const currencyNameSymbol=stateData?.currencySymbol !=="GBP"?"Rs":"£"
   return (
     <>
@@ -143,7 +143,7 @@ const setReturnUrl= `${document.domain=='localhost'?'https://expert-dev.findanex
                     <h1>Expert</h1>
                 </div>
                 {success =="no" && 
-                  (<FAELoading  type="video" loaderImage={loaderImage} height="700px" />)
+                  (<FAELoading  type="svg" loaderImage={loaderImage} height="700px" />)
                 }        
                 {success =="yes" && 
                 (

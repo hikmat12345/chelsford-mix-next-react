@@ -32,7 +32,7 @@ import history from "../../history";
 //scss
 import "./AddressSelectionFullyBookedStatusPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 // const deleteIcon = getFileSrcFromPublicFolder("delete_svg.svg");
 const notesIcon = getFileSrcFromPublicFolder("notes_svg.svg");
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
@@ -57,7 +57,7 @@ const AddressSelectionNearClinicPage = ({
   const [addressIdForClinics, setAddressIdForClinics] = useState(0);
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Select Address`;
+  document.title = `Chelsford | ${serviceName} - Select Address`;
   const location = useLocation();
   const { state, pathname } = location;
   const {
@@ -289,7 +289,7 @@ const AddressSelectionNearClinicPage = ({
 
 
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
           )}
   
           {!loading && (

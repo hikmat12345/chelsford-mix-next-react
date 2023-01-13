@@ -17,7 +17,7 @@ import history from "../../history";
 import "./OffersPage.scss";
 import { FAEText } from "@findanexpert-fae/components/dist/stories/FAEText/FAEText";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const OffersPage = ({ getOffers, error, loading, offers=[], userCountryId }) => {
   document.title = "Expert | Discounts and Offers";
@@ -36,7 +36,7 @@ const OffersPage = ({ getOffers, error, loading, offers=[], userCountryId }) => 
             logo={getFileSrcFromPublicFolder("title_logo.svg")}
           />
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="400px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="400px" />
           )}
           {!loading && (
             <div className="fae--offers-page-services-wrapper">

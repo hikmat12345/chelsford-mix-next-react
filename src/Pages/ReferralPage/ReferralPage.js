@@ -44,7 +44,7 @@ import "./ReferralPage.scss";
 const refferalImage = getFileSrcFromPublicFolder("referral_image.png");
 const refferalImage2 = getFileSrcFromPublicFolder("referral_image_2.png");
 const refferalImage3 = getFileSrcFromPublicFolder("referral_image_3.png");
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const ReferralPage = ({
   userCountry,
@@ -61,7 +61,7 @@ const ReferralPage = ({
   const isProfileCompleted =
     getCookies("customer_details") !== undefined &&
     getCookies("customer_details").isProfileCompleted;
-  document.title = `Expert | Refer A Friend`;
+  document.title = `Chelsford | Refer A Friend`;
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [open, setOpen] = useState(false);
@@ -261,7 +261,7 @@ const ReferralPage = ({
               {loading ? (
                 <FAELoading
                   loaderImage={loaderImage}
-                  type="video"
+                  type="svg"
                   height="200px"
                 />
               ) : (

@@ -28,7 +28,7 @@ import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAE
 import { ToastContainer } from "react-toastify";
 
 const email = getCookies("customer_details").email;
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const deleteIcon = getFileSrcFromPublicFolder("delete_icon.svg");
 
 const PaymentDetailsPage = ({
@@ -45,7 +45,7 @@ const PaymentDetailsPage = ({
   defaultCardData={}
 }) => {
   
-  document.title = `Expert | Payment Details`;
+  document.title = `Chelsford | Payment Details`;
   const location = useLocation();
   const [open, setOpen] = useState(false); 
   const { state } = location;
@@ -126,7 +126,7 @@ console.log(defaultCardData?.code, 'defaultCardData?.code')
             </div>
             {loading && (
               <FAELoading
-                type="video"
+                type="svg"
                 loaderImage={loaderImage}
                 height="200px"
               />
@@ -265,7 +265,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PaymentDetailsPage);
 // import { ToastContainer } from "react-toastify";
 
 // const email = getCookies("customer_details").email;
-// const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+// const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 // const deleteIcon = getFileSrcFromPublicFolder("delete_icon.svg");
 
 // const PaymentDetailsPage = ({
@@ -282,7 +282,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PaymentDetailsPage);
 //   defaultCardData={}
 // }) => {
   
-//   document.title = `Expert | Payment Details`;
+//   document.title = `Chelsford | Payment Details`;
 //   const location = useLocation();
 //   const [open, setOpen] = useState(false); 
 //   const { state } = location;
@@ -366,7 +366,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(PaymentDetailsPage);
 //             </div>
 //             {loading && (
 //               <FAELoading
-//                 type="video"
+//                 type="svg"
 //                 loaderImage={loaderImage}
 //                 height="200px"
 //               />

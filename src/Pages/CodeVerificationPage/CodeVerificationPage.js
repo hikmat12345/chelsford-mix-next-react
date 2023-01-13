@@ -20,7 +20,7 @@ import history from "../../history";
 //scss
 import "./CodeVerificationPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const CodeVerificationPage = ({
   setVerifyCodeResponseToEmpty,
@@ -60,7 +60,7 @@ const CodeVerificationPage = ({
             logo={getFileSrcFromPublicFolder("title_logo.svg")}
           />
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="150px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="150px" />
           )}
           {!loading && <FAECodeInput getValue={setCode} />}
         </div>

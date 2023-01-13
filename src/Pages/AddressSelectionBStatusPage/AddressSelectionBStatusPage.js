@@ -31,7 +31,7 @@ import { saveBookingDateAndTimeNextTime, saveBookingDateAndTime } from "../../re
  import { buildQueries } from "@testing-library/react";
 import { getClinicAddressAPI } from "../../Webviews/ThreedsStatusWebviewAndroid/action";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
 const notesIcon = getFileSrcFromPublicFolder("notes_svg.svg");
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
@@ -76,7 +76,7 @@ const AddressSelectionNearClinicPage = ({
           id
       } = state; 
      
-      document.title = `Expert | ${servicePathName} - Select Address`; 
+      document.title = `Chelsford | ${servicePathName} - Select Address`; 
       const [addressIdForClinics, setAddressIdForClinics] = useState(AddressSelectid);
       useEffect(() => { 
         getAddressesBStatus(
@@ -282,7 +282,7 @@ const AddressSelectionNearClinicPage = ({
             </div>
          { loading_address && (
             <>
-              <FAEloading_address type="video" loaderImage={loaderImage} height="200px" />
+              <FAEloading_address type="svg" loaderImage={loaderImage} height="200px" />
              </>
           )}
   

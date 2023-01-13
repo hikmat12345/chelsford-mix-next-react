@@ -31,7 +31,7 @@ import history from "../../history";
 //scss
 import "./AddAddressPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
 const AddAddressPage = ({
@@ -47,7 +47,7 @@ const AddAddressPage = ({
   userLat,
   userLng,
 }) => {
-  document.title = `Expert | Add Address`;
+  document.title = `Chelsford | Add Address`;
   const userId = getCookies("userId");
   const location = useLocation();
   const { addressoperation } = useParams();
@@ -151,7 +151,7 @@ const AddAddressPage = ({
           className="fae--add-address-page-main-container"
         >
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
           )}
           {!loading && (
             <>

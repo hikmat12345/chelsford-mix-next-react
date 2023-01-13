@@ -42,7 +42,7 @@ const videoNotesIcon = getFileSrcFromPublicFolder("video_notes_icon.svg");
 const deleteIcon = getFileSrcFromPublicFolder("delete_icon.svg");
 const editIcon = getFileSrcFromPublicFolder("edit_icon.svg");
 const notesIcon = getFileSrcFromPublicFolder("notes_icon.svg");
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
 
 const BookingDetailPage = ({
@@ -60,7 +60,7 @@ const BookingDetailPage = ({
   bookingVideos,
   setBookingDeleteEmpty
 }) => {
-  document.title = `Expert | Booking Details`;
+  document.title = `Chelsford | Booking Details`;
   const userId = getCookies("userId");
   const pathLocation = useLocation();
   const { jobtype, service } = useParams();
@@ -189,7 +189,7 @@ const BookingDetailPage = ({
     <>
       <UserInfoPageLayout childWidth="100%" paddingTop="">
         {loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
         )}
         {!loading && (
           <div className="fae--booking-detail-page-main-container">
@@ -285,7 +285,7 @@ const BookingDetailPage = ({
                   {address}
                 </FAEText>
               </div>
-              {!hasAcceptedConsent ? (
+              {/* {!hasAcceptedConsent ? (
                 <div className="fae--booking-detail-page-duration-wrapper line-break">
                   <FAEText
                     paragraph
@@ -307,7 +307,7 @@ const BookingDetailPage = ({
                     Consent Accepted
                   </FAEText>
                 </div>
-              )} 
+              )}  */}
             </FAEShadowBox> 
             <div className="fae--booking-detail-page-action-buttons-wrapper">
               {(bookingVideos.length > 0 || bookingImages.length > 0) && (

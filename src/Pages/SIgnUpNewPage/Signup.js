@@ -73,6 +73,7 @@ import { setUserId } from '../../redux/actions/defaultActions';
     const [passwordErrors, setPaasswordError]= useState()
     const [confirmPasswordErrors, setConfirmPasswordError]=useState()
     const [emailVerifCode, setEmailVerifCode]= useState("")
+    const [tokenRefresh, setTokebRefresh] = useState(false);
     const [responseEmailMessage, emailErrorMessage]= useState("")
  /////////////////////////// use effects 
       useEffect(() => { 
@@ -84,10 +85,10 @@ import { setUserId } from '../../redux/actions/defaultActions';
         useEffect(()=>{
           const interval= setInterval(()=>{
                 setLoadToken(!loadToken)
-              }, 10000)
+              }, 100000)
           return ()=> clearInterval(interval)
         }, [loadToken]) 
-   
+   console.log(authToken, 'loadToken')
   // submit phone verification code 
       useEffect(() => {
         if (mobVerifCode.length === 6) {
@@ -141,7 +142,8 @@ import { setUserId } from '../../redux/actions/defaultActions';
             history.push("/account?signupstep=verification-pn")
          } 
          if(checkNumber_response?.statusCode===0 || (checkNumber_response?.statusCode===1 && checkNumber_response?.error !==true)  ){
-            history.push("/account?signupstep=verification-pn") 
+          Do_Empty_signup_reducer_OBJECT_Action();
+          history.push("/account?signupstep=verification-pn") 
          } 
          if(checkNumber_response?.error===true){
             FAEToaster({message: checkNumber_response?.message, toaster:"error"})
@@ -149,20 +151,25 @@ import { setUserId } from '../../redux/actions/defaultActions';
          } 
 
         //  after first screen click
-        if(forgotPassoword_response?.statusCode==0 ){ 
+        if(forgotPassoword_response?.statusCode==0 ){
+          Do_Empty_signup_reducer_OBJECT_Action(); 
           history.push("/account?code-verification=forgot-verification")  
          }
          if(verifySMS_response?.statusCode==0 && resetPassFlag==-2){ 
+          Do_Empty_signup_reducer_OBJECT_Action();
           history.push({pathname:"/reset-password", state:{userId:userIdentification }}) 
          } 
          else  if(verifySMS_response?.statusCode==0 && checkNumber_response?.statusCode !==-2) 
          {
+           Do_Empty_signup_reducer_OBJECT_Action();
            history.push("/account?signupstep=add-password") 
          }
          if(set_new_pass_response?.statusCode==0 && forgotPassFlag==true){ 
+          Do_Empty_signup_reducer_OBJECT_Action();
           history.push("/account?signupstep=profile-information")
          } 
          if(update_person_info_response?.statusCode==0){
+          Do_Empty_signup_reducer_OBJECT_Action();
           history.push("/account?signupstep=email-verification")
          }  
           
@@ -177,6 +184,10 @@ import { setUserId } from '../../redux/actions/defaultActions';
          } 
          if(resendSMS_code_response?.error ==true ){
           FAEToaster({message: resendSMS_code_response?.message, toaster:"error"})
+          Do_Empty_signup_reducer_OBJECT_Action();
+         }
+         if(update_person_info_response?.error ==true ){
+          FAEToaster({message: update_person_info_response?.message, toaster:"error"})
           Do_Empty_signup_reducer_OBJECT_Action();
          }
          // return ()=>{ Do_Empty_signup_reducer_OBJECT_Action();}
@@ -229,7 +240,7 @@ import { setUserId } from '../../redux/actions/defaultActions';
         setAuthToken(token);
       }, [loadToken]);
        const  handMobileEntrySubmit = (e)=>{
-        
+        setTokebRefresh((r) => !r);
         e.preventDefault();
         if(mobileNumber.length>=14) {
           setMobileError("")
@@ -303,6 +314,8 @@ import { setUserId } from '../../redux/actions/defaultActions';
        forgotPassword({
         mobileNumber:mobileNumber,
         countryCode:userCountryId,
+        isMobile: false,
+        authToken: authToken
         // messageHash
        })
       }
@@ -329,10 +342,9 @@ import { setUserId } from '../../redux/actions/defaultActions';
       history.push("/")
      }
    return (
-    <GoogleReCaptchaProvider reCaptchaKey="6LfR7U0jAAAAAFOkVZiFzhUq2d2T57juuM8bkI4P">
-       <GoogleReCaptcha onVerify={handleToken} refreshReCaptcha={false} /> 
-         <>
-          <div className="fae--new-signup-page-container" >
+    <GoogleReCaptchaProvider reCaptchaKey="6Lci38kjAAAAAMPlCMX9KYmnuFwh7BLHX6O_j0ch">
+       <GoogleReCaptcha onVerify={handleToken} refreshReCaptcha={tokenRefresh} /> 
+         <div className="fae--new-signup-page-container" >
             {loading && (
                <div className='fae-signup-loader'>
                   <FAELoading   type="svg" loaderImage={loaderImage} height="100vh" />
@@ -438,8 +450,7 @@ import { setUserId } from '../../redux/actions/defaultActions';
                         }     
                     </main> 
                </>   
-          </div>
-        </>
+          </div> 
         <ToastContainer/>
     </GoogleReCaptchaProvider>
   )

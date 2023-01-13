@@ -13,6 +13,8 @@ import history from "../../history";
 } from "../../redux/actions/summaryPageActions";
 //scss
 import "./ThankYouPage.scss";
+import { FAELoading } from "@findanexpert-fae/components/dist/stories/FAELoading/FAELoading";
+import { getFileSrcFromPublicFolder } from "../../utils";
 
 const ThankYouPage = ({
   thankYouBookingAction,
@@ -34,30 +36,39 @@ const ThankYouPage = ({
     })
     return ()=> setCreateBookingResponseToEmpty();
   }, []) 
+  console.log(ThankYouBookingResponse, 'ThankYouBookingResponse')
   return (
     <>
       <div className="fae--thank-you-page-container">
+      {loading && (
+            <FAELoading
+              loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+              type="svg"
+              height="300px"
+            />
+          )}
+          {!loading && (
         <div className="fae--thank-you-page-wrapper dpt dpb">
           <FAEText className="fae--thank-you-text">Thank You!</FAEText>
           <FAEText className="fae--thank-you-message">{message}</FAEText>
           <div className="fae--thank-you-card">
             <FAEText className="fae--thank-you-service-name">
-              {serviceName}
+              {ThankYouBookingResponse?.serviceName}
             </FAEText>
             <div className="fae--thank-you-page-booking-detail">
               <div>
                 <FAEText paragraph secondary>
                   Booking Confirmation Number
                 </FAEText>
-                <FAEText>{bookingId}</FAEText>
+                <FAEText>{ThankYouBookingResponse?.bookingId}</FAEText>
               </div>
               <div>
                 <FAEText paragraph secondary>
                   Booking Date & Time
                 </FAEText>
                 <div style={{ display: "flex", gap: "50px" }}>
-                  <FAEText>{bookingDate}</FAEText>
-                  <FAEText>{bookingTime}</FAEText>
+                  <FAEText>{ThankYouBookingResponse?.bookingDate}</FAEText>
+                  <FAEText>{ThankYouBookingResponse?.bookingTime}</FAEText>
                 </div>
               </div>
             </div>
@@ -65,7 +76,7 @@ const ThankYouPage = ({
           <FAEButton onClick={() => history.push("/your-bookings/upcoming")}>
             See your Bookings
           </FAEButton>
-        </div>
+        </div>)}
       </div>
     </>
   );

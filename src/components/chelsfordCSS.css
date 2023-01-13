@@ -7,8 +7,8 @@
     margin-bottom: 0px !important;
   }
   .icons__all {
-    margin-top: 31%;
-    margin-left: 29%;
+    /* margin-top: 31%;
+    margin-left: 29%; */
   }
   .short_tab_line_button {
     display: none;
@@ -19,18 +19,21 @@
   .courses__text1:hover + .hover__div {
     border-top: none;
   }
+  .sub__container {
+    margin-top: -7px;
+ }
   .hover__div {
     /* display: none; */
     position: absolute;
-    top: 163px;
-    width: 77%;
+    top: 122px;
+    width: 77.4%;
     right: 0;
     left: -15px px;
     background: white;
     /* padding: 10px 0px; */
     border-right: 3px solid #d9bd3e;
     z-index: 2;
-}
+  }
   .hover__container {
     display: flex;
     flex-wrap: wrap;
@@ -108,11 +111,11 @@
     display: none;
   }
   .sub__headers {
-    width: 94%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-top: 3%;
-    margin-bottom: 1%;
+    margin-top: 43px;
+    margin-bottom: 0px;
   }
   .portal__button {
     height: 28.8px;
@@ -124,12 +127,12 @@
   }
   .sub__header2 {
     height: 79px;
-    min-width: 827px;
+    width: 100%;
     border-radius: 13.4703px 0px 0px 0px;
     background-color: #1e185f;
     color: white;
-    PADDING: 1px 36px; 
-  }
+    PADDING: 1px 36px;
+   }
 
   .navbar {
     display: flex;
@@ -613,11 +616,12 @@
     flex-direction: column;
     justify-content: center;
     margin-top: -5%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1px;
+    padding-left: 0px;
     margin-right: auto;
     margin-left: auto;
-  }
+    width: 96%;
+}
   .home__section__3__row {
     display: flex;
     flex-direction: column;
@@ -851,8 +855,8 @@
     margin-left: -15px;
   }
   .footer__container__1 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 20%;
+    max-width: 20%;
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -910,8 +914,8 @@
     color: #eee !important;
   }
   .footer__container__2 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 20%;
+    max-width: 20%;
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -919,8 +923,8 @@
     float: left;
   }
   .footer__container__2 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 20%;
+    max-width: 20%;
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -966,12 +970,18 @@
   }
   /* #################################pic-container-mobile########################### */
   @media (min-width: 700px) {
+    .mobile-video{
+      display: none;
+    }
     .content-feature-courses .coursesContainer .course-card {
       
       margin: 12px 6px !important; 
     }
   }     
   @media (max-width: 700px) {
+        .desktop-video{
+          display: none !important;
+        }
           .fae-mobile-tabs {
             display: block;
           }
@@ -1637,11 +1647,12 @@
           .sub__headers {
             display: none;
           }
-          .short_tab {
+          .short_tab { 
             display: flex !important;
-            justify-content: space-between;
+            justify-content: start;
             position: relative;
-          }
+            width: 37%;
+        }
           .courses__tab__container {
             display: flex;
           }
@@ -1823,6 +1834,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
   
   .content-feature-courses .headerContainer h2 {

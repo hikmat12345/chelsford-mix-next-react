@@ -58,9 +58,9 @@ import { FAELoading } from '@findanexpert-fae/components/dist/stories/FAELoading
     serviceId,
     serviceName,
     userId }= thankyouBookingPageReducter.ThankYouBookingResponse
-    const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+    const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
     if (loading) {
-      return <FAELoading type="video" loaderImage={loaderImage} height="500px" />;
+      return <FAELoading type="svg" loaderImage={loaderImage} height="500px" />;
     } 
     
     return ( 

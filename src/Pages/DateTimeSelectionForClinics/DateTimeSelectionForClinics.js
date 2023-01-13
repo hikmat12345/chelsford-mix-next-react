@@ -27,7 +27,7 @@ import history from "../../history";
 import "./DateTimeSelectionForClinics.scss"; 
 import { saveEditedBookingDateTime } from "../../redux/actions/bookingEditPageActions";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const DateTimeSelectionForClinics = ({
   loading, 
@@ -44,7 +44,7 @@ const DateTimeSelectionForClinics = ({
 }) => {
   const { service } = useParams();
   const serviceName =   addSpaces(service, "-") ;
-  document.title = `Expert | ${serviceName} - Schedule`;
+  document.title = `Chelsford | ${serviceName} - Schedule`;
   const location = useLocation();
   const { state } = location; 
   const {

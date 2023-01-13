@@ -85,7 +85,7 @@ function ProductListPage() {
       history.push({pathname:`/booking/${service}/summary`, state:{...saveStateToNext}})
     }
 
-    const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+    const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
     const placeholderImage = getFileSrcFromPublicFolder("placeholder.jpg");
     const getCartid=location?.state?.cartId 
     !getCartid  &&  history.push('/') 
@@ -93,7 +93,7 @@ function ProductListPage() {
   return (
     <div id='fae-prodcut-list'>
       {cartProduct.loading && (
-        <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+        <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
       )}  
       {/* category section start  */}
       { !cartProduct.loading &&

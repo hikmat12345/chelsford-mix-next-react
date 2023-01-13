@@ -18,13 +18,13 @@ import {
   saveAddress,
 } from "../../redux/actions/addressSelectionPageActions";
 import { getTrainingDetails } from "../../redux/actions/trainingSelectionPageActions";
-import { addSpaces, getCookies, getFileSrcFromPublicFolder } from "../../utils";
+import { addSpaces, getCookies, getFileSrcFromPublicFolder, NoResult } from "../../utils";
 import history from "../../history";
 
 //scss
 import "./TrainingSelectionPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const TrainingSelectionPage = ({
   error,
@@ -82,7 +82,7 @@ const TrainingSelectionPage = ({
         <div className="fae--training-selection-page-wrapper">
           <FAETitle label={serviceName} />
           {loading || loader ? (
-            <FAELoading loaderImage={loaderImage} height="200px" type="video" />
+            <FAELoading loaderImage={loaderImage} height="200px" type="svg" />
           ) : (
             ""
           )}
@@ -210,6 +210,8 @@ const TrainingSelectionPage = ({
                 })
               )
             : ""}
+         {(!loading && trainingList.length ==0) && NoResult(loading, trainingList, "Training List Not Found." )}
+
         </div>
       </div>
       <FAEDialogueBox

@@ -77,11 +77,11 @@ export const navBarDropDownInfoLogedIn = {
   //     icon:<img src={getFileSrcFromPublicFolder("gift box.svg")} />,
   //     onClick: () => history.push("/your-vouchers/service-voucher"),
   //  },
-   {
-      label: "Switch Country", 
-      icon: <CachedIcon />,
-      onClick: () => history.push("/switch-country"),
-   }
+  //  {
+  //     label: "Switch Country", 
+  //     icon: <CachedIcon />,
+  //     onClick: () => history.push("/switch-country"),
+  //  }
     // {
     //   label: "Your Experts",
     //   icon: <AssignmentIndIcon />,
@@ -203,7 +203,7 @@ export const mobileMenu = [
   // onClick: () => history.push("/watchlist"),
   // },
   {
-    label: "About Cheslford",
+    label: "About Chelsford",
     icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
     onClick: () => history.push("/about-us"),
   },

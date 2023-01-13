@@ -30,7 +30,7 @@ import { ThreedsStatus, capturePaymenFetch} from '../../Webviews/ThreedsStatusWe
     const stripeKey = process.env.REACT_APP_STRIPE_KEY;
     var url = new URL(window.location.href); 
     var transactionid = url?.searchParams?.get("transactionId") ?? 0; 
-     const {isInClinic, bookingTime, bookingDate,  serviceName, isReferralReceiver,currencySymbol, selectedSessions, latitude,  longitude, UbookingId, totalAmount, returnUrl , Vouchercode, availableProviderId, paymentMethod, duration, serviceId}=getCookies("summary_detail")
+     const {isInClinic,trainingStartTime, trainingStartDate, bookingTime, bookingDate,  serviceName, isReferralReceiver,currencySymbol, selectedSessions, latitude,  longitude, UbookingId, totalAmount, returnUrl , Vouchercode, availableProviderId, paymentMethod, duration, serviceId,isTraining}=getCookies("summary_detail")
     var paymentIntent = url?.searchParams?.get("payment_intent_client_secret") ?? "no";
     var cartId = url?.searchParams?.get("cartId") ?? "no"; 
     const state= useSelector(state=>state) 
@@ -54,6 +54,9 @@ import { ThreedsStatus, capturePaymenFetch} from '../../Webviews/ThreedsStatusWe
                            if(res?.error !==true && res?.statusCode !==1){
                                 createBooking({
                                   amount :totalAmount,
+                                  isTraining,
+                                  trainingStartTime, 
+                                  trainingStartDate,
                                   cartId :cartId,
                                   chargeId : res?.setupIntentResponseDetail?.chargeId,
                                   distance :20,
@@ -89,7 +92,7 @@ import { ThreedsStatus, capturePaymenFetch} from '../../Webviews/ThreedsStatusWe
     }, [])
 
    // ditructure 
-    const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+    const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
     // create booking api 
     //  useEffect(()=>{ 
     //     // if(!objectIsEmpty(saveBookingResponse)){
@@ -117,7 +120,7 @@ import { ThreedsStatus, capturePaymenFetch} from '../../Webviews/ThreedsStatusWe
     //  },[]) 
     // loading on none 
     if (loading) {
-      return <FAELoading type="video" loaderImage={loaderImage} height="500px" />;
+      return <FAELoading type="svg" loaderImage={loaderImage} height="500px" />;
     } 
      
     return ( 
@@ -412,9 +415,9 @@ import { ThreedsStatus, capturePaymenFetch} from '../../Webviews/ThreedsStatusWe
 //     serviceId,
 //     serviceName,
 //     userId }= thankyouBookingPageReducter.ThankYouBookingResponse
-//     const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+//     const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 //     if (loading) {
-//       return <FAELoading type="video" loaderImage={loaderImage} height="500px" />;
+//       return <FAELoading type="svg" loaderImage={loaderImage} height="500px" />;
 //     } 
      
 //     return ( 

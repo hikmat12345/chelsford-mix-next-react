@@ -28,7 +28,7 @@ import 'react-credit-cards/lib/styles.scss';
 import 'react-credit-cards/es/styles-compiled.css';  
 import { makeCardDefault,setDefaultCardObjEmpty } from "../../redux/actions/paymentDetailsPageActions";
 const stripeKey = process.env.REACT_APP_STRIPE_KEY;
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const AddPaymentCardPage = ({
   loading=true,
@@ -39,7 +39,7 @@ const AddPaymentCardPage = ({
   userCountry,
   makeCardDefault
 }) => {
-  document.title = `Expert | Add Card`;
+  document.title = `Chelsford | Add Card`;
   const location = useLocation(); 
  
   const { state } = location;
@@ -198,7 +198,7 @@ const AddPaymentCardPage = ({
       <UserInfoPageLayout 
       > 
        {loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="400px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="400px" />
         )}
         {!loading && (
           <>
@@ -248,7 +248,7 @@ const AddPaymentCardPage = ({
                         value={expiryShow}
                         onChange={handleInputChange}
                         required 
-                        min="2022-08"
+                        min="2023-01"
                         max="2030-05"
                       />
                 </>

@@ -172,22 +172,36 @@ html {
   }
 }
 
-.fae--navbar-items-section-dropdown-items p {
-  color: white;
+.fae--navbar-items-section-dropdown-items p { 
+  color: #1e185f; 
   margin-bottom: initial !important;
 }
-
+.fae--navbar-items-section-dropdown-items{
+  p, svg{
+    color: #1e185f; 
+  }
+}
 .fae--navbar-items-section-items-container, .fae--navbar-search-section-container, .fae--navbar-items-section-greeting {
   display: none !important; 
 }
-.fae--navbar { 
+.fae--navbar {  
+  height: 0px;
+  padding: 0px;
   background-color: #1e185f !important; 
+  
+}
+.fae--navbar-items-section-dropdown-items { 
+  margin-top: 7px;
 }
 .fae--navbar-items-section-dropdown-items { 
   margin-left: auto;
 }
+ 
 .fae--account-dropdown-list p {
   margin-bottom: initial;
+  position: relative;
+  top: 0px;
+  color: black;
 }
 .fae-button {
   background-color: #1e185f !important;

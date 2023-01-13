@@ -165,7 +165,7 @@ import { useLocation } from 'react-router-dom';
          <>
           <div className="fae--new-signup-page-container" >
             {loading && (
-                <FAELoading   type="video" loaderImage={loaderImage} height="630px" />
+                <FAELoading   type="svg" loaderImage={loaderImage} height="630px" />
                 )}
                 {/* main head  */}
                  {!loading && (

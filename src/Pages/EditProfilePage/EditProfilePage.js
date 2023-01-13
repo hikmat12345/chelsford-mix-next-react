@@ -35,7 +35,7 @@ import UserInfoPageLayout from "../UserInfoPageLayout";
 //scss
 import "./EditProfilePage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const profileFormParser = (data) => {
   const parsedData = data?.map(({ value, id }) => ({
@@ -55,7 +55,7 @@ const EditProfilePage = ({
   makeUpdateProfileResponseToEmpty,
   updateProfile,
 }) => {
-  document.title = `Expert | Edit Profile`;
+  document.title = `Chelsford | Edit Profile`;
   const userId = getCookies("userId");
   const [errorFileds, setErrorFields] = useState([]);
   const [fieldAnswers, setFieldAnswers] = useState([]);
@@ -138,7 +138,7 @@ const EditProfilePage = ({
             />
             {loading && (
               <FAELoading
-                type="video"
+                type="svg"
                 loaderImage={loaderImage}
                 height="200px"
               />

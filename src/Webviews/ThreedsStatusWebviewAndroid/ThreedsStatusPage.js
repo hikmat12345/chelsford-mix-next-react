@@ -37,12 +37,12 @@ const ThreedsStatusPage = () => {
   }
   const { code, message, reason,  redirectUrl, returnUrl, setupIntentResponseDetail, error}=status
 console.log(status, 'status')
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
   return ( 
       <div className="fae-threeds-webview">
        { code ==400 ?  
        <FAEText style={{textAlign:"center"}}>
-         <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+         <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
           Loading ...
        </FAEText>
        :<>

@@ -17,7 +17,7 @@ import history from "../../history";
 
 //scss
 import "./SubServicesPage.scss";
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const SubServicesPage = ({
   error,
   loading,
@@ -32,7 +32,7 @@ const SubServicesPage = ({
   const {
     state: { mainService, voucherId, availableFlag },
   } = location;
-  document.title = `Expert | ${serviceName} Service`;
+  document.title = `Chelsford | ${serviceName} Service`;
 
   useEffect(() => {
     if (userCountryId !== "") {

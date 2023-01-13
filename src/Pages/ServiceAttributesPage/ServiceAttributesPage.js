@@ -53,7 +53,7 @@ import ClearIcon from '@material-ui/icons/Clear';
 import "./ServiceAttributesPage.scss"; 
 import { SaveSessionBooking } from "../../redux/actions/sessionBookingsPageActions";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
 const imageUploadIcon = getFileSrcFromPublicFolder("image_upload_icon.svg");
 const videoUploadIcon = getFileSrcFromPublicFolder("video_upload_icon.svg");
@@ -88,7 +88,7 @@ const ServiceAttributesPage = ({
   const userId = getCookies("userId");
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Attributes`;
+  document.title = `Chelsford | ${serviceName} - Attributes`;
   const location = useLocation();
   const { state } = location;
   
@@ -315,7 +315,7 @@ const ServiceAttributesPage = ({
       <div className="fae--service-attributes-page-container dpt dpb">
         <div className="fae--service-attributes-page-wrapper">
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="300px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="300px" />
           )}
           {!loading && (
            <>
@@ -521,7 +521,7 @@ const ServiceAttributesPage = ({
                       <FAELoading
                         loaderImage={loaderImage}
                         height="200px"
-                        type="video"
+                        type="svg"
                       />
                     )}
                   </div>
@@ -561,7 +561,7 @@ const ServiceAttributesPage = ({
                       <FAELoading
                         loaderImage={loaderImage}
                         height="200px"
-                        type="video"
+                        type="svg"
                       />
                     )}
                   </div>
@@ -739,7 +739,7 @@ export default connect(
 // //scss
 // import "./ServiceAttributesPage.scss";
 
-// const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+// const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 // const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
 // const imageUploadIcon = getFileSrcFromPublicFolder("image_upload_icon.svg");
 // const videoUploadIcon = getFileSrcFromPublicFolder("video_upload_icon.svg");
@@ -772,7 +772,7 @@ export default connect(
 //   const userId = getCookies("userId");
 //   const { service } = useParams();
 //   const serviceName = addSpaces(service, "-");
-//   document.title = `Expert | ${serviceName} - Attributes`;
+//   document.title = `Chelsford | ${serviceName} - Attributes`;
 //   const location = useLocation();
 //   const { state } = location;
 //   const {
@@ -994,7 +994,7 @@ export default connect(
 //             logo={getFileSrcFromPublicFolder("title_logo.svg")}
 //           />
 //           {loading && (
-//             <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+//             <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
 //           )}
 //           {!loading && (
 //             <form
@@ -1189,7 +1189,7 @@ export default connect(
 //                       <FAELoading
 //                         loaderImage={loaderImage}
 //                         height="200px"
-//                         type="video"
+//                         type="svg"
 //                       />
 //                     )}
 //                   </div>
@@ -1228,7 +1228,7 @@ export default connect(
 //                       <FAELoading
 //                         loaderImage={loaderImage}
 //                         height="200px"
-//                         type="video"
+//                         type="svg"
 //                       />
 //                     )}
 //                   </div>

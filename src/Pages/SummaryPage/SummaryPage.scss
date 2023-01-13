@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 5px;
 }
 
 .red-text {
@@ -16,7 +16,7 @@
 .fae--summary-wrapper {
   // background-color: #eaeaea;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
 }
 
 .fae--summary-duration-and-price {
@@ -63,7 +63,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
 }
 
 .details-and-method-wrapper-body > div {
@@ -90,7 +90,7 @@
   @include flex(center, center);
   width: 100%;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
 }
 
 .fae--summary-address-field {

@@ -25,7 +25,7 @@ import history from "../../history";
 //scss
 import "./AddVoucherPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const AddVoucherPage = ({
   voucherAddedResponse,
@@ -56,7 +56,7 @@ const AddVoucherPage = ({
     <>
       <UserInfoPageLayout>
         {loading && (
-          <FAELoading loaderImage={loaderImage} height="200px" type="video" />
+          <FAELoading loaderImage={loaderImage} height="200px" type="svg" />
         )}
         {!loading && (
           <form onSubmit={handleSubmit} className="add-voucher-main-container">

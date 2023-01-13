@@ -52,7 +52,7 @@ import { GetVoucherByServiceId } from "../../redux/actions/servicesVocuhersPageA
 import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAEImage";
 import { useMemo } from "react";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const loaderApply = getFileSrcFromPublicFolder("loader_forcomponent.svg");
 const SummaryPage = ({
   summary=[],
@@ -157,7 +157,7 @@ const SummaryPage = ({
     SalesOrderSummary({tempBookingId: bookingId, cartId:cartId, userId: JSON.parse(getCookies("userId"))}) 
     getVoucherList({ serviceId, userId: getCookies("userId") }); 
   }, [cartId, getSummary, getVoucherList, serviceId]);
-  document.title = `Expert | ${serviceName} - Summary`; 
+  document.title = `Chelsford | ${serviceName} - Summary`; 
 
   useEffect(() => {
     if (paymentMethod !== "" && paymentMethod === "card") {
@@ -245,7 +245,10 @@ const SummaryPage = ({
                 providerId:0 
               })
             if(res?.error !==true && res?.statusCode !==1){
+              
                   createBooking({
+                    trainingStartTime,
+                    trainingStartDate,
                     amount :totalAmount,
                     cartId :cartId,
                     chargeId : res?.setupIntentResponseDetail?.chargeId,
@@ -280,7 +283,7 @@ const SummaryPage = ({
                   userId:JSON.parse(getCookies("userId")),
                   providerId:0 
               })
-            await setCookies('summary_detail', {isInClinic:state.isInClinic, bookingTime: isTraining ? trainingStartTime : bookingTime, bookingDate: isTraining ? trainingStartDate : bookingDate, serviceName,  currencySymbol:currencySymbol, isReferralReceiver:isReferralReceiver, selectedSessions:selectedSessions, latitude: state?.latitude,  longitude:state?.longitude, UbookingId:bookingId,totalAmount:totalAmount, returnUrl:returnUrl, Vouchercode:code, availableProviderId:providerId,  paymentMethod: paymentMethodId
+            await setCookies('summary_detail', {isInClinic:state.isInClinic,trainingStartTime, trainingStartDate, bookingTime: isTraining ? trainingStartTime : bookingTime, bookingDate: isTraining ? trainingStartDate : bookingDate, serviceName,  currencySymbol:currencySymbol, isReferralReceiver:isReferralReceiver, selectedSessions:selectedSessions, latitude: state?.latitude,  longitude:state?.longitude, UbookingId:bookingId,totalAmount:totalAmount, returnUrl:returnUrl, Vouchercode:code, availableProviderId:providerId,  paymentMethod: paymentMethodId
               ,duration:duration, serviceId:serviceId,  })
            await   window.location.assign(`${redirectUrl}`);
           } else if (holdpaymentData?.error == true && holdpaymentData.code==1) {
@@ -404,7 +407,7 @@ const applyVoucherCode=  ()=>{
     <>
       <div className="random-design-container dpt dpb">
         {Loader && (
-          <FAELoading type="video" loaderImage={loaderImage} height="400px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="400px" />
         )}
         {!Loader && (
           <>
@@ -525,7 +528,7 @@ const applyVoucherCode=  ()=>{
                   </div>
                 )}
 
-                <div className="summary-page-each-info-unit">
+                {/* <div className="summary-page-each-info-unit">
                   <div>
                     <FAEText
                       tertiary
@@ -535,7 +538,7 @@ const applyVoucherCode=  ()=>{
                     </FAEText>
                     <FAEText className="summary-info-text">{address}</FAEText>
                   </div>
-                </div> 
+                </div>  */}
               </FAEShadowBox>
             </div>
 
@@ -698,7 +701,7 @@ const applyVoucherCode=  ()=>{
                   </FAEShadowBox>
              </div> */}
  
-            {!freeConsultation && (
+            {/* {!freeConsultation && (
               <div className="details-and-method-container payment-details">
                 <FAEText subHeading>
                   <span className="red-text">Payment</span> Method
@@ -723,7 +726,7 @@ const applyVoucherCode=  ()=>{
                   </div>
                 </FAEShadowBox>
               </div>
-            )}
+            )} */}
 
             {paymentMethod == "card" && (
               <div className="details-and-method-container payment-details">
@@ -733,8 +736,7 @@ const applyVoucherCode=  ()=>{
                 <FAEShadowBox
                   padding
                   primary
-                  className="details-and-method-wrapper-body"
-                >
+                  className="details-and-method-wrapper-body" >
                   <div className="voucher-body-wrapper">
                     <div
                       style={{
@@ -757,13 +759,21 @@ const applyVoucherCode=  ()=>{
                         <FAEText tertiary paragraph>
                           Payment Method
                         </FAEText>
+                        {cardList?.length ==0  ?
+                        <FAEText className="fae--payment-details-card-bar red-text">
+                          Please add Credit or Debit Card
+                        </FAEText>
+                        :
                         <FAEText className="fae--payment-details-card-bar">
                           Credit or Debit Card
                         </FAEText>
+                        }
                       </div>
-                      <FAEText heading tertiary>
-                        {">"}
-                      </FAEText>
+                       {cardList?.length !==0  && 
+                          <FAEText   tertiary>
+                            {"Change Payment ->"}
+                          </FAEText>
+                        }
                     </div>
                     {Children.toArray(
                       cardList?.map((card) => {
@@ -795,7 +805,7 @@ const applyVoucherCode=  ()=>{
                       direction="vertical"
                       value={selectedCard}
                     /> */}
-                    <FAEButton
+                    {/* <FAEButton
                       onClick={() =>
                         history.push({
                           pathname: "/payment-details/add-card",
@@ -804,14 +814,26 @@ const applyVoucherCode=  ()=>{
                       }
                     >
                       Add Card
-                    </FAEButton>
+                    </FAEButton> */}
                   </div>
                 </FAEShadowBox>
               </div>
             )}
-
+           <br/>
             {!freeConsultation ? (
               paymentMethod === "cash" || selectedCard !== "" ? (
+                cardList?.length ==0 ?
+                    <FAEButton
+                      onClick={() =>
+                        history.push({
+                          pathname: "/payment-details/add-card",
+                          state: { ...state, redirectedUrl: pathname },
+                        })
+                      }
+                    >
+                      Confirm Booking
+                    </FAEButton>   
+                :
                 <FAEButton onClick={handleSaveBooking}>
                   Confirm Booking
                 </FAEButton>

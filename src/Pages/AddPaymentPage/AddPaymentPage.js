@@ -27,7 +27,7 @@ import 'react-credit-cards/es/styles-compiled.css';
 import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAEImage";
 import { FAELoading } from "@findanexpert-fae/components/dist/stories/FAELoading/FAELoading";
 const stripeKey = process.env.REACT_APP_STRIPE_KEY;
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const AddPaymentPage = ({
   loading,
@@ -37,7 +37,7 @@ const AddPaymentPage = ({
   userCountry,
   saveOneTimeCardDataResponse
 }) => {
-  document.title = `Expert | Add Card`;
+  document.title = `Chelsford | Add Card`;
   const location = useLocation();  
   const { state } = location;
   const redirectUrl =
@@ -178,7 +178,7 @@ const AddPaymentPage = ({
   return (
     <FAEContainer style={{backgroundColor: '#f7f7f7'}}>
            {loading && (
-            <FAELoading  type="video" loaderImage={loaderImage} height="700px"  />
+            <FAELoading  type="svg" loaderImage={loaderImage} height="700px"  />
             )}
            {!loading && (
              <div className='fae-addpayment-container'>
@@ -243,7 +243,7 @@ const AddPaymentPage = ({
                         value={expiryShow}
                         onChange={handleInputChange}
                         required 
-                        min="2022-08"
+                        min="2023-01"
                         max="2030-05"
                         />
                    </>

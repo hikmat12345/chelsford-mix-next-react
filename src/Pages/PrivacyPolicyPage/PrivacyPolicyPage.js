@@ -38,8 +38,8 @@ const PrivacyPolicyPage = ({
           /> */}
           {loading ? (
             <FAELoading
-              loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-              type="video"
+              loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+              type="svg"
               height="200px"
             />
           ) : (

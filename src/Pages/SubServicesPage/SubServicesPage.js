@@ -21,7 +21,7 @@ import history from "../../history";
 import "./SubServicesPage.scss";
 import { FAEText } from "@findanexpert-fae/components/dist/stories/FAEText/FAEText";
 import { FAELoading } from "@findanexpert-fae/components/dist/stories/FAELoading/FAELoading";
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const SubServicesPage = ({
   error,
   loading,
@@ -38,7 +38,7 @@ const SubServicesPage = ({
 
   const { mainService, voucherId, selected_country_id }  = location?.state == undefined ? {mainService:JSON.parse(searchData?.mainService), voucherId:JSON.parse(searchData?.voucherId), selected_country_id:JSON.parse(searchData?.selected_country_id)}: location?.state;
 
-  document.title = `Expert | ${serviceName} Service`;
+  document.title = `Chelsford | ${serviceName} Service`;
   userCountryId = (selected_country_id == undefined || selected_country_id ==null) ? userCountryId : JSON.parse(selected_country_id)
   console.log(searchData,selected_country_id, userCountryId, "userCountryId")
   useEffect(() => {
@@ -139,9 +139,9 @@ const SubServicesPage = ({
     :  redirectUrl(selectedSubService); 
   };
   if (loading) {
-    return <FAELoading type="video" loaderImage={loaderImage} height="630px" />;
+    return <FAELoading type="svg" loaderImage={loaderImage} height="630px" />;
   } 
-  const doPadding= subServices?.length<4 ?(subServices.length==1 ?{paddingBottom: 254}:{paddingBottom: 220}): {paddingBottom: 254}
+  const doPadding= subServices?.length<4 ?(subServices.length==1 ?{paddingBottom: 353}:{paddingBottom: 220}): {paddingBottom: 294}
 
   return (
     <>

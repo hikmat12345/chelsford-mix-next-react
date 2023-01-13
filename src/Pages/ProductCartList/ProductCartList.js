@@ -18,7 +18,7 @@ import { FAEFloatingBookingPrice } from '@findanexpert-fae/components/dist/stori
   const location = useLocation();  
   const getHistoryState=location.state
   !getHistoryState?.productcartId  &&  history.push('/')
-  const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+  const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
   const [flagCall, setFlagCall]=useState(true)
   const reduxProducts= useSelector(state=>state)
   const products=reduxProducts.productsReducer
@@ -56,7 +56,7 @@ import { FAEFloatingBookingPrice } from '@findanexpert-fae/components/dist/stori
     <div className="fae--cart-page-container cart-containter dpt dpb">
       <div className="fae--cart-page-wrapper"> 
         {products?.loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
          )} 
          { !products.loading ?  
          <>

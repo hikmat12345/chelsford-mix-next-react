@@ -29,8 +29,8 @@ const PointsVouchersPage = ({
       <div className="fae--points-vouchers-page-main-container">
         {loading && (
           <FAELoading
-            loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-            type="video"
+            loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+            type="svg"
             height="200px"
           />
         )}

@@ -16,7 +16,7 @@ import { FAEText } from "@findanexpert-fae/components";
 import { FAELoading } from "@findanexpert-fae/components";
 import { FAESubIndustries } from "../../Temps/FAESubIndustries/FAESubIndustries";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const SubIndustriesPage = ({
   getSubIndustries,
@@ -27,7 +27,7 @@ const SubIndustriesPage = ({
 }) => {
   const { industry } = useParams();
   const industryName = addSpaces(industry, "-");
-  document.title = `Expert | ${industryName}`;
+  document.title = `Chelsford | ${industryName}`;
   useEffect(() => {
     if (userCountryId !== "") {
       getSubIndustries({ industryName, userCountryId });
@@ -36,7 +36,7 @@ const SubIndustriesPage = ({
   const doPadding= subIndustries?.length<4 ?(subIndustries.length==1 ?{paddingBottom: 354}:{paddingBottom: 350}): {paddingBottom: 40}
   
   if (loading) {
-    return <FAELoading type="video" loaderImage={loaderImage} height="630px" />;
+    return <FAELoading type="svg" loaderImage={loaderImage} height="630px" />;
   } 
   return (
     <>

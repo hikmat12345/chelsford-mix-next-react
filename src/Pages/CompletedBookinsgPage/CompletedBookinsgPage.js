@@ -15,7 +15,7 @@ import { getCompletedBookings } from "../../redux/actions/completedBookingsPageA
 //scss
 import "./CompletedBookinsgPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholderImage = getFileSrcFromPublicFolder("placeholder.jpg");
 
 const CompletedBookinsgPage = ({
@@ -24,7 +24,7 @@ const CompletedBookinsgPage = ({
   loading,
   completedBookings,
 }) => {
-  document.title = `Expert | Completed Bookings`;
+  document.title = `Chelsford | Completed Bookings`;
   const userId = getCookies("userId");
   useEffect(() => {
     getCompletedBookings(userId);
@@ -33,7 +33,7 @@ const CompletedBookinsgPage = ({
     <>
       <div className="fae--upcoming-bookings-page-main-container">
         {loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
         )}
         {!loading && (
           <FAEContainer>

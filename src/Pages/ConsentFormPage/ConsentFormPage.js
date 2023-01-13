@@ -44,7 +44,7 @@ import { setConsentResponseToEmpty } from "../../redux/actions/consentPageAction
     saveSignatureImageRespon="",
     signuatureObjectDoEmpty
   })=>{
-    const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+    const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
     const [errorFileds, setErrorFields] = useState([]);
     const [imageUploading, setImageUploading] = useState(false);
     const [showImgInp, setShowImgInp]= useState('No')  
@@ -236,7 +236,7 @@ useEffect(async()=>{
          { (getQuestions.error !==true && getQuestions.statusCode !==1)  ?
             <div className="fae--consent-form">
                   <div className="fae--cart-page-wrapper"> 
-                  {loading  &&   <FAELoading type="video" loaderImage={loaderImage} height="200px" /> } 
+                  {loading  &&   <FAELoading type="svg" loaderImage={loaderImage} height="200px" /> } 
                      {<div className="fae-noresult-container"> { NoResult(loading, questionList, "No data found")}</div>}
                         {!loading  && 
                                   <div
@@ -460,7 +460,7 @@ useEffect(async()=>{
                                                   <FAELoading
                                                     loaderImage={loaderImage}
                                                     height="200px"
-                                                    type="video" />
+                                                    type="svg" />
                                                )  }  
                                           </div>
                                           </div>)}

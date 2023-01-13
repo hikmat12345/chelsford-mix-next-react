@@ -86,8 +86,8 @@ const ContactUsPage = ({
             <div className="formbox">
               {loading && (
               <FAELoading
-                loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-                type="video"
+                loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+                type="svg"
                 height="300px"
               />
             )}

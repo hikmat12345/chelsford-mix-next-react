@@ -25,7 +25,7 @@ import {
 import "./SessionBookingsPage.scss";
 import { FAEText } from "@findanexpert-fae/components/dist/stories/FAEText/FAEText";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholderImage = getFileSrcFromPublicFolder("placeholder.jpg");
 
 const SessionBookingsPage = ({
@@ -35,7 +35,7 @@ const SessionBookingsPage = ({
   DeleteSessionBooking, 
   deleteSession="" 
 }) => {
-  document.title = `Expert | Upcoming Bookings`;
+  document.title = `Chelsford | Upcoming Bookings`;
   const userId = getCookies("userId");
   useEffect(() => {
     getSessionBookings(userId);
@@ -49,7 +49,7 @@ const SessionBookingsPage = ({
     <>
       <div className="fae--session-bookings-page-main-container">
         {loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
         )}
          
         {!loading && (

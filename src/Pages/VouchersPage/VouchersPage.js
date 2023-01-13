@@ -18,7 +18,7 @@ import { getFileSrcFromPublicFolder } from "../../utils";
 import VoucherHistoryPage from "../VoucherHistoryPage";
 
 const VouchersPage = () => {
-  document.title = `Expert | Your Vouchers`;
+  document.title = `Chelsford | Your Vouchers`;
   const { vouchertype } = useParams();
   return (
     <>

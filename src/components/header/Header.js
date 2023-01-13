@@ -3,7 +3,7 @@ import cart from "../../components/images/cart-icon.png"
 import phone from "../../components/images/phone.png"
  import "../chelsfordCSS.css"           
  import { FaBars } from "react-icons/fa"
-import { useState } from "react"
+import { useState , useRef, useEffect } from "react"
 import { FcPhone } from "react-icons/fc"
 import { Link } from "react-router-dom"
 function Modal({ children, shown, close }) {
@@ -28,6 +28,7 @@ function Modal({ children, shown, close }) {
     </div>
   ) : null
 }
+
 const Header = () => {
   const [toggle, setToggle] = useState(false)
   const [toggle1, setToggle1] = useState(false)
@@ -36,9 +37,28 @@ const Header = () => {
   const [toggle4, setToggle4] = useState(false)
   const [toggle5, setToggle5] = useState(false)
   const [toggle6, setToggle6] = useState(false)
+  document?.querySelector(".fae--navbar-items-section-container")?.addEventListener("click", ()=>{
+    console.log("clicked")
+    // document.querySelector(".hover__div").style.display=="none"? document.querySelector(".hover__div").style.display="none": document.querySelector(".hover__div").style.display="none";
+    setToggle3(false)
+  })
+ 
+
+  let menuRef = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setToggle1(false)
+      }
+    }
+    document.addEventListener("mousedown", handler)
+    return () => {
+      document.removeEventListener("mousedown", handler)
+    }
+  })
 
   return (
-    <div className="header__main">
+    <div className="header__main" ref = {menuRef}>
       <div className="header__img">
         <Link to="/">
           <img
@@ -53,14 +73,14 @@ const Header = () => {
       <div className="short_tab">
         <div className="courses__tab__container">
           <div className="courses__tab">
-            <div onClick={() => setToggle3(!toggle3)}>
+            <div onClick={() =>{  document.querySelector(".hover__div").style.display=="none"? document.querySelector(".hover__div").style.display="initial": document.querySelector(".hover__div").style.display="none"; setToggle3(!toggle3)}}>
               <span className="short__heading">Courses</span>
             </div>
           </div>
           <div className="portal__tab">
-            <a href="/" className="portal__nav__link">
+            {/* <a href="/" className="portal__nav__link">
               <span className="portal__short__heading">Portal</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -109,7 +129,7 @@ const Header = () => {
           </ul>
         </div>
       )}
-      <div>
+      <div style={{width:"100%"}}>
         <div className="sub__headers">
           {/* <button className="portal__button">Portal</button>
           <img
@@ -127,253 +147,227 @@ const Header = () => {
               <div className="hover__row">
                 <div className="hover__colomn">
                   <h3 className="hover__heading">Laser</h3>
-                  <li className="hover__item">
+                  {/* <li className="hover__item">
                     <a
                       className="hover__linka"
-                      href="https://chelsford.com/course/laser-practitioner-diploma-vtct"
+                      href="/services/laser-practitioner-diploma-vtct"
                     >
                       Laser Practitioner Diploma VTCT
                     </a>
-                  </li>
+                  </li> */}
                   <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-4-laser-and-ipl-treatments"
-                    >
-                      VTCT Level 4 Laser &amp; IPL Treatments
+                  <a
+                    href="/services/Level-5-Laser-Tattoo-Removal"
+                    className="hover__linka"
+                  >
+                    Level 5 Laser Tattoo Removal
                     </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/level-4-laser-and-blemish-removal"
-                    >
-                      Level 4 Laser &amp; Blemish Removal
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/level-5-laser-tattoo-removal"
-                    >
-                      Level 5 Laser Tattoo Removal
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/laser-core-of-knowledge"
-                    >
-                      Laser Core of Knowledge
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/advanced-laser-diploma"
-                    >
-                      Advanced Laser Diploma
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/fat-freeze-and-body-sculpting"
-                    >
-                      Fat Freeze &amp; Body Sculpting
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/level-4-laser-hair-removal"
-                    >
-                      Level 4 Laser Hair Removal
-                    </a>
-                  </li>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Advanced-Laser-Diploma"
+                    className="hover__linka"
+                   > 
+                       Advanced Laser Diploma
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Laser-Practitioner-Diploma-VTCT"
+                    className="hover__linka"
+                  >
+                   Laser Practitioner Diploma VTCT
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Level-4-Laser-and-Blemish-Removal"
+                    className="hover__linka"
+                  >
+                    Level 4 Laser and Blemish Removal
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-NVQ-Level-4-Laser-and-IPL-Training"
+                    className="hover__linka"
+                  >
+                     VTCT NVQ Level 4 Laser and IPL Training
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Fat-Freeze-and-Body-Sculpting"
+                    className="hover__linka"
+                  >
+                    Fat Freeze and Body Sculpting 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Level-4-Laser-Hair-Removal"
+                    className="hover__linka"
+                  >
+                     Level 4 Laser Hair Removal 
+                  </a>
+                </li>
                 </div>
+
+
+
+
+
                 <div className="hover__colomn">
                   <h3 className="hover__heading">Beauty</h3>
                   <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-2-and-3-nvq-beauty-therapy"
-                    >
-                      VTCT Level 2 &amp; 3 NVQ Beauty Therapy
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-2-nvq-beauty-therapy"
-                    >
-                      VTCT Level 2 NVQ Beauty Therapy
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-3-nvq-beauty-therapy"
-                    >
-                      VTCT Level 3 NVQ Beauty Therapy
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/fast-track-vtct-level-3-nvq-beauty-therapy"
-                    >
-                      Fast Track VTCT Level 3 NVQ Beauty Therapy
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-2-3-and-4-nvq-beauty-and-laser"
-                    >
-                      VTCT Level 2, 3 &amp; 4 NVQ Beauty &amp; Laser
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-2-award-facial-and-skincare"
-                    >
-                      VTCT Level 2 Award Facial &amp; Skincare
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-3-facial-electrotherapy"
-                    >
-                      VTCT Level 3 Facial Electrotherapy
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-4-skin-blemish-removal"
-                    >
-                      VTCT Level 4 Skin Blemish Removal
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/level-3-anatomy-and-physiology-vtct"
-                    >
-                      Level 3 Anatomy &amp; Physiology VTCT
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/vtct-level-3-in-epilation"
-                    >
-                      VTCT Level 3 in Epilation
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/cpd-advanced-chemical-peels"
-                    >
-                      CPD Advanced Chemical Peels
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/cpd-microneedling-diploma"
-                    >
-                      CPD Microneedling Diploma
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/cpd-advanced-plasma-fibroblast"
-                    >
-                      CPD Advanced Plasma Fibroblast
-                    </a>
-                  </li>
+                  <a
+                    href="/services/VTCT-Level-4-Skin-Blemish-Removal"
+                    className="hover__linka"
+                  >
+                    VTCT Level 4 Skin Blemish Removal
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-Level-2-and-3-NVQ-Beauty-Therapy"
+                    className="hover__linka"
+                  >
+                     VTCT Level 2 and 3 NVQ Beauty Therapy
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-Level-2,-3-and-4-NVQ-Beauty-&-Laser"
+                    className="hover__linka"
+                  >
+                     VTCT Level 2, 3 and 4 NVQ Beauty & Laser
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-Level-3-in-Epilation"
+                    className="hover__linka"
+                  >
+                    VTCT Level 3 in Epilation
+
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/CPD-Advanced-Chemical-Peels"
+                    className="hover__linka"
+                  >
+                    CPD Advanced Chemical Peels
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-Level-2-Award-Facials
+                    "
+                    className="hover__linka"
+                  >
+                    VTCT Level 2 Award Facials
+
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/VTCT-Level-3-Facial-Electrotherapy"
+                    className="hover__linka"
+                  >
+                    VTCT Level 3 Facial Electrotherapy
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/CPD-Advanced-Plasma-Fibroblast"
+                    className="hover__linka"
+                  >
+                    CPD Advanced Plasma Fibroblast
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/NVQ-Level-2-Beauty-Therapy"
+                    className="hover__linka"
+                  >
+                    NVQ Level 2 Beauty Therapy
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/NVQ-Level-3-Beauty-Therapy
+                    "
+                    className="hover__linka"
+                  >
+                    NVQ Level 3 Beauty Therapy
+                  </a>
+                </li>
                 </div>
+
+
+
+
+
+
                 <div className="hover__colomn">
                   <h3 className="hover__heading">Medical</h3>
                   <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/medical-aesthetics-diploma"
-                    >
-                      Medical Aesthetics Diploma
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/foundation-botox-and-dermal-fillers"
-                    >
-                      Foundation Botox &amp; Dermal Fillers
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/advanced-botox-and-dermal-fillers"
-                    >
-                      Advanced Botox &amp; Dermal Fillers
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/advanced-dermal-fillers"
-                    >
-                      Advanced Dermal Fillers
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/prp-advanced-treatments"
-                    >
-                      PRP Advanced Treatments
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/intimate-laser-rejuvenation"
-                    >
-                      Intimate Laser Rejuvenation
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/laser-skin-resurfacing"
-                    >
-                      Laser Skin Resurfacing
-                    </a>
-                  </li>
-                  <h3 className="hover__heading">Online</h3>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/laser-core-of-knowledge"
-                    >
-                      Laser Core of Knowledge
-                    </a>
-                  </li>
-                  <li className="hover__item">
-                    <a
-                      className="hover__linka"
-                      href="https://chelsford.com/course/level-3-anatomy-and-physiology-vtct"
-                    >
-                      Level 3 Anatomy &amp; Physiology VTCT
-                    </a>
-                  </li>
+                  <a
+                    href="/services/PRP-Advanced-Treatments"
+                    className="hover__linka"
+                  >
+                    PRP Advanced Treatments 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/PRP-Advanced-Treatments"
+                    className="hover__linka"
+                  >
+                     PRP Advanced Treatments 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Intimate-Laser-Rejuvenation-Training "
+                    className="hover__linka"
+                  >
+                     Intimate Laser Rejuvenation Training 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Laser-Skin-Resurfacing-Training"
+                    className="hover__linka"
+                  >
+                    Laser Skin Resurfacing Training
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Medical-Aesthetics-Diploma"
+                    className="hover__linka"
+                  >
+                    Medical Aesthetics Diploma 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Foundation-Botox-and-Dermal-Fillers"
+                    className="hover__linka"
+                  >
+                    Foundation Botox and Dermal Fillers 
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/Advanced-Botox-and-Dermal-Fillers"
+                    className="hover__linka"
+                  >
+                    Advanced Botox and Dermal Fillers
+                  </a>
+                </li>
                 </div>
 
                 <div className="hover__colomn">
@@ -447,7 +441,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/laser-practitioner-diploma-vtct"
+                          href="/services/laser-practitioner-diploma-vtct"
                         >
                           Laser Practitioner Diploma VTCT
                         </a>
@@ -455,7 +449,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-4-laser-and-ipl-treatments"
+                          href="/services/vtct-level-4-laser-and-ipl-treatments"
                         >
                           VTCT Level 4 Laser &amp; IPL Treatments
                         </a>
@@ -463,7 +457,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/level-4-laser-and-blemish-removal"
+                          href="/services/level-4-laser-and-blemish-removal"
                         >
                           Level 4 Laser &amp; Blemish Removal
                         </a>
@@ -471,7 +465,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/level-5-laser-tattoo-removal"
+                          href="/services/level-5-laser-tattoo-removal"
                         >
                           Level 5 Laser Tattoo Removal
                         </a>
@@ -479,7 +473,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/laser-core-of-knowledge"
+                          href="/services/laser-core-of-knowledge"
                         >
                           Laser Core of Knowledge
                         </a>
@@ -487,7 +481,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/advanced-laser-diploma"
+                          href="/services/advanced-laser-diploma"
                         >
                           Advanced Laser Diploma
                         </a>
@@ -495,7 +489,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/fat-freeze-and-body-sculpting"
+                          href="/services/fat-freeze-and-body-sculpting"
                         >
                           Fat Freeze &amp; Body Sculpting
                         </a>
@@ -503,7 +497,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/level-4-laser-hair-removal"
+                          href="/services/level-4-laser-hair-removal"
                         >
                           Level 4 Laser Hair Removal
                         </a>
@@ -515,7 +509,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-2-and-3-nvq-beauty-therapy"
+                          href="/services/vtct-level-2-and-3-nvq-beauty-therapy"
                         >
                           VTCT Level 2 &amp; 3 NVQ Beauty Therapy
                         </a>
@@ -523,7 +517,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-2-nvq-beauty-therapy"
+                          href="/services/vtct-level-2-nvq-beauty-therapy"
                         >
                           VTCT Level 2 NVQ Beauty Therapy
                         </a>
@@ -531,7 +525,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-3-nvq-beauty-therapy"
+                          href="/services/vtct-level-3-nvq-beauty-therapy"
                         >
                           VTCT Level 3 NVQ Beauty Therapy
                         </a>
@@ -539,7 +533,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/fast-track-vtct-level-3-nvq-beauty-therapy"
+                          href="/services/fast-track-vtct-level-3-nvq-beauty-therapy"
                         >
                           Fast Track VTCT Level 3 NVQ Beauty Therapy
                         </a>
@@ -547,7 +541,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-2-3-and-4-nvq-beauty-and-laser"
+                          href="/services/vtct-level-2-3-and-4-nvq-beauty-and-laser"
                         >
                           VTCT Level 2, 3 &amp; 4 NVQ Beauty &amp; Laser
                         </a>
@@ -555,7 +549,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-2-award-facial-and-skincare"
+                          href="/services/vtct-level-2-award-facial-and-skincare"
                         >
                           VTCT Level 2 Award Facial &amp; Skincare
                         </a>
@@ -563,7 +557,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-3-facial-electrotherapy"
+                          href="/services/vtct-level-3-facial-electrotherapy"
                         >
                           VTCT Level 3 Facial Electrotherapy
                         </a>
@@ -571,7 +565,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-4-skin-blemish-removal"
+                          href="/services/vtct-level-4-skin-blemish-removal"
                         >
                           VTCT Level 4 Skin Blemish Removal
                         </a>
@@ -579,7 +573,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/level-3-anatomy-and-physiology-vtct"
+                          href="/services/level-3-anatomy-and-physiology-vtct"
                         >
                           Level 3 Anatomy &amp; Physiology VTCT
                         </a>
@@ -587,7 +581,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/vtct-level-3-in-epilation"
+                          href="/services/vtct-level-3-in-epilation"
                         >
                           VTCT Level 3 in Epilation
                         </a>
@@ -595,7 +589,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/cpd-advanced-chemical-peels"
+                          href="/services/cpd-advanced-chemical-peels"
                         >
                           CPD Advanced Chemical Peels
                         </a>
@@ -603,7 +597,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/cpd-microneedling-diploma"
+                          href="/services/cpd-microneedling-diploma"
                         >
                           CPD Microneedling Diploma
                         </a>
@@ -611,7 +605,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/cpd-advanced-plasma-fibroblast"
+                          href="/services/cpd-advanced-plasma-fibroblast"
                         >
                           CPD Advanced Plasma Fibroblast
                         </a>
@@ -623,7 +617,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/medical-aesthetics-diploma"
+                          href="/services/medical-aesthetics-diploma"
                         >
                           Medical Aesthetics Diploma
                         </a>
@@ -631,7 +625,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/foundation-botox-and-dermal-fillers"
+                          href="/services/foundation-botox-and-dermal-fillers"
                         >
                           Foundation Botox &amp; Dermal Fillers
                         </a>
@@ -639,7 +633,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/advanced-botox-and-dermal-fillers"
+                          href="/services/advanced-botox-and-dermal-fillers"
                         >
                           Advanced Botox &amp; Dermal Fillers
                         </a>
@@ -647,7 +641,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/advanced-dermal-fillers"
+                          href="/services/advanced-dermal-fillers"
                         >
                           Advanced Dermal Fillers
                         </a>
@@ -655,7 +649,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/prp-advanced-treatments"
+                          href="/services/prp-advanced-treatments"
                         >
                           PRP Advanced Treatments
                         </a>
@@ -663,7 +657,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/intimate-laser-rejuvenation"
+                          href="/services/intimate-laser-rejuvenation"
                         >
                           Intimate Laser Rejuvenation
                         </a>
@@ -671,7 +665,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/fat-freeze-and-body-sculpting"
+                          href="/services/fat-freeze-and-body-sculpting"
                         >
                           Fat Freeze &amp; Body Sculpting
                         </a>
@@ -679,7 +673,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/laser-skin-resurfacing"
+                          href="/services/laser-skin-resurfacing"
                         >
                           Laser Skin Resurfacing
                         </a>
@@ -691,7 +685,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/laser-core-of-knowledge"
+                          href="/services/laser-core-of-knowledge"
                         >
                           Laser Core of Knowledge
                         </a>
@@ -699,7 +693,7 @@ const Header = () => {
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
-                          href="https://chelsford.com/course/level-3-anatomy-and-physiology-vtct"
+                          href="/services/level-3-anatomy-and-physiology-vtct"
                         >
                           Level 3 Anatomy &amp; Physiology VTCT
                         </a>

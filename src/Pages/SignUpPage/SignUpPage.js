@@ -34,7 +34,7 @@ import history from "../../history";
 import "./SignUpPage.scss";
 import { FAERadioGroup } from "@findanexpert-fae/components/dist/stories/FAERadioGroup/FAERadioGroup";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const SignUpPage = ({
   loading,
@@ -148,7 +148,7 @@ useEffect(()=>{
   
 if(loading){
    return (
-      <FAELoading type="video" loaderImage={loaderImage} height="630px" />
+      <FAELoading type="svg" loaderImage={loaderImage} height="630px" />
         )
    }
    const doPadding= signUpFormData?.length<4 ?(signUpFormData.length==1 ?{paddingBottom: 284}:{paddingBottom: 280}): {paddingBottom: 284}

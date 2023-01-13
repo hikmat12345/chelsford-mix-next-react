@@ -23,7 +23,7 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 const LandingPage = ({ 
   getNotificationsList,   
 }) => {    
-  document.title = "Expert | AnyService, AnyTime, AnyWhere";
+  document.title = "Chelsford | Trainings";
  
     useEffect( async() => {
     window.scrollTo(0, 0);
@@ -32,19 +32,18 @@ const LandingPage = ({
     
  
   return (
-    <>  
-       <div>
-         
-          <PicContainer />
+      <>  
+        <div>
+         <PicContainer />
           <SubContainer />
           <CetagoryContainer />
           <VideoContainer />
-          <Testimonial/>
+          {/* <Testimonial/> */}
           <About /> 
-    </div>
-      </>
-    );
-  };
+         </div>
+       </>
+     );
+   };
 
 
 

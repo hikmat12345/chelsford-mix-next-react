@@ -25,7 +25,7 @@ import "./BookingEditPage.scss";
 import { alternateGetBookingSlots, getBookingSlots } from "../../redux/actions/dateTimeSelectionForClinicsActions";
 import { getAvaliableBookingSlots } from "../../redux/actions/dateTimeSelectionPageActions";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const BookingEditPage = ({
   loading,
@@ -40,7 +40,7 @@ const BookingEditPage = ({
   alternateGetBookingSlots,
   alternatetimeSlots
 }) => {
-  document.title = `Expert | Edit Booking`;
+  document.title = `Chelsford | Edit Booking`;
   const userId = getCookies("userId");
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");

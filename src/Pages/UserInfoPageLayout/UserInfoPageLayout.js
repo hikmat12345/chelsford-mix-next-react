@@ -31,11 +31,12 @@ const userInfoTabs = [
     label: "Payment Details",
     svgIconSrc:  getFileSrcFromPublicFolder("icons/paymentgreyicons.svg"),
     onClick: () => history.push("/payment-details"),
-  },{
-    label: "Switch Country",
-    svgIconSrc:  getFileSrcFromPublicFolder("icons/swithc-country.svg"),
-    onClick: () => history.push("/switch-country"),
-  }, 
+  },
+  // {
+  //   label: "Switch Country",
+  //   svgIconSrc:  getFileSrcFromPublicFolder("icons/swithc-country.svg"),
+  //   onClick: () => history.push("/switch-country"),
+  // }, 
   // {
   //   label:  "Your Vouchers", 
   //   svgIconSrc:  getFileSrcFromPublicFolder("icons/vouchergrey.svg"),

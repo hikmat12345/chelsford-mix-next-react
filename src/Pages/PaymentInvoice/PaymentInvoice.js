@@ -32,7 +32,7 @@ function PaymentInvoice({
          state:{...salesOrderinvoice?.response, generalBookingId:salesOrderinvoice?.response?.bookingId}
    })
  }
- const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+ const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
  const paymentStatusBg= salesOrderinvoice?.response?.paymentStatus=="Unpaid"?"#FBE5E6":"#5fdf5a33"
  const paymentStatusColor= salesOrderinvoice?.response?.paymentStatus=="Unpaid"?"#db0406":"#5FDF5A"
  
@@ -40,7 +40,7 @@ function PaymentInvoice({
       <>
          <FAEContainer style={{backgroundColor: '#f7f7f7'}}>
             {loading && 
-              (<FAELoading className="paymentlink-loader"  type="video" loaderImage={loaderImage} height="700px"  />)
+              (<FAELoading className="paymentlink-loader"  type="svg" loaderImage={loaderImage} height="700px"  />)
             }
             {!loading &&  (
              <div className='fae-paynow-container'>

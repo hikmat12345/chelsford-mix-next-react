@@ -19,7 +19,7 @@ import "./ServicesPage.scss";
 import { FAEText } from "@findanexpert-fae/components/dist/stories/FAEText/FAEText";
 import { FAELoading } from "@findanexpert-fae/components/dist/stories/FAELoading/FAELoading";
  
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
 
 export const ServicesPage = ({
@@ -34,7 +34,7 @@ export const ServicesPage = ({
 }) => {
   const { industry } = useParams();
   const industryName = addSpaces(propsIndustryName, "-");
-  document.title = `Expert | ${industryName}`;
+  document.title = `Chelsford | ${industryName}`;
   console.log(propsIndustryName, 'propsIndustryName')
   useEffect(() => {
     if (propsCountryId !== "") {
@@ -42,7 +42,7 @@ export const ServicesPage = ({
     }
   }, [getServices, industryName, userCountryId]);
   if (loading) {
-    return <FAELoading type="video" loaderImage={loaderImage} height="630px" />;
+    return <FAELoading type="svg" loaderImage={loaderImage} height="630px" />;
   } 
   const doPadding= services?.length<4 ?(services.length==1 ? 254: 220):  254
   return (

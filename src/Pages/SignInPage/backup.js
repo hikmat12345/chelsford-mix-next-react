@@ -35,7 +35,7 @@ import { FAERadioGroup } from "@findanexpert-fae/components/dist/stories/FAERadi
 import { faeFormDataParser } from "../../parsers";
 import FAEPhoneInput from "../../Temps/FAEPhoneInput/FAEPhoneInput";
 import { SocketService } from "../../helpers/socketservice";
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const SignInPage = ({
   loading,
@@ -194,7 +194,7 @@ const field= {
             logo={getFileSrcFromPublicFolder("title_logo.svg")}
           />
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="630px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="630px" />
           )}
           {!loading && (
             <form

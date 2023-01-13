@@ -43,7 +43,7 @@ const AddressSelectionPage = ({
   userHomeAddresses,
   addressSelectionPageReducer
 }) => {
-  const loaderImage = getFileSrcFromPublicFolder("loader.webm"); 
+  const loaderImage = getFileSrcFromPublicFolder("loader.GIF"); 
   const notesIcon = getFileSrcFromPublicFolder("notes_svg.svg");
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
@@ -53,7 +53,7 @@ const AddressSelectionPage = ({
   const [latLanObject, setUbdateObjec]=useState({})
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Select Address`;
+  document.title = `Chelsford | ${serviceName} - Select Address`;
   const location = useLocation();
   const { state, pathname } = location;
   const store= useSelector(state=>state)
@@ -165,7 +165,7 @@ const AddressSelectionPage = ({
              I want my service at
            </FAEText> 
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
           )} 
           {!loading && (
             <div className="fae--all-addresses-addresses-wrapper">

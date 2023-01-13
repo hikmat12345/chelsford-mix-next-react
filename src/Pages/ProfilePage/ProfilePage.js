@@ -39,7 +39,7 @@ const ProfilePage = ({
   getProfileFields,
   profileFields=[]
 }) => {
-  document.title = `Expert | Profile`;
+  document.title = `Chelsford | Profile`;
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
   const [openResponse, setOpenResponse] = useState("");
@@ -140,8 +140,8 @@ const ProfilePage = ({
         <div className="fae--profile-page-main-container">
         {loading && (
           <FAELoading
-            type="video"
-            loaderImage={getFileSrcFromPublicFolder("loader.webm")}
+            type="svg"
+            loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
             height="200px"
             />
           )}
@@ -249,8 +249,8 @@ const ProfilePage = ({
           <>
             {loading ? (
               <FAELoading
-                loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-                type="video"
+                loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+                type="svg"
                 height="200px"
               />
             ) : (

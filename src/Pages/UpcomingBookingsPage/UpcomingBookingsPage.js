@@ -21,7 +21,7 @@ import { getUpcomingBookings } from "../../redux/actions/upcomingBookingsPageAct
 //scss
 import "./UpcomingBookingsPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholderImage = getFileSrcFromPublicFolder("placeholder.jpg");
 
 const UpcomingBookingsPage = ({
@@ -30,7 +30,7 @@ const UpcomingBookingsPage = ({
   loading,
   upcomingBookings,
 }) => {
-  document.title = `Expert | Upcoming Bookings`;
+  document.title = `Chelsford | Upcoming Bookings`;
   const userId = getCookies("userId");
   useEffect(() => {
     getUpcomingBookings(userId);
@@ -39,7 +39,7 @@ const UpcomingBookingsPage = ({
     <>
       <div className="fae--upcoming-bookings-page-main-container">
         {loading && (
-          <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+          <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
         )}
         {!loading && (
           <FAEContainer>
@@ -52,12 +52,15 @@ const UpcomingBookingsPage = ({
                     serviceTypeName = "",
                     providerName = "",
                     providerId,
+                    isTraining,
+                    trainingStartTime=""
                   } = booking; 
                   return (
+                    isTraining &&
                     <FAEBookingCard
                       src={placeholderImage}
                       serviceName={serviceTypeName}
-                      time={bookingTime}
+                      time={trainingStartTime}
                       date={displayedBookingDate}
                       expertName={
                         providerName.trim() !== "" || providerId !== 0

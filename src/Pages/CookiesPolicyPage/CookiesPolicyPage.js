@@ -37,8 +37,8 @@ const CookiesPolicyPage = ({
           />
           {loading ? (
             <FAELoading
-              loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-              type="video"
+              loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+              type="svg"
               height="630px"
             />
           ) : (

@@ -20,7 +20,7 @@ import { getFileSrcFromPublicFolder } from "../../utils";
 //scss
 import "./HelpPage.scss";
 
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const HelpPage = ({help, error, loading, faqs, userCountry, getFaqs }) => {
   document.title = "Expert | Need Help";
@@ -39,7 +39,7 @@ const HelpPage = ({help, error, loading, faqs, userCountry, getFaqs }) => {
             logo={getFileSrcFromPublicFolder("title_logo.svg")}
           />
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="630px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="630px" />
           )}
           {!loading && (
             <Fragment>

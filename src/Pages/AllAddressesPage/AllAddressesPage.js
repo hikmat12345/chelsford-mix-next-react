@@ -23,7 +23,7 @@ import history from "../../history";
 import "./AllAddressesPage.scss";
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css';
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 // const deleteIcon = getFileSrcFromPublicFolder("delete_svg.svg");
 const notesIcon = getFileSrcFromPublicFolder("notes_svg.svg");
 
@@ -36,7 +36,7 @@ const AllAddressesPage = ({
   deleteAddress,
 }) => {
   
-  document.title = `Expert | Addresses`;
+  document.title = `Chelsford | Addresses`;
   const userId = getCookies("userId");
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
@@ -71,7 +71,7 @@ const AllAddressesPage = ({
             </FAEText>
           </div>
           {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="200px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="200px" />
           )}
           {!loading && (
             <div className="fae--all-addresses-addresses-wrapper">

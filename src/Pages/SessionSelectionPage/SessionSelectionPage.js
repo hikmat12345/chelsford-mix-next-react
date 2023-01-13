@@ -25,7 +25,7 @@ const SessionSelectionPage = ({
   const location = useLocation();
   const { state } = location;
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Select Session(s)`;
+  document.title = `Chelsford | ${serviceName} - Select Session(s)`;
   const { currencySymbol, serviceId, isInClinic, isInHouse, isOnline } = state;
   
   useEffect(() => {
@@ -84,8 +84,8 @@ const SessionSelectionPage = ({
           <FAEText>Please Choose The Session(s)</FAEText>
           {loading ? (
             <FAELoading
-              loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-              type="video"
+              loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+              type="svg"
               height="200px"
             />
           ) : (

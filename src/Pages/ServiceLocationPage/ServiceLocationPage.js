@@ -20,7 +20,7 @@ const ServiceLocationPage = () => {
   const location = useLocation();
   const { state } = location;
   const serviceName = addSpaces(service, "-");
-  document.title = `Expert | ${serviceName} - Select Location`;
+  document.title = `Chelsford | ${serviceName} - Select Location`;
   const {
     price,
     freeConsultation,

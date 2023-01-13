@@ -34,11 +34,7 @@ export const setSignUpResponseToEmpty = () => {
   });
 };
 
-
-
-
-
-
+ 
 // new signup actions start 
 export const checkMobileNumber =({
   mobileNumber,
@@ -55,10 +51,11 @@ export const checkMobileNumber =({
         countryCode: countryCode, 
         deviceId: "_web",
         deviceName: "_web", 
-        devicePlatform: "_web",
+        // devicePlatform: "_web",
         macAddress: "_web",
         isMobile: false,
         authToken: authToken,
+        isChelsfordRequest:true
      })
   })
 }
@@ -156,7 +153,8 @@ export const UpdatePersonInfo=({
 export const forgotPassword=({
     mobileNumber,
   countryCode,
-   messageHash
+   messageHash,
+   authToken
 })=>{
   return fetchAction({
     type:"FORGOT_PASSWORD_NEWSIGNUP",
@@ -166,6 +164,9 @@ export const forgotPassword=({
     payload :JSON.stringify({
       mobileNumber: mobileNumber,
       countryCode:countryCode,
+      isMobile: false,
+      authToken: authToken,
+      isChelsfordRequest:true
      })
   })
 }

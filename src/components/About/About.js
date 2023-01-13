@@ -122,7 +122,7 @@ const About = () => {
                         </div>
                     </div><h3>CPD MICRONEEDLING DIPLOMA.</h3>
                     <p>Learn how to improve Scarring, Blemishes & Collagen</p>
-                    <a href="/course/cpd-microneedling-diploma">Explore More</a>
+                    <a href="/services/cpd-microneedling-diploma">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -131,7 +131,7 @@ const About = () => {
                         </div>
                     </div><h3>CPD ADVANCED PLASMA FIBROBLAST</h3>
                     <p>Learn Plasma Non-Surgical Eye Lift procedure & Wrinkle Removal.</p>
-                    <a href="/course/cpd-advanced-plasma-fibroblast">Explore More</a>
+                    <a href="/services/cpd-advanced-plasma-fibroblast">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -141,7 +141,7 @@ const About = () => {
                     </div>
                     <h3>CPD ADVANCED CHEMICAL PEELS</h3>
                     <p>Learn to use Chemical Peels to treat various skin conditions.</p>
-                    <a href="/course/cpd-advanced-chemical-peels">Explore More</a>
+                    <a href="/services/cpd-advanced-chemical-peels">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -151,7 +151,7 @@ const About = () => {
                     </div>
                     <h3>VTCT LEVEL 4 SKIN BLEMISH REMOVAL</h3>
                     <p>Learn Advanced techniques to remove Skin tags, Milia & Veins.</p>
-                    <a href="/course/level-4-laser-and-blemish-removal">Explore More</a>
+                    <a href="/services/level-4-laser-and-blemish-removal">Explore More</a>
                 </div>
                 <div className="course-card">
                     <div className="iconDiv">
@@ -159,9 +159,9 @@ const About = () => {
                             <i className="fa fa-graduation-cap" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <h3>VTCT LEVEL 4 LASER & IPL TREATMENTS</h3>
+                    <h3>VTCT LEVEL 2 AND 3 NVQ BEAUTRY THERAPY</h3>
                     <p>Necessary Qualification to enter the world of Lasers & IPL.</p>
-                    <a href="/course/vtct-level-4-laser-and-ipl-treatments">Explore More</a>
+                    <a href="/services/VTCT-Level-2-and-3-NVQ-Beauty-Therapy">Explore More</a>
                 </div>
                 
             </div>
@@ -181,7 +181,7 @@ const About = () => {
             <div className="col-md-2"> </div>
             <div className="col-md-3">
                 <div className="bookingContainer">
-                    <button type="button" className="btn btn-default" style={{background: "#D9BD3E",borderRadius: "5px",top: "35px",bottom: 0,position: "relative"}}><a href="{{ url('course/booking/'.$product['slug'] ) }}"  style={{color:" #fff", fontSize: "22px",fontWeight: 500}}>View Dates & Book</a></button>
+                    {/* <button type="button" className="btn btn-default" style={{background: "#D9BD3E",borderRadius: "5px",top: "35px",bottom: 0,position: "relative"}}><a href="{{ url('course/booking/'.$product['slug'] ) }}"  style={{color:" #fff", fontSize: "22px",fontWeight: 500}}>View Dates & Book</a></button> */}
                 </div>
             </div>
         </div>

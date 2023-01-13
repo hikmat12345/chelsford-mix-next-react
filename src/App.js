@@ -325,8 +325,8 @@ const App = ({
         <Suspense
           fallback={
             <FAELoading
-              loaderImage={getFileSrcFromPublicFolder("loader.webm")}
-              type="video"
+              loaderImage={getFileSrcFromPublicFolder("loader.GIF")}
+              type="svg"
             />
           }
         > 

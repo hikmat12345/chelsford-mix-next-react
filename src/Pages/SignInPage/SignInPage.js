@@ -38,7 +38,7 @@ import { faeFormDataParser } from "../../parsers";
 import FAEPhoneInput from "../../Temps/FAEPhoneInput/FAEPhoneInput";
 import { SocketService } from "../../helpers/socketservice";
 import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAEImage";
-const loaderImage = getFileSrcFromPublicFolder("loader.webm");
+const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
 const SignInPage = ({
   loading,
@@ -220,7 +220,7 @@ const field= {
       <div className="fae--sign-in-page-container dpt dpb" >
         <div className="fae--sign-in-page-wrapper">
         {loading && (
-            <FAELoading type="video" loaderImage={loaderImage} height="630px" />
+            <FAELoading type="svg" loaderImage={loaderImage} height="630px" />
           )}
           {!loading && (
             <>

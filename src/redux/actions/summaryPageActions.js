@@ -165,6 +165,8 @@ export const createBooking=({
    bookingTime,
    duration,
    serviceId,
+   trainingStartTime,
+   trainingStartDate,
 })=>{ 
  return fetchAction({
     type: "CREATE_BOOKING",
@@ -186,8 +188,8 @@ export const createBooking=({
       referralBonusUsed:referralBonusUsed,
       userId:userId,
       voucherCode:voucherCode, 
-      bookingDate:bookingDate,
-      bookingTime:bookingTime,
+      bookingDate: trainingStartDate,
+      bookingTime:trainingStartTime,
       // duration:duration,
       serviceId:serviceId,
     }),
