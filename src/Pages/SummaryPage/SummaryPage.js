@@ -95,9 +95,7 @@ const SummaryPage = ({
     if(LinkUserCountry !==undefined && LinkUserCountry !==null && LinkUserCountry !==false){
        userCountry=LinkUserCountry
        userCountryId= LinkUserCountryId
-     }
-  console.log(LinkUserCountry,LinkUserCountryId, 'LinkUserCountry')
-
+     } 
   const [paymentMethod, setPaymentMethod] = useState("");
   const [selectedCard, setSelectedCard] = useState("");
   const [open, setOpen] = useState(false);
@@ -150,10 +148,8 @@ const SummaryPage = ({
       selectedSessions:0,
       countryId:1,
       isTraining:true,
-      is_service:false, 
-      
-      // countryId: (getCookies("switched_id") ==undefined || getCookies("switched_id") ==null || getCookies("switched_id") =="") ? userCountryId: getCookies("switched_id")
-    });
+      is_service:false,  
+     });
     SalesOrderSummary({tempBookingId: bookingId, cartId:cartId, userId: JSON.parse(getCookies("userId"))}) 
     getVoucherList({ serviceId, userId: getCookies("userId") }); 
   }, [cartId, getSummary, getVoucherList, serviceId]);
@@ -172,7 +168,7 @@ const SummaryPage = ({
 
   // handle click on confirm booking button 
   const  handleSaveBooking =(e)=>{
-    loading =true
+    setLoader(true)
     applyDiscountCodeObjectEmpty() 
     if((defaultPaymentMethodId[0]?.id =="" ||  defaultPaymentMethodId[0]?.id ==null ||  defaultPaymentMethodId[0]?.id ==undefined) && userCountryId !==171){
       FAEToaster({message:"Please select or add your payment card.", toaster:"error"})

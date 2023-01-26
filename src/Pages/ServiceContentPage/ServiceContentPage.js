@@ -12,10 +12,10 @@ import {
 import { useParams, useLocation } from "react-router-dom";
 
 //src
-import { addSpaces, getCookies, getFileSrcFromPublicFolder } from "../../utils"; 
+import { addSpaces, getCookies, getFileSrcFromPublicFolder, getFileSrcFromPublicFolderSpcialLHR, replaceSpaces } from "../../utils"; 
 import { getServiceDetail } from "../../redux/actions/serviceContentPageActions";
 import history from "../../history"; 
-
+import courseDetailContent from '../../statics/courseDetailContent.json'
 import $ from "jquery"
 // import OwlCarousel from 'react-owl-carousel';
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -23,6 +23,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 //scss
 import "./ServiceContentPage.scss";
 import "./contentDetail.css";
+import Testimonial from "../../components/Testimonial/Testimonial";
+import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAEImage";
 
 const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
@@ -175,20 +177,19 @@ function sendwithStates(pathname,   subservice, freeConsultation){
          $(this).find(".box-extra").toggleClass("active-box-extra")
      });
     
-   var acc = document.getElementsByClassName("you-talk-btn");
-   var i; 
-   for (i = 0; i < acc.length; i++) {
-     acc[i].addEventListener("click", function() {
-       this.classList.toggle("active");
-       var panel = this.nextElementSibling;
-       if (panel.style.display === "block") {
-         panel.style.display = "none";
-       } else {
-         panel.style.display = "block";
-       }
-     });
-   }
-    
+    var acc = document.getElementsByClassName("you-talk-btn");
+    var i; 
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      } 
    })
  
  
@@ -205,15 +206,18 @@ function sendwithStates(pathname,   subservice, freeConsultation){
      document.getElementById(cityName).style.display = "block";
      evt.currentTarget.className += " active-tab";
    } 
- 
- 
-  return (
+  
+ const courseContent= courseDetailContent.filter((item)=>item.page_link==service?.toLocaleLowerCase())
+ const {course_information, course_module, featur_content, instruction_content, page_link, what_next}= courseContent[0] || {}
+
+ const padding= courseContent?.length ==0 && 300
+   return (
     <>
       {loading && (
         <FAELoading loaderImage={loaderImage} type="svg" height="630px" />
       )}
         {!loading && (
-          <>
+          <div  style={{paddingBottom:padding}}>
           <FAEServiceDescription
             className="fae--service-content-page-service-description-tab"
             actionButtonProps={{
@@ -312,182 +316,78 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             </div> 
           </div> */}
 
-
-
-
-
-<section id="Course_module" className="py-5 course_module">
+ {courseContent?.length !==0 &&
+   <>
+   {(course_module?.length !==0 && course_module !==undefined) && <section id="Course_module" className="py-5 course_module">
       <div className="container">
         <h4 className="pt-3 pb-5 text-center">Course Modules</h4>
-        <div className="px-5 row">
-          
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>1</span>
-              </div>
-              <p className="py-5">Level 2 Infection Control</p>
-            </div>
+        <div className="px-5 row"> 
+          {course_module?.slice(0,8)?.map((courseModuleName, index)=>{
+            return (
+                <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
+                  <div className="course_module_label">
+                    <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
+                      <span>{index+1}</span>
+                    </div>
+                    <p className="py-5">{courseModuleName}</p>
+                  </div>
+                </div>)
+               })}
           </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
+      <div className="px-5 row remaining-boxes " style={{display:"none"}}> 
+       {course_module?.slice(8)?.map((courseModuleName, index)=>{
+            return (<div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>2</span>
+                <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
+                <span>{index+8}</span>
+                </div>
+                <p className="py-5">{courseModuleName}</p>
               </div>
-              <p className="py-5">Client Communication</p>
-            </div>
+            </div>)})} 
+           </div> 
           </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>3</span>
-              </div>
-              <p className="py-5">Facial Massage &amp; Skincare</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>4</span>
-              </div>
-              <p className="py-5">Facials Electrics</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>5</span>
-              </div>
-              <p className="py-5">Body Electrics</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>6</span>
-              </div>
-              <p className="py-5">Electrolysis</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>7</span>
-              </div>
-              <p className="py-5">Body Massage</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>8</span>
-              </div>
-              <p className="py-5">Skin Tightening</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="px-5 row remaining-boxes remaining-boxes-show" style={{display:"none"}}> 
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-              <span>9</span>
-              </div>
-              <p className="py-5">Indian Head Massage</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>10</span>
-              </div>
-              <p className="py-5">Core of Knowledge</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>11</span>
-              </div>
-              <p className="py-5">Hazards and Safety</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>12</span>
-              </div>
-              <p className="py-5"> Fitzpatrick Skin Types</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>13</span>
-              </div>
-              <p className="py-5">Hair Biology</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>14</span>
-              </div>
-              <p className="py-5">Laser Hair Reduction</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>15</span>
-              </div>
-              <p className="py-5">Vascular</p>
-            </div>
-          </div>
-
-          <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>16</span>
-              </div>
-              <p className="py-5"> Pigmented Lesions</p>
-            </div>
-          </div>
-         	
-      <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
-            <div className="course_module_label">
-              <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>17</span>
-              </div>
-              <p className="py-5">Aromatherapy Pre Blended Oils</p>
-            </div>
-          </div>
-        </div>
-
-        </div>
  
-        <div className="my-3 text-center justify-content-center">
-          <div className="px-3 py-3 text-center text-white justify-content-center chevron-arrow label-circle"><i style={{fontSize: 12, fontSize: "21px", color: "black"}} className="fa fa-angle-up" aria-hidden="true"></i></div>
+          {course_module?.length >8 && <div className="my-3 text-center justify-content-center">
+          <div className="px-3 py-3 text-center text-white justify-content-center chevron-arrow label-circle"><i style={{fontSize: 12, fontSize: "21px", color: "black"}} className="fa fa-angle-down" aria-hidden="true"></i></div>
+        </div>} 
+    </section>}
+   {console.log(featur_content, 'featur_content')}
+    {courseContent?.length !==0 && 
+      (featur_content?.length !==0 && featur_content !==undefined) && 
+        <section id="complete_beauty" className="complete_beauty ">
+            <div className="container-fluid">
+            <h2 className="only-show-on-mobile">
+                {featur_content?.title}
+              </h2>
+            <div className="row">
+             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <h2 className="only-show-on-desktop ">
+                {featur_content?.title}
+              </h2>
+              <artical>
+                <p className="cutoff-text"   dangerouslySetInnerHTML={{ __html: featur_content?.content_detail}} /> 
+                <input className="expand-btn" type="checkbox" />
+                </artical>
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+             <FAEImage src={getFileSrcFromPublicFolderSpcialLHR(featur_content?.image)}   />
+                <div className="complete_beauty_quality">
+                  
+                </div>
+                <artical>
+                <p className="cutoff-text cuttabletext" 
+                  dangerouslySetInnerHTML={{ __html: featur_content?.content_detail}} />
+                  <input className="expand-btn cuttabletext" type="checkbox" />
+              </artical>
+            </div>
+          </div>
         </div>
-      
-    </section>
-    {/* <!-- course information   --> */}
- 
-    <section id="you-talk-with" className="mb-4 you-talk-with" >
-          <div className="container-fluid">
+      </section>}
+  
+    {/* <!-- course information   --> */} 
+    {(course_information?.length !==0 && course_information?.length !==undefined) &&
+          <section id="you-talk-with" className="mb-4 you-talk-with" >
+             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8 col-sm-12">
                       <h2>Course Information</h2>
@@ -499,11 +399,13 @@ function sendwithStates(pathname,   subservice, freeConsultation){
               <div className="row">
                 <div className="tabs-ci col-md-3">
                     <ul>
-                        <li>
-                          <button className="tablinks " onClick={(e)=>openCity(e, 'Course_Details')}>Course Details</button> 
-                        </li>
-                        
-                        <li>
+                        {course_information?.map((ciTitle, index)=>{
+                         return (
+                          <li key={index}>
+                            <button className={`tablinks ${index==0 && "active-tab"}`} onClick={(e)=>openCity(e, replaceSpaces(ciTitle?.course_info_title, "_"))}><div dangerouslySetInnerHTML={{ __html:ciTitle?.course_info_title}} /></button> 
+                          </li>)})}
+        
+                        {/* <li>
                           <button className="tablinks" onClick={(e)=>openCity(e, 'Entry_Requirements')}>Entry Requirements</button>
                         </li>
                         <li>
@@ -515,34 +417,23 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                         <li>
                           <button className="tablinks" onClick={(e)=>openCity(e, 'Study_Options')}>Study Options</button>
                         </li> 
-                        {/* <li>
+                        <li>
                           <button className="tablinks" id="openCity(event, 'Tuition_Fees')">Tuition Fees</button>
-                        </li>  */}
+                        </li>  */}  
                     </ul>
                   </div>
                 
-                <div className="tabs col-md-9">
-                    <div id="Course_Details" className="tabcontent" style={{display:"initial"}}  > 
-                        <p> <strong>PART 1 – LEVEL 2 BEAUTY THERAPY</strong>
-                            Underpinning this qualification you will develop a sound knowledge of health and safety practices in a salon environment and how to promote client care and communications in beauty related industries. You will also develop an underpinning knowledge and understanding of the practical skills learned throughout this qualification.
-                            The purpose of this qualification is to develop your skills in beauty therapy to a high level of occupational ability, to enable you to perform your own salon services.
-                            Units in this qualification have been mapped to the relevant NOS (where applicable). This qualification is regulated on the Regulated Qualifications Framework.
-                            This qualification is approved and supported by the Hairdressing and Beauty Industry Authority (HABIA), the standard setting body for hair, beauty, nails and spa qualifications. <br /><br />
-                            <strong>PART 2 - LEVEL 3 BEAUTY THERAPY (GENERAL ROUTE)</strong> <br />
-                            The VTCT Level 3 Beauty Therapy is a qualification that has been specifically designed to develop your practical skills in; how to provide face and body electrical treatments, Massage, Indian head, Peblended Oils, Epilation.
-                            Underpinning this qualification you will develop a sound knowledge of health and safety practice in a salon environment, how to promote client care and communication in beauty related industries, . You will also develop an underpinning knowledge and understanding of the practical skills learned throughout this qualification.
-                            The purpose of this qualification is to develop your skills in beauty therapy to a high level of occupational ability, to enable you to perform your own salon services.
-                            Units in this qualification have been mapped to the relevant NOS (where applicable). This qualification is regulated on the Regulated Qualifications Framework.
-                            This qualification is approved and supported by the Hairdressing and Beauty Industry Authority (HABIA), the standard setting body for hair, beauty, nails and spa qualifications.<br /><br />
-                            <strong> PART 3 - LEVEL 4 LASER & LIGHT</strong><br />
-                            This is a vocationally related qualification and is focused on reducing hair growth and photo rejuvenation of the skin using intense light and laser treatments.
-                            In this qualification, you will develop an understanding of managing safe working practices and how to identify and control hazards.
-                            You will also learn how to identify hair and skin conditions and those clients suitable for intense light and laser system treatments.
-                            This qualification has been mapped to the relevant NOS, and is accredited on the Qualifications and Credit Framework (QCF).
-                            The course will cover both theory and practice, which will be delivered by experienced Laser/IPL technicians.   </p>
-                    </div>
                 
-                    <div id="Entry_Requirements" className="tabcontent"> 
+                <div className="tabs col-md-9">
+                {course_information?.map((ciTitle, index)=>{
+                  console.log(course_information, ciTitle, 'course_information')
+                  return ( 
+                    <div key={index} style={ {display: index ==0 && "initial"}} id={replaceSpaces(ciTitle?.course_info_title, "_")} className="tabcontent"   > 
+                        <p> { ciTitle?.course_info_detail ==="" ? <h4 style={{padding:6, textAlign:"center"}}>Content Not Found</h4>: <div dangerouslySetInnerHTML={{ __html: ciTitle?.course_info_detail }} /> }</p>
+                    </div>)})
+                  }
+                 
+                    {/* <div id="Entry_Requirements" className="tabcontent"> 
                       <p>This course is for complete beginners and there are no entry requirements for this course. If you want to enter the world of aesthetics then this is the perfect course that covers everything from foundation to advanced.</p> 
                     </div>
 
@@ -576,12 +467,12 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                               VTCT Qualification Fee<br/> 
                               Assessment Fees<br/>  
                           </p>
-                    </div>
+                    </div> */}
                 </div> 
                 </div> 
           </div>  
-    </section>
-
+         </section>
+     }
     {/*  your talk with  */}
    
     <section id="your-talk">
@@ -589,16 +480,19 @@ function sendwithStates(pathname,   subservice, freeConsultation){
         <div className="custom-container">
           <h2>You'll walk away with </h2>
             <ul>
-              <li>
-                <div className="tick-icon"> 
-                    <span><img  src="https://chelsford.com/public/icon/tick.svg" height={20} width={20} alt='tick icon' /></span>
-                </div> 
-                <div>
-                    <div className="you-talk-btn">Once you complete the course, you will earn a VTCT Qualification...</div>
-                    <div className="you-talk-remaining-text"> in Level 2 Beauty Therapy of providing Manicure, Pedicure, Facial, Waxing, Eye treatments and Makeup. You will also get a VTCT Qualification in NVQ Level 3 Beauty Therapy (General Route), including Face and Body Electrical, Massage, Indian Head, Pre-blended oil Massage and Epilation. Apart from that, you will also walk away with a VTCT Qualification in NVQ Level 4 Laser and Light & Knowledge of the Identification of Fitzpatrick Skin Types, Laser & IPL Hair Reduction, Pigmentation - sunspots & Freckles Removal, Vein Removal (Face & Legs), Skin Tightening Treatments, IPL Treatments for Sun Damage, Acne, Rosacea & Rejuvenation. As an added bonus you will receive a Level 2 in Infection control and Core of Knowledge.</div>
-                </div>
-              </li> 
-              <li>
+              {instruction_content?.map((instruction_content, index)=>{
+                return (
+                   <li key={index}> 
+                    <div className="tick-icon"> 
+                        <span><img  src="https://chelsford.com/public/icon/tick.svg" height={20} width={20} alt='tick icon' /></span>
+                    </div> 
+                    <div>
+                        <div className="you-talk-btn">{instruction_content?.title}...</div>
+                        <div className="you-talk-remaining-text" dangerouslySetInnerHTML={{ __html: instruction_content?.content_detail }} />
+                    </div>
+                  </li> )})
+                }
+              {/* <li>
                 <div className="tick-icon"> 
                     <span><img  src="https://chelsford.com/public/icon/tick.svg" height={20} width={20} alt='tick icon' /></span>
                 </div> 
@@ -606,7 +500,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                     <div className="you-talk-btn">Once you complete the course, you will earn a VTCT Qualification...</div>
                     <div className="you-talk-remaining-text"> in Level 2 and 3 Beauty Therapy (General Route), including Face and Body Electrical, Massage, Indian Head, Pre-blended oil Massage and Epilation. Apart from that, you will also walk away with a VTCT Qualification in NVQ Level 4 Laser and Light & Knowledge of the Identification of Fitzpatrick Skin Types, Laser & IPL Hair Reduction, Pigmentation - sunspots & Freckles Removal, Vein Removal (Face & Legs), Skin Tightening Treatments, IPL Treatments for Sun Damage, Acne, Rosacea & Rejuvenation. As an added bonus you will receive a Level 2 in Infection control and Core of Knowledge.</div>
                 </div>
-              </li> 
+              </li>  */}
           </ul>
         </div>
       </div>
@@ -668,7 +562,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                         <a className="" href="#myCarousel" data-slide="next">
                             <i className="fa fa-angle-right"></i>
                         </a>
-                    </div>
+                      </div>
                         
                         </div>
                     </div>
@@ -680,7 +574,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             
         </div>
     </div> */}
-   
+    
     {/* // <!-- what next  --> */}
       <div className="container-fluid content-feature-courses content-feature-courses-update">
         <div className="row">
@@ -688,17 +582,20 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                 <h2>What’s Next </h2>
             </div>
             <div className="coursesContainer">
-                
-                <div className="course-card">
-                    <div className="iconDiv">
+            {what_next?.map((what_next_cont, index)=>{
+                 return (
+                     <div className="course-card">
+                      <div className="iconDiv">
                         <div className="iconContainer">
                             <i className="fa fa-graduation-cap" aria-hidden="true"></i>
                         </div>
-                    </div><h3>CPD MICRONEEDLING DIPLOMA.</h3>
-                    <p>Learn how to improve Scarring, Blemishes & Collagen</p>
-                    <a href="/services/cpd-microneedling-diploma">Explore More</a>
-                </div>
-                <div className="course-card">
+                      </div>
+                      <h3>{what_next_cont?.title}</h3>
+                      <p>{what_next_cont?.detail}</p>
+                      <a href= {`/services/${replaceSpaces(what_next_cont?.title?.toLocaleLowerCase()?.replaceAll(".", ""), "-")}`}>Explore More</a>
+                  </div>
+                 )})}
+                {/* <div className="course-card">
                     <div className="iconDiv">
                         <div className="iconContainer">
                             <i className="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -736,12 +633,13 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                     <h3>VTCT LEVEL 2 AND 3 NVQ BEAUTRY THERAPY</h3>
                     <p>Necessary Qualification to enter the world of Lasers & IPL.</p>
                     <a href="/services/VTCT-Level-2-and-3-NVQ-Beauty-Therapy">Explore More</a>
-                </div>
+                </div> */}
                 
             </div>
         </div>
-    </div>
-
+     </div>
+    {/* testimonial section  */}
+     <Testimonial />
     {/* // {{-- content page section 6 --}} */}
 
     <div className="container-fluid learn-more" >
@@ -760,7 +658,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             </div>
         </div>
     </div>  
-
+  </>}
 {/* // <!-- footer sticky icons on mobile  --> */}
 {/* 
      <div className="contact-source">
@@ -771,7 +669,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
        </div>
     </div> */}
   
-         </>
+         </div>
        )}
    </>
   )

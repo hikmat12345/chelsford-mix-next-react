@@ -38,7 +38,7 @@ const LandingPage = ({
           <SubContainer />
           <CetagoryContainer />
           <VideoContainer />
-          {/* <Testimonial/> */}
+          <Testimonial/>
           <About /> 
          </div>
        </>

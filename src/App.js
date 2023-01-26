@@ -339,24 +339,10 @@ const App = ({
             isLogin={userSignedInStatus}
             dropDownInfo={{
               signOutClicked: () => { 
-                 setLogoutState(true)
-                // setUserId("");
-                // removeCookies("userId");
-                // removeCookies("customer_details"); 
-                // removeCookies("switched_country")
-                // removeCookies("switched_id",)
-                // removeCookies("switched_userCurrencyCode")
-                // removeCookies("user_country") 
-                // signOutDeleteAccount(userId, false);
-                // history.push("/");
+                 setLogoutState(true) 
               },
               deleteAccountClicked: () => { 
-                setDeleteState(true)
-                // setUserId("");
-                // removeCookies("userId");
-                // removeCookies("customer_details");
-                // signOutDeleteAccount(userId, true);
-                // history.push("/");
+                setDeleteState(true) 
               },
              ...navbarDrodownInfoData
             }}
@@ -413,59 +399,28 @@ const App = ({
               exact
               auth={true}
             /> */}
-            {/* <FAEGuardedRoute
+              <FAEGuardedRoute
               path="/sign-up"
               component={SignUpPage}
               exact
               auth={userSignedInStatus ? false : true}
-              redirectPath={userAlreadyLoggedInRedirect}
-            /> */}
-            <FAEGuardedRoute
+              redirectPath={"/account"}
+            />
+             <FAEGuardedRoute
               path="/account"
               component={signUp}
               exact
-              auth={true}
-              // auth={userSignedInStatus ? false : true}
-              // redirectPath={userAlreadyLoggedInRedirect}
+              // auth={true}
+              auth={userSignedInStatus ? false : true}
+              redirectPath={userAlreadyLoggedInRedirect}
               />
             <FAEGuardedRoute
               path="/sign-in"
               component={SignInPage}
               exact
               auth={userSignedInStatus ? false : true}
-              redirectPath={userAlreadyLoggedInRedirect}
-            />
-            {/* <FAEGuardedRoute
-              path="/payment-invoice"
-              component={PaymentInvoice}
-              exact
-              auth={true}
-            />
-            <FAEGuardedRoute
-              path="/add-payment"
-              component={AddPaymentPage}
-              exact
-              auth={true}
-            />
-            <FAEGuardedRoute
-              path="/payment-selection"
-              component={PaymentSelection}
-              exact
-              auth={true}
-            />
-            <FAEGuardedRoute
-              path="/payment-success"
-              component={PaymentSuccessPage}
-              exact
-              auth={true}
-            /> */}
-            {/* <FAEGuardedRoute
-              path="/verify-account"
-              component={CodeVerificationPage}
-              exact
-              auth={userSignedInStatus ? false : true}
-              redirectPath={userAlreadyLoggedInRedirect}
-            /> */}
+              redirectPath={"/account"}
+            /> 
             <FAEGuardedRoute
               path="/reset-password"
               component={ForgotPasswordPage}
@@ -787,9 +742,8 @@ const App = ({
             <FAEGuardedRoute
               path="/booking/:service/training-selection"
               component={TrainingSelectionPage}
-              exact
-              auth={userSignedInStatus}
-              redirectPath={authRedirectPath}
+              exact 
+              auth={true}
             />
             <FAEGuardedRoute
               path="/booking/:service/summary"

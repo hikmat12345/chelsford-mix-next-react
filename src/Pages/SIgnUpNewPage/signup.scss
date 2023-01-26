@@ -15,9 +15,9 @@
 } 
 .fae--new-signup-page-container{
     .fae-login-desktop-logo{
-      width: 9%;
-      height: 3.5rem;
-      padding: 5rem;
+      width: 12%;
+      height: initial;
+      padding: 2rem;
       margin: auto;
     }
     .fae-mobile-logo{
@@ -193,10 +193,15 @@
             margin: 13px auto !important; 
          }
        }
+       .fae-login-desktop-logo {
+          width: 37%; 
+          padding: 0.5rem;
+          margin: auto;
+        }
        .fae-mobile-logo {
         width: 8rem !important;
         height: inherit !important;
-        margin: 3rem auto !important;
+        margin: 0rem auto !important;
     }
     .before-submit-text {
       font-size: 13px;

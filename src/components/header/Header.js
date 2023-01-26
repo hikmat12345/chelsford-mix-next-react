@@ -129,7 +129,7 @@ const Header = () => {
           </ul>
         </div>
       )}
-      <div style={{width:"100%"}}>
+      <div style={{width:"100%", position:"relative"}}>
         <div className="sub__headers">
           {/* <button className="portal__button">Portal</button>
           <img
@@ -245,6 +245,14 @@ const Header = () => {
                 </li>
                 <li className="hover__item">
                   <a
+                    href="/services/fast-track-vtct-level-3-nvq-beauty-therapy"
+                    className="hover__linka"
+                  >
+                     Fast Track VTCT Level 3 NVQ Beauty Therapy
+                  </a>
+                </li>
+                <li className="hover__item">
+                  <a
                     href="/services/VTCT-Level-3-in-Epilation"
                     className="hover__linka"
                   >
@@ -303,6 +311,14 @@ const Header = () => {
                     NVQ Level 3 Beauty Therapy
                   </a>
                 </li>
+                <li className="hover__item">
+                  <a
+                    href="/services/cpd-microneedling-diploma"
+                    className="hover__linka"
+                  >
+                   CPD-Microneedling-Diploma
+                  </a>
+                </li>
                 </div>
 
 
@@ -312,14 +328,7 @@ const Header = () => {
 
                 <div className="hover__colomn">
                   <h3 className="hover__heading">Medical</h3>
-                  <li className="hover__item">
-                  <a
-                    href="/services/PRP-Advanced-Treatments"
-                    className="hover__linka"
-                  >
-                    PRP Advanced Treatments 
-                  </a>
-                </li>
+                   
                 <li className="hover__item">
                   <a
                     href="/services/PRP-Advanced-Treatments"
@@ -336,6 +345,7 @@ const Header = () => {
                      Intimate Laser Rejuvenation Training 
                   </a>
                 </li>
+                 
                 <li className="hover__item">
                   <a
                     href="/services/Laser-Skin-Resurfacing-Training"
@@ -357,7 +367,7 @@ const Header = () => {
                     href="/services/Foundation-Botox-and-Dermal-Fillers"
                     className="hover__linka"
                   >
-                    Foundation Botox and Dermal Fillers 
+                    Foundation Botox & Dermal Fillers 
                   </a>
                 </li>
                 <li className="hover__item">
@@ -365,11 +375,30 @@ const Header = () => {
                     href="/services/Advanced-Botox-and-Dermal-Fillers"
                     className="hover__linka"
                   >
-                    Advanced Botox and Dermal Fillers
+                    Advanced Botox & Dermal Fillers
                   </a>
                 </li>
+
+                <div className="hover__colomn">
+                  <h3 className="hover__heading">Online</h3> 
+                    <li className="hover__item">
+                      <a
+                        href="/services/laser-core-of-knowledge"
+                        className="hover__linka" >
+                        Laser Core Of Knowledge 
+                      </a>
+                    </li>
+                    <li className="hover__item">
+                      <a
+                        href="/services/level-3-anatomy-and-physiology-vtct"
+                        className="hover__linka" >
+                        Level 3 Anatomy & Physiology VTCT
+                      </a>
+                    </li> 
                 </div>
 
+                </div>
+             
                 <div className="hover__colomn">
                   <img
                     src="https://chelsford.com/public/homeImages/chelsford home icons-09.png"
@@ -511,7 +540,7 @@ const Header = () => {
                           className="custom_mob_nav_link"
                           href="/services/vtct-level-2-and-3-nvq-beauty-therapy"
                         >
-                          VTCT Level 2 &amp; 3 NVQ Beauty Therapy
+                          VTCT Level 2 & 3 NVQ Beauty Therapy
                         </a>
                       </li>
                       <li className="custom_mob_nav_sub_item">

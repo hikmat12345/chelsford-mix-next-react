@@ -64,13 +64,13 @@ const ContactUsPage = ({
       <div className="">
         <div className="destop-banner">
           <div className="image-container">
-           <img src="https://chelsford.com/public/chelsforImages/contact-banner.webp" width="100%" className="img-fluid" alt="Responsive image" />
+           <img src={getFileSrcFromPublicFolder("contact-banner.webp")} width="100%" className="img-fluid" alt="Responsive image" />
           </div>
       </div>
 
     <div className="mobile-banner">
         <div className="image-container">
-            <img src="https://chelsford.com/public/chelsforImages/contact-banner-mob.webp" width="100%" className="img-fluid" alt="Responsive image" />
+            <img src={getFileSrcFromPublicFolder("contact-banner-mob.webp")} width="100%" className="img-fluid" alt="Responsive image" />
         </div>
     </div>
 
@@ -220,7 +220,7 @@ const ContactUsPage = ({
           <div id="response" style={{width:"100%"}}></div>
             </div>
             <div className="imageContainer">
-                <img src="https://chelsford.com/public/chelsforImages/Contact-us-inner.webp" alt=""  />
+                <img src={getFileSrcFromPublicFolder("Contact-us-inner.webp")} alt=""  />
             </div>
           </div>
       </div>
@@ -320,7 +320,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(ContactUsPage);
 //         </div>
 //         <div className="w-full">
 //           <div className="m-3 md:m-10">
-//             <div className="flex justify-evenly flex-col md:flex-row">
+//             <div className="flex flex-col justify-evenly md:flex-row">
 //               <div className="w-full md:w-5/12">
 //                 <div className="w-full">
 //                   <p className="">Leader in Aesthetics Education</p>
@@ -417,12 +417,12 @@ export default connect(mapStateToProps, mapDispatchToProps)(ContactUsPage);
 //               <h2>Speak to us</h2>
 //               <p>Our knowledgeable careers advisors is available to answer your questions and give you peace of mind knowing we've got your back. Following are the ways to contact us with your questions or concerns. So don't wait, let's talk about your future goals.</p>
 //             </div>
-//             <div className="flex flex-col md:flex-row mt-3">
+//             <div className="flex flex-col mt-3 md:flex-row">
 //               <div className="flex flex-col bg-[#1F105A] justify-center rounded-l-lg w-full md:w-1/4 text-center h-60">
 //                 <h3 className="text-white">Let's Go Social</h3>
 //                 <p className="text-white">Follow us on social media</p>
 //                 <div className="">
-//                   <ul className='flex space-x-5 justify-center mr-10'>
+//                   <ul className='flex justify-center mr-10 space-x-5'>
 //                     <li>
 //                       <a href="https://www.facebook.com/liatraininguk/" target="_blank"><FaFacebookF color='white' /></a>
 //                     </li>

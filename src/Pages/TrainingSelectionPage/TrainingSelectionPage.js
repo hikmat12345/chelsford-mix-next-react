@@ -23,6 +23,7 @@ import history from "../../history";
 
 //scss
 import "./TrainingSelectionPage.scss";
+import { BiBorderBottom } from "react-icons/bi";
 
 const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 
@@ -37,6 +38,7 @@ const TrainingSelectionPage = ({
   bookingId,
   cartId,
   nextPage,
+  userId
 }) => {
   const { service } = useParams();
   const serviceName = addSpaces(service, "-");
@@ -47,15 +49,19 @@ const TrainingSelectionPage = ({
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
   const [loader, setLoader] = useState(false);
+  const userSignedInStatus = (userId !== "" && userId !== undefined) || getCookies("userId") !== undefined ? true : false;
 
   useEffect(() => {
     if (nextPage) {
       setLoader(false);
       makeNextPageFalse();
-      history.push({
-        pathname: `/booking/${service}/summary`,
-        state: { bookingId: bookingId, cartId: cartId, serviceId },
-      });
+      !userSignedInStatus && localStorage.setItem("redirectUrl", `/booking/${service}/summary`)
+      !userSignedInStatus   ?  localStorage.setItem('stateObject', JSON.stringify({bookingId: bookingId, cartId: cartId, serviceId})) :
+      localStorage.setItem('stateObject', JSON.stringify({bookingId: bookingId, cartId: cartId, serviceId }))
+        history.push({
+          pathname: `/booking/${service}/summary`,
+          state: { bookingId: bookingId, cartId: cartId, serviceId },
+        });
     }
   }, [bookingId, cartId, makeNextPageFalse, nextPage, service, serviceId]);
 
@@ -75,11 +81,13 @@ const TrainingSelectionPage = ({
       voucherId,
     });
   };
+  
+  const doPadding= trainingList?.length<4 ?(trainingList.length==1 ?{paddingBottom: 353}:{paddingBottom: 220}): {paddingBottom: 294}
 
   return (
     <>
       <div className="fae--training-selection-page-main-container dpt dpb">
-        <div className="fae--training-selection-page-wrapper">
+        <div className="fae--training-selection-page-wrapper" style={doPadding}>
           <FAETitle label={serviceName} />
           {loading || loader ? (
             <FAELoading loaderImage={loaderImage} height="200px" type="svg" />
@@ -107,10 +115,9 @@ const TrainingSelectionPage = ({
                     <FAEShadowBox
                       style={{
                         flexDirection: "column",
-                        gap: "20px",
+                        gap: "11px",
                         cursor: "pointer",
                       }}
-                      padding
                       primary
                       onClick={() => {
                         if (availableSeats <= 0) {
@@ -121,90 +128,121 @@ const TrainingSelectionPage = ({
                         } else {
                           handleChangeTrainingBooking(id);
                         }
-                      }}
-                    >
+                      }} >
                       <div
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
-                          width: "80%",
-                        }}
-                      >
-                        <div>
-                          <FAEText tertiary paragraph>
-                            From
+                          width: "100%", 
+                          backgroundColor: "#d9bd3e",
+                          padding: "9px 10%",
+                        }} 
+                        >
+                        <div  style={{
+                          display: "flex", 
+                           }}
+                           className="fae-training-grid">
+                          <FAEText >
+                            Starting
                           </FAEText>
-                          <FAEText>{trainingStartDate}</FAEText>
+                          <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text" >{trainingStartDate}</FAEText>
                         </div>
-                        <div style={{ textAlign: "end" }}>
-                          <FAEText tertiary paragraph>
-                            To
+                        <div style={{  display: "flex", textAlign: "end" }} className="fae-training-grid">
+                          <FAEText>
+                            Ending
                           </FAEText>
-                          <FAEText>{trainingEndDate}</FAEText>
+                          <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text">{trainingEndDate}</FAEText>
                         </div>
                       </div>
-                      <div
+                      {/* <div
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
                           width: "80%",
                         }}
                       >
-                        <div>
-                          <FAEText tertiary paragraph>
+                        <div style={{ display: "flex", }}>
+                          <FAEText >
                             Time
                           </FAEText>
-                          <FAEText>
+                          <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text">
                             {trainingStartTime} - {trainingEndTime}
                           </FAEText>
                         </div>
-                        <div style={{ textAlign: "end" }}>
-                          <FAEText tertiary paragraph>
+                        <div style={{ display: "flex", textAlign: "end" }}>
+                            <FAEText >
+                              Remaining Seats
+                            </FAEText>
+                            <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text" >{availableSeats}</FAEText>
+                         </div>
+                      </div> */}
+                      {/* <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          width: "83%",
+                          padding:10,
+                          borderRadius:"5px",
+                          border:"1px solid #d9bd3e"
+                        }}
+                      >
+                        <div>
+                          <FAEText >
+                            Detail
+                          </FAEText>
+                         </div>
+                        <div style={{  textAlign: "center",  margin:"auto"  }}> 
+                          <FAEText  style={{fontSize:14, fontWeight:"bold"}}  className="fae-training-bolder-text">{trainingDescription}</FAEText>
+                        </div>
+                      </div> */}
+                      <div
+                        style={{
+                          width: "80%",
+                          display: "flex",
+                          paddingBottom:20,
+                          paddingTop:20,
+                          borderBottom:"1px solid #00000057"
+                         }} className="fae-training-grid" >
+                         <div >
+                          <FAEText >
+                             Location
+                           </FAEText> 
+                          </div >
+                          <div style={{ textAlign: "center", margin:"auto" }}> 
+                            <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text">{location}</FAEText>
+                          </div>
+                        </div>
+
+                        <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          width: "80%", 
+                          paddingBottom:20, 
+                        }}  >
+                        <div style={{
+                          display: "flex",}} className="fae-training-grid">
+                           <FAEText >
+                              Remaining Seats
+                            </FAEText>
+                            <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text" >{availableSeats}</FAEText>
+                        </div>
+                        <div style={{ display: "flex", textAlign: "end" }} className="fae-training-grid">
+                          <FAEText  >
                             Price
                           </FAEText>
                           <FAEPrice
+                           style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text"
                             price={trainingPrice}
                             discountedPrice={
                               trainingPercentDiscount !== 0
                                 ? discountedPrice
                                 : 0
-                            }
+                              }
                             currencySymbol={currencySymbol}
                           />
                         </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "80%",
-                        }}
-                      >
-                        <div>
-                          <FAEText tertiary paragraph>
-                            Remaining Seats
-                          </FAEText>
-                          <FAEText>{availableSeats}</FAEText>
-                        </div>
-                        <div style={{ textAlign: "end" }}>
-                          <FAEText tertiary paragraph>
-                            Details
-                          </FAEText>
-                          <FAEText>{trainingDescription}</FAEText>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          width: "80%",
-                        }}
-                      >
-                        <div>
-                          <FAEText tertiary paragraph>
-                            Location
-                          </FAEText>
-                          <FAEText>{location}</FAEText>
-                        </div>
-                      </div>
+                      </div> 
                     </FAEShadowBox>
                   );
                 })
@@ -232,7 +270,7 @@ const TrainingSelectionPage = ({
 
 const mapStateToProps = ({
   trainingSelectionPageReducer: { error, loading, trainingList },
-  defaultReducer: { userCountryId },
+  defaultReducer: { userCountryId,  userId }, 
   addressSelectionPageReducer: { bookingId, cartId, nextPage },
 }) => ({
   error,
@@ -242,6 +280,7 @@ const mapStateToProps = ({
   cartId,
   nextPage,
   trainingList,
+  userId
 });
 
 const mapDispatchToProps = (dispatch) => {

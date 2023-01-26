@@ -210,6 +210,7 @@
   background: #46333338;
 }
 .popup-sure-btn {
+  border: none;
   outline: initial;
   background-color: initial;
   color: #f21607;
@@ -219,11 +220,15 @@
   border: initial;
   margin-left: auto;
   float: right;
+  font-size: 14px;
   cursor: pointer;
   margin-right: 36px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
+.popup-sure-btn:focus { 
+  outline: 0px !important;
+}
 .popup-content-con{
     display: grid;
  } 

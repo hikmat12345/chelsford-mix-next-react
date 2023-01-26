@@ -117,34 +117,38 @@
   /* cutoff text  */
   .cutoff-text{
     --max-lines:13;
-    --line-height:1.4;
+    --line-height:1.6;
     max-height: calc(var(--max-lines) * 1em * var(--line-height));
     line-height: var(--line-height);
     overflow:hidden;
     position:relative;
     scroll-behavior: smooth;
+    font-size: 17px;
+    color: #02020294;
   }
   
   .cutoff-text ::before{
-  content: "";
-  position:absolute;
-  height:calc(2em * var(--line-height));
-  width:100%;
-  bottom:0;
-  pointer-events: none;
-  background:linear-gradient(to bottom, transparent, white);
-  
+    content: "";
+    position:absolute;
+    height:calc(2em * var(--line-height));
+    width:100%;
+    bottom:0;
+    pointer-events: none;
+    background:linear-gradient(to bottom, transparent, white); 
   } 
   .expand-btn {
     appearance: none;
     /* border: 1px solid #0000004d; */
-    padding: 0px 0rem 3.5rem !important;
-    border-radius: 0.25em;
+     border-radius: 0.25em;
     cursor: pointer;
     font-size: 15px;
     outline: initial;
     background-color: white;
+    padding: 0px 0rem 0.5rem !important;
+    color: #1e185f;
   }
+  
+
   .expand-btn:hover{
   background-color:#cccccc87; 
   }
@@ -158,9 +162,10 @@
   max-height:none;
   } 
   .active-tab:after {
-    cursor: pointer;
+    /* cursor: pointer;
     margin: 0;
     right: 0;
+    top: 10px;
     border-left-color: #ffffff !important;
     border-right: 0;
     margin-right: 27px;
@@ -171,7 +176,7 @@
     border: 12px solid transparent;
     border-bottom: 0;
     margin-top: 2px;
-    transform: rotateZ(223deg);
+    transform: rotateZ(223deg); */
   } 
   .tab-switch:checked + label + .tab-content {
   z-index: 2;
@@ -235,7 +240,7 @@
         padding-left: 0px !important;
       }
       #complete_beauty h2 { 
-          font-size: 26px !important;
+          font-size: 20px !important;
           line-height: 51px !important; 
           padding: 20px 12px !important;
           text-align:center;
@@ -285,8 +290,8 @@
         }
        
         .learn-more{ 
-          padding: 2rem !important;
-          min-height: 470px !important 
+          /* padding: 2rem !important;
+          min-height: 470px !important  */
        }
        .get-qualified { 
           padding: 3rem 2rem !important;  
@@ -501,7 +506,7 @@
          display:initial !important;
         }
         .tick-icon {
-          width: 123% !important;
+          /* width: 123% !important; */
           
           height: 44px; 
           margin-right: 9px !important;
@@ -606,7 +611,7 @@
     #complete_beauty {
         background-color: white;
         color: #1E185F;
-        padding: 20px 42px 0px 42px;
+        padding: 27px 42px 25px 42px;
     }
    .cblt-btn{
     background-color:#F2F2F2;
@@ -789,7 +794,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    padding-top: 13px;
+    padding-bottom: 20px;
     color: #848484;
     opacity: 0.7;
   }
@@ -817,8 +822,8 @@
     overflow-y: scroll;
   }
   #Course_Details::-webkit-scrollbar, #Teaching_Assessments::-webkit-scrollbar {
-  width: 5px; 
-  background: #ddd;
+    width: 5px; 
+    background: rgb(117, 117, 117);
   }
    
                 .wrapper {
@@ -906,7 +911,7 @@
                   display:none;
                 }
                 .tick-icon {
-                  width: 35%; 
+                  width: 30px; 
                   height: 44px;
                   padding: 6px;
                   border-radius: 3rem;

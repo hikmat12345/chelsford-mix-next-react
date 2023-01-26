@@ -59,66 +59,32 @@ const SubServicesPage = ({
     discountedPrice,  duration,  currencySymbol,  hasSession, price, isTraining,
     isOnline, hasProducts  }= getRedirectCredential;
 
-     !userSignedInStatus && localStorage.setItem("redirectUrl", pathname)
+    !userSignedInStatus && localStorage.setItem("redirectUrl", pathname)
     !userSignedInStatus && ismainService ?  localStorage.setItem('stateObject', JSON.stringify({serviceId: id, mainService: false, voucherId })) :
     localStorage.setItem('stateObject', JSON.stringify({...getRedirectCredential, serviceId: id}))
-
     ismainService ? history.push({
       pathname: pathname,
-      state: { mainService: false, voucherId },
-    }):
-    history.push({
-      pathname: pathname,
-      state: {
-        serviceId: id,
-        isInClinic,
-        isInHouse,
-        isOnline,
-        hasAttributes,
-        price: discountedPrice === 0 ? price : discountedPrice,
-        duration,
-        hasProducts,
-        currencySymbol,
-        voucherId,
-      },
-    })
-
+      state: { mainService: false, voucherId }, }):
+        history.push({
+          pathname: pathname,
+          state: {
+            serviceId: id,
+            isInClinic,
+            isInHouse,
+            isOnline,
+            hasAttributes,
+            price: discountedPrice === 0 ? price : discountedPrice,
+            duration,
+            hasProducts,
+            currencySymbol,
+            voucherId,
+          },
+      }) 
   }
 
 
-  const redirectUrl = async ({
-    id,
-    isInHouse,
-    isInClinic,
-    hasAttributes,
-    hasSubservice,
-    name,
-    discountedPrice,
-    duration,
-    currencySymbol,
-    hasSession,
-    price,
-    isTraining,
-    isOnline,
-    hasProducts
-
-  }) => {
-    const getRedirectCredential= {
-                    id,
-                    isInHouse,
-                    isInClinic,
-                    hasAttributes,
-                    hasSubservice,
-                    name,
-                    discountedPrice,
-                    duration,
-                    currencySymbol,
-                    hasSession,
-                    price,
-                    isTraining,
-                    isOnline,
-                    hasProducts 
-    } 
+  const redirectUrl = async ({ id, isInHouse, isInClinic, hasAttributes, hasSubservice, name, discountedPrice, duration, currencySymbol, hasSession, price, isTraining, isOnline, hasProducts  }) => {
+    const getRedirectCredential= {  id,isInHouse,isInClinic,hasAttributes,hasSubservice,name,discountedPrice,duration,currencySymbol,hasSession,price,isTraining,isOnline,hasProducts } 
     const filteredName =replaceSymbolToSpace(name, " ")
     return await hasSubservice === true  ? sendwithStates( `/booking/${replaceSpaces(filteredName, "-")}/sub-services/false/${voucherId ? voucherId: 0}/${userCountryId}`,true, getRedirectCredential)  
       : isTraining ? sendwithStates(`/booking/${replaceSpaces(filteredName, "-")}/training-selection`,false, getRedirectCredential)
@@ -129,14 +95,21 @@ const SubServicesPage = ({
       : isOnline ? sendwithStates(`/booking/${searchData?.service}/attributes`,false, getRedirectCredential)
       : isInClinic ?  sendwithStates( `/booking/${replaceSpaces(filteredName, "-")}/address-selection`,false, getRedirectCredential)
       : sendwithStates(`/booking/${replaceSpaces(filteredName, "-")}/address-selection`, false, getRedirectCredential)
-          
   };
   const handleSubServiceClicked = async (selectedSubService) => {
+    console.log(selectedSubService, 'selectedSubService')
+    const filteredName =replaceSymbolToSpace(serviceName, " ")
      await !isProfileCompleted && userSignedInStatus  ? history.push({
           pathname: "/profile/edit",
             state: { next: history.location.pathname },
           })
-    :  redirectUrl(selectedSubService); 
+    : history.push({
+      pathname: `/booking/${replaceSpaces(filteredName, "-")}/training-selection`,
+      state: {
+        serviceId: selectedSubService?.id,
+        ...selectedSubService
+      },
+    })  
   };
   if (loading) {
     return <FAELoading type="svg" loaderImage={loaderImage} height="630px" />;

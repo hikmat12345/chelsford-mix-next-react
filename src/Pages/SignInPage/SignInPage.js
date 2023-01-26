@@ -31,14 +31,14 @@ import {changeULocId} from "../../redux/actions/changeCountryLocId"
 import history from "../../history";
 
 //scss
-import "./SignInPage.scss";
+// import "./SignInPage.scss";
 import { FAERadioGroup } from "@findanexpert-fae/components/dist/stories/FAERadioGroup/FAERadioGroup";
 //import { FAEPhoneInput } from "@findanexpert-fae/components/dist/stories/FAEPhoneInput/FAEPhoneInput";
 import { faeFormDataParser } from "../../parsers";
 import FAEPhoneInput from "../../Temps/FAEPhoneInput/FAEPhoneInput";
 import { SocketService } from "../../helpers/socketservice";
 import { FAEImage } from "@findanexpert-fae/components/dist/stories/FAEImage/FAEImage";
-const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
+const loaderImage = getFileSrcFromPublicFolder("loader.webm");
 
 const SignInPage = ({
   loading,
@@ -53,7 +53,9 @@ const SignInPage = ({
   ...props
 }) => {
 
-
+  useEffect(() => {
+    history.push("/account")
+  }, []);
   //javascript for Tab
 
   function openCity(cityName) {
@@ -206,93 +208,8 @@ const field= {
   const fieldTypeAcc = type.toLowerCase();
   return (
     <>
-      {/* <div className="card">
-        <div className="cardtit">
-         <img src="" alt="Avatar" style="width:100%"/>
-        </div>      
-      <div className="container">
-        <h4><b>John Doe</b></h4> 
-        <p>Architect & Engineer</p> 
-      </div>
-      </div> */}
-
-
-      <div className="fae--sign-in-page-container dpt dpb" >
-        <div className="fae--sign-in-page-wrapper">
-        {loading && (
-            <FAELoading type="svg" loaderImage={loaderImage} height="630px" />
-          )}
-          {!loading && (
-            <>
-              <div className="loginlogotop">
-                    {window.screen.width>600?
-                      
-                      <FAEImage className="fae-login-desktop-logo" src={getFileSrcFromPublicFolder("expert_logo.PNG")}/>
-                    :
-                    <>
-                      <FAEImage className="fae-mobile-logo" src={getFileSrcFromPublicFolder("mobile_expert_logo.PNG")}/>
-                        <FAETitle
-                          className="fae-mobile-login-title"
-                          label="Expert"
-                          logo={getFileSrcFromPublicFolder("title_logo.svg")}
-                        />
-                      </>
-                  }
-              </div> 
-              <form
-                onSubmit={handleSubmit}
-                className="fae--sign-in-page-form-wrapper"
-                style={{paddingBottom: 104}}
-              > 
-
-                  <div className="fae-login-card-tab">
-                    <div className="fae-login-ul">
-                        <FAEButton type="button" className={`fae-login-email-btn ${showImgInp=="Email" ? "active":""}`} onClick={()=> handleMailBoxAndMobile("Email")}>Email</FAEButton>
-                        <FAEButton  type="button"  className={`fae-login-email-btn ${showImgInp=="Phone Number" ? "active":""}`} onClick={()=>handleMailBoxAndMobile("Phone Number")}>Phone</FAEButton>
-                        <FAEButton  type="button"  className={`fae-login-email-btn ${showImgInp=="Account Number" ?"active":""}`} onClick={()=>handleMailBoxAndMobile("Account Number")}>Account</FAEButton>
-                    </div>
-                  
-                  <div id="fae-phone" className="fae-login-content">
-                    <FAEText className="fae-login-msg-title" label="Welcome To">Welcome To</FAEText><br/>
-                      <FAEText>To Keep connected with us please login with your
-                        personal information by phone number and password
-                      </FAEText>
-                  </div>
-                      {/* <div id="fae-email" className="fae-login-content">
-                        <FAETitle label="Email"></FAETitle><br/>
-                          <FAEText>To Keep connected with us please login with your
-                            personal information by phone number and password
-                          </FAEText>
-                      </div>
-                      <div id="fae-UserId" className="fae-login-content">
-                        <FAETitle label="User ID"></FAETitle><br/>
-                          <FAEText>To Keep connected with us please login with your
-                            personal information by phone number and password
-                          </FAEText>
-                      </div> */}
-
-                            
-
-                    {/* <FAERadioGroup 
-                      values={faeFormDataParser(fOption)}
-                      primary
-                      className="fae-login-option"
-                      value="Email"
-                      shadowBoxProps={{ primary: true }}
-                      getSelectedValue={(value) => handleMailBoxAndMobile(value)}
-                    />  */}
-                {showImgInp == "Email" ? (
-                  <>
-                  {/* <FAETextField
-                    placeholder="UserName (Email / Account #)"
-                    primary
-                    required
-                    type="text"
-                    getValue={setEmail}
-                    shadowBoxProps={{
-                      primary: true,
-                    }}
-                  /> */}
+     {/* {showImgInp == "Email" ? (
+                  <> 
             
                         <FAETextField
                             autoComplete="new-password"
@@ -357,17 +274,7 @@ const field= {
                     }}
                   />
                 )}
-
-                {/* <FAETextField
-                  placeholder="UserName (Email / Mobile # / Account #)"
-                  primary
-                  required
-                  type="text"
-                  getValue={setEmail}
-                  shadowBoxProps={{
-                    primary: true,
-                  }}
-                /> */}
+ 
 
                 <div>
                 <FAETextField
@@ -405,19 +312,13 @@ const field= {
 
                 </div>  
 
-
-
-
-
-
-
-
+ 
               </form>
             </>
           )}
         </div>
         <ToastContainer />
-      </div>
+      </div> */}
     </>
   );
 };

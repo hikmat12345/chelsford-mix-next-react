@@ -153,12 +153,17 @@ const BookingDetailPage = ({
   const [openPopUp, setOpenPopup] = useState(false);
   const [openDeletePopUp, setOpenDeletePopUp]=useState(false)
   const [reasonValue, setReasonValue]=useState("")
+  const [notesMessage, setNotesMessage]=useState("")
   const closeRef= useRef()
   const clickHandler = () => { 
+    if(reasonValue !==""){
     //  setOpenDeletePopUp(true)  
      sessionId>0 ? deleteBookingSession({ sessionId,  bookingId  }): deleteBooking({ userId, bookingId, reasonValue  });
      closeRef.current.click()
      setOpenPopup(false);
+    }else {
+      setNotesMessage("The reason input is required!")
+    }
   }; 
   console.log(state,bookingDetails, 'sessionFlag')
   const clickDeleteBookintHandler= (userId, bookingId)=>{
@@ -474,22 +479,23 @@ const BookingDetailPage = ({
                  </Popup> 
                  <Popup 
                     open={openDeletePopUp}
-                    position="right center"  >
+                    position="right center" >
                     {(close) => (
                       <div>
                         <FAEText className="fae-popup-title">Reason!</FAEText>
                         <FAEText className="fae-popup-message">Please explain the reason, why you want to delete the booking</FAEText>
                         <input className="fae-reason-input" onChange={(e)=>setReasonValue(e.target.value)} placeholder="please write reason"/>
-                        <button
-                          className="popup-sure-btn"
-                          onClick={close} >
-                           CANCEL
-                        </button>
-                        <button
-                          className="popup-sure-btn"
-                          onClick={() => clickHandler(userId, bookingId)}  >
-                           DELETE BOOKING
-                        </button>
+                        {notesMessage !=="" && <FAEText style={{ margin: "auto",fontSize: "10px" }} className="red-text">{notesMessage}</FAEText>}
+                          <button
+                            className="popup-sure-btn"
+                            onClick={close}>
+                              CANCEL
+                          </button>
+                          <button
+                            className="popup-sure-btn"
+                            onClick={() => clickHandler(userId, bookingId)}  >
+                              DELETE BOOKING
+                          </button>
                       </div>
                     )}
                   </Popup>
