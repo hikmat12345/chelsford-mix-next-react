@@ -2,7 +2,31 @@
 .mobile__navbar {
     display: none;
   }
-  
+  .video-js .vjs-big-play-button { 
+    right: 0;
+    left: 0;
+    width: 4rem; 
+    bottom: 0;
+    height: 3rem;   
+    top: 10px;  
+    margin: auto;
+    position: absolute;
+  }
+  .my-video-dimensions {
+    width: 640px;
+    height: 570px;
+  }
+  .testimonial-slide-video-dimensions{ 
+    /* width: 100%;
+    height: 347px; */
+  }
+  /* .testimonial-slide-video-dimensions   .vjs-control {
+   top: -15px;
+} */
+  #slide-video {
+    width: 100%;
+    height: 100%;
+  }
   .phone__no {
     margin-bottom: 0px !important;
   }
@@ -21,7 +45,7 @@
   }
   .sub__container {
     margin-top: -7px;
- }
+  }
   .hover__div {
     /* display: none; */
     position: absolute;
@@ -100,12 +124,12 @@
     transition: all 0.3s ease 0s;
     box-sizing: border-box;
     cursor: pointer;
-}
-  .header__main {
+  }
+    .header__main {
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
+  }
   .short_tab {
     display: none;
   }
@@ -131,13 +155,11 @@
     background-color: #1e185f;
     color: white;
     PADDING: 1px 36px;
-   }
-
+  } 
   .navbar {
     display: flex;
     justify-content: flex-start !important;
-  }
-
+  } 
   .phone__logo__No {
     display: flex;
     float: left;
@@ -148,7 +170,7 @@
   a.courses__text {
     cursor: pointer;
     margin-top: 1%;
-     text-decoration: none;
+    text-decoration: none;
     color: white;
     padding: 0px 14px;
   }  
@@ -165,7 +187,7 @@
     margin-left: -15%;
     text-decoration: none;
     color: white;
-}
+  }
   .header__logo {
     margin: 15px;
   }
@@ -183,8 +205,7 @@
   }
   .send__button__div {
     display: flex;
-  }
-  
+  } 
   .heading__1 {
     width: 114px;
     height: 20px;
@@ -219,9 +240,7 @@
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
-}
-
-
+  } 
   .send__msg__div {
     display: flex;
     justify-content: flex-start;
@@ -301,7 +320,7 @@
     text-transform: uppercase;
     color: #1e185f;
     top: 5px;
- }
+  }
   .sub__container__main__text1 {
     margin-left: 1.5%;
     border-left: 3px solid white;
@@ -318,7 +337,7 @@
     text-transform: uppercase;
     color: #1e185f;
     padding-left: 9px;
-}
+  }
   .sub__container2 {
     display: flex;
     background-color: transparent;
@@ -974,9 +993,13 @@
     }
   }     
   @media (max-width: 700px) {
+        .my-video-dimensions {
+            width: 640px;
+            height: 187px;
+          }
         .desktop-video{
-          display: none !important;
-        }
+            display: none !important;
+          }
           .fae-mobile-tabs {
             display: block;
           }

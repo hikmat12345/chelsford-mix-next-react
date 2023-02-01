@@ -155,6 +155,13 @@ import "../chelsfordCSS.css"
                      VTCT Level 2, 3 and 4 NVQ Beauty & Laser
                   </a>
                 </li>
+                {/* <li className="footer__container__2__course__list__number">
+                  <a
+                    href="/services/fast-track-vtct-level-3-nvq-beauty-therapy"
+                    className="footer__container__2__course__list__link">
+                    Fast Track VTCT Level 3 NVQ Beauty Therapy
+                  </a>
+                </li> */}
                 <li className="footer__container__2__course__list__number">
                   <a
                     href="/services/VTCT-Level-3-in-Epilation"
@@ -200,7 +207,7 @@ import "../chelsfordCSS.css"
                 </li>
                 <li className="footer__container__2__course__list__number">
                   <a
-                    href="/services/NVQ-Level-2-Beauty-Therapy"
+                    href="/services/nvq-level-2-beauty-therapy"
                     className="footer__container__2__course__list__link"
                   >
                     NVQ Level 2 Beauty Therapy
@@ -208,14 +215,20 @@ import "../chelsfordCSS.css"
                 </li>
                 <li className="footer__container__2__course__list__number">
                   <a
-                    href="/services/NVQ-Level-3-Beauty-Therapy
-                    "
+                    href="/services/NVQ-Level-3-Beauty-Therapy"
                     className="footer__container__2__course__list__link"
                   >
                     NVQ Level 3 Beauty Therapy
                   </a>
                 </li>
-                
+                <li className="footer__container__2__course__list__number">
+                  <a
+                    href="/services/cpd-microneedling-diploma"
+                    className="footer__container__2__course__list__link"
+                  >
+                    Cpd Microneedling Diploma
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -228,14 +241,7 @@ import "../chelsfordCSS.css"
                 <h3 className="footer__container__2__heading"> Medical Training </h3>
               </div>
               <ul className="footer__container__2__course__list">
-                <li className="footer__container__2__course__list__number">
-                  <a
-                    href="/services/PRP-Advanced-Treatments"
-                    className="footer__container__2__course__list__link"
-                  >
-                    PRP Advanced Treatments 
-                  </a>
-                </li>
+               
                 <li className="footer__container__2__course__list__number">
                   <a
                     href="/services/PRP-Advanced-Treatments"

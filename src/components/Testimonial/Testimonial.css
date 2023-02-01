@@ -14,7 +14,10 @@
       border-right: 1px solid #dcdcdc;
       margin-right: 15px !important;
   }
-  
+  .testimonial-slide-video{
+    width: 100%;
+    height: 100%;
+  }
   .testimonials_ h2 {
     font-family: "Roboto" !important;
     font-style: normal;

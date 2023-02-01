@@ -243,14 +243,14 @@ const Header = () => {
                      VTCT Level 2, 3 and 4 NVQ Beauty & Laser
                   </a>
                 </li>
-                <li className="hover__item">
+                {/* <li className="hover__item">
                   <a
                     href="/services/fast-track-vtct-level-3-nvq-beauty-therapy"
                     className="hover__linka"
                   >
                      Fast Track VTCT Level 3 NVQ Beauty Therapy
                   </a>
-                </li>
+                </li> */}
                 <li className="hover__item">
                   <a
                     href="/services/VTCT-Level-3-in-Epilation"
@@ -388,13 +388,13 @@ const Header = () => {
                         Laser Core Of Knowledge 
                       </a>
                     </li>
-                    <li className="hover__item">
+                    {/* <li className="hover__item">
                       <a
                         href="/services/level-3-anatomy-and-physiology-vtct"
                         className="hover__linka" >
                         Level 3 Anatomy & Physiology VTCT
                       </a>
-                    </li> 
+                    </li>  */}
                 </div>
 
                 </div>
@@ -559,14 +559,14 @@ const Header = () => {
                           VTCT Level 3 NVQ Beauty Therapy
                         </a>
                       </li>
-                      <li className="custom_mob_nav_sub_item">
+                      {/* <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
                           href="/services/fast-track-vtct-level-3-nvq-beauty-therapy"
                         >
                           Fast Track VTCT Level 3 NVQ Beauty Therapy
                         </a>
-                      </li>
+                      </li> */}
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
@@ -599,14 +599,14 @@ const Header = () => {
                           VTCT Level 4 Skin Blemish Removal
                         </a>
                       </li>
-                      <li className="custom_mob_nav_sub_item">
+                      {/* <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
                           href="/services/level-3-anatomy-and-physiology-vtct"
                         >
                           Level 3 Anatomy &amp; Physiology VTCT
                         </a>
-                      </li>
+                      </li> */}
                       <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
@@ -719,14 +719,14 @@ const Header = () => {
                           Laser Core of Knowledge
                         </a>
                       </li>
-                      <li className="custom_mob_nav_sub_item">
+                      {/* <li className="custom_mob_nav_sub_item">
                         <a
                           className="custom_mob_nav_link"
                           href="/services/level-3-anatomy-and-physiology-vtct"
                         >
                           Level 3 Anatomy &amp; Physiology VTCT
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   )}
                 </div>

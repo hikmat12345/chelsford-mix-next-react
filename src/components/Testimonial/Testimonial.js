@@ -2,12 +2,12 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import {  FaAngleLeft, FaAngleRight, FaQuoteRight } from 'react-icons/fa';
- import './Testimonial.scss'
+import './Testimonial.scss'
 
 export default function Testimonial() {
     return (
-        <div className='testimonials_'>
-        {/* <Carousel infiniteLoop autoPlay interval={5000} showStatus={false}
+     <div className='testimonials_'>
+        <Carousel infiniteLoop autoPlay interval={5000} showStatus={false}
         >
             <section>
                 <div className="testimonials__title">
@@ -84,8 +84,7 @@ export default function Testimonial() {
                     </div>
                 </div>
             </section>
-        </Carousel> */}
-    </div>
-
-    )
+        </Carousel>
+     </div>
+   )
 }

@@ -1,5 +1,5 @@
 //libs
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { 
@@ -36,6 +36,7 @@ const ServiceContentPage = ({
   userCountryId,
   userId, 
 }) => {
+  const [contentData, setContentData]= useState([])
   const isProfileCompleted =
     getCookies("customer_details") !== undefined &&
     getCookies("customer_details").isProfileCompleted;
@@ -206,11 +207,16 @@ function sendwithStates(pathname,   subservice, freeConsultation){
      document.getElementById(cityName).style.display = "block";
      evt.currentTarget.className += " active-tab";
    } 
-  
- const courseContent= courseDetailContent.filter((item)=>item.page_link==service?.toLocaleLowerCase())
- const {course_information, course_module, featur_content, instruction_content, page_link, what_next}= courseContent[0] || {}
+  useEffect(()=>{
+    const courseContent= courseDetailContent.filter((item)=>item.page_link==service?.toLocaleLowerCase())
+    setContentData(courseContent)
+   
+  }, [])
+  const {course_information,summary_description, course_module, featur_content, instruction_content, page_link, what_next}= contentData[0] || {}
+console.log(contentData,contentData?.summary_description, 'contentData')
+const placeholderImage = getFileSrcFromPublicFolder("placeholder.jpg");
 
- const padding= courseContent?.length ==0 && 300
+ const padding= contentData?.length ==0 && 300
    return (
     <>
       {loading && (
@@ -249,7 +255,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             discountedPrice={percentDiscount !== 0 && price}
             alt={serviceName}
             currencySymbol={currencySymbol}
-            serviceDescription={serviceShortDescription}
+            serviceDescription={summary_description}
             bookingButtonText={
               !isServiceAvailable
                 ? serviceUnavailableMessage
@@ -316,32 +322,32 @@ function sendwithStates(pathname,   subservice, freeConsultation){
             </div> 
           </div> */}
 
- {courseContent?.length !==0 &&
+ {contentData?.length !==0 &&
    <>
    {(course_module?.length !==0 && course_module !==undefined) && <section id="Course_module" className="py-5 course_module">
       <div className="container">
         <h4 className="pt-3 pb-5 text-center">Course Modules</h4>
-        <div className="px-5 row"> 
+        <div className="px-3 row"> 
           {course_module?.slice(0,8)?.map((courseModuleName, index)=>{
             return (
                 <div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
                   <div className="course_module_label">
-                    <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
+                    <div className="px-3 py-1 mt-1 text-center text-white fs-3 justify-content-center label-circle">
                       <span>{index+1}</span>
                     </div>
-                    <p className="py-5">{courseModuleName}</p>
+                    <p className="py-4">{courseModuleName}</p>
                   </div>
                 </div>)
                })}
           </div>
-      <div className="px-5 row remaining-boxes " style={{display:"none"}}> 
+      <div className="px-3 row remaining-boxes " style={{display:"none"}}> 
        {course_module?.slice(8)?.map((courseModuleName, index)=>{
             return (<div className="px-1 col-sm-6 col-6 col-md-6 col-lg-3">
             <div className="course_module_label">
-                <div className="px-3 py-1 mt-5 text-center text-white fs-3 justify-content-center label-circle">
-                <span>{index+8}</span>
+                <div className="px-3 py-1 mt-1 text-center text-white fs-3 justify-content-center label-circle">
+                <span>{index+9}</span>
                 </div>
-                <p className="py-5">{courseModuleName}</p>
+                <p className="py-4">{courseModuleName}</p>
               </div>
             </div>)})} 
            </div> 
@@ -351,8 +357,8 @@ function sendwithStates(pathname,   subservice, freeConsultation){
           <div className="px-3 py-3 text-center text-white justify-content-center chevron-arrow label-circle"><i style={{fontSize: 12, fontSize: "21px", color: "black"}} className="fa fa-angle-down" aria-hidden="true"></i></div>
         </div>} 
     </section>}
-   {console.log(featur_content, 'featur_content')}
-    {courseContent?.length !==0 && 
+    {console.log(featur_content?.content_detail.length, 'featur_content?.content_detail') }
+     {contentData?.length !==0 && 
       (featur_content?.length !==0 && featur_content !==undefined) && 
         <section id="complete_beauty" className="complete_beauty ">
             <div className="container-fluid">
@@ -365,12 +371,12 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                 {featur_content?.title}
               </h2>
               <artical>
-                <p className="cutoff-text"   dangerouslySetInnerHTML={{ __html: featur_content?.content_detail}} /> 
-                <input className="expand-btn" type="checkbox" />
+                <p className="cutoff-text" dangerouslySetInnerHTML={{ __html: featur_content?.content_detail}} /> 
+                {featur_content?.content_detail?.length > 2221 && <input className="expand-btn" type="checkbox" />}
                 </artical>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-             <FAEImage src={getFileSrcFromPublicFolderSpcialLHR(featur_content?.image)}   />
+             <FAEImage placeholder={placeholderImage} src={getFileSrcFromPublicFolderSpcialLHR(featur_content?.image)}   />
                 <div className="complete_beauty_quality">
                   
                 </div>
@@ -592,7 +598,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
                       </div>
                       <h3>{what_next_cont?.title}</h3>
                       <p>{what_next_cont?.detail}</p>
-                      <a href= {`/services/${replaceSpaces(what_next_cont?.title?.toLocaleLowerCase()?.replaceAll(".", ""), "-")}`}>Explore More</a>
+                      <a href= {`/services/${replaceSpaces(what_next_cont?.title?.toLocaleLowerCase(), "-")?.replaceAll(".", "")}`}>Explore More</a>
                   </div>
                  )})}
                 {/* <div className="course-card">
@@ -647,7 +653,7 @@ function sendwithStates(pathname,   subservice, freeConsultation){
               <div className="col-md-7">
                 <div className="coursesDiscriptionCol">
                     <h2>Get Qualified and Start Today</h2>
-                    <p className="description">We'll ensure that you reach a high standard of education and are competent in your chosen subject of study so you can move straight into the job industry. Enroll Today!</p> 
+                    <p className="description">We'll ensure that you reach a high standard of education and are competent in your chosen subject of study so you can move straight into the job industry. Enrol Today!</p> 
                 </div> 
               </div>
             <div className="col-md-2"> </div>
