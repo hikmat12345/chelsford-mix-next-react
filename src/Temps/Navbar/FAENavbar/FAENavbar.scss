@@ -1,0 +1,48 @@
+@import "../../../App.scss";
+@import "../../../mediaQueries.scss";
+
+.fae--navbar {
+  @include flex(none, none);
+  flex-direction: column;
+  gap: 7px;
+  background-color: $primary-bg;
+  padding: 10px $default-side-padding;
+}
+
+.fae--nav-bar-items-for-mobile-container {
+  display: none;
+}
+
+@include tablet {
+  .fae--navbar {
+    display: none;
+  }
+  .fae--navbar-items-section-container {
+    display: none;
+  }
+  .fae--nav-bar-items-for-mobile-container {
+    @include flex(center, center);
+    padding: 10px 0px;
+    background-color: $primary-bg;
+  }
+  .fae--navbar-items-for-mobile-wrapper {
+    @include flex(space-between, center);
+  }
+  .fae--navbar-items-logo-for-mobile-wrapper {
+    display: flex;
+  }
+  
+  .fae--mobile-nav-bar-actions-wrapper {
+    @include flex(center, center);
+    gap: 10px;
+    position: relative;
+    z-index: 99;
+  }
+  .fae--navbar-search-section-search {
+    margin: 0px 10px;
+  }
+  .fae--navbar-items-for-mobile-wrapper {
+    width: 98%;
+   
+  }
+}

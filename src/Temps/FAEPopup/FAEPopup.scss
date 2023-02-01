@@ -1,0 +1,62 @@
+@import "../../mediaQueries.scss";
+
+
+.popup-content {
+    width: 256px !important; 
+    border-radius: 5px;
+    padding: 22px !important;
+    position: absolute !important;
+    // left: 0;
+    // font-size: 18px;
+    // right: 0;
+  }
+  .close {
+    float: right;
+    top: 0;
+    position: absolute;
+    right: 7px;
+    font-size: 31px;
+    cursor: pointer;
+  }
+  .popup-arrow { display: none;}
+  [data-popup=tooltip].popup-overlay {
+    background: #46333338;
+  }
+   .popup-sure-btn{
+     background-color: red;
+     color: white;
+     border-radius: 4px;
+     text-align: right;
+     padding: 5px;
+     width: 30px;
+     margin-left: auto;
+     float: right;
+     cursor: pointer;
+     margin-top: 17px; 
+   }
+  .popup-content-con{
+      display: grid;
+   } 
+  #popup-root .popup-content {
+    top: 40%;
+    bottom: 40%;
+     height: 65px;
+  }
+  .change-icon svg { 
+    font-size: 15px;
+  }
+  
+  @include onlyDesktop {
+    .change-country-tab { 
+      width: 60%;
+    }
+    .popup-content {
+      right: 20%;
+    }
+   }
+   @include mobile{
+     #popup-root .popup-content {
+       top: 40%;
+       left: initial !important;
+    }
+   }

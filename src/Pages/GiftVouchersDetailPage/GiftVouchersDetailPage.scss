@@ -1,0 +1,238 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--gift-vouchers-page-main-container {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.fae--gift-voucher-transfer-form{
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+ 
+.fae--voucher-card-page-unit-container {
+  width: 49%;
+  position: relative;
+}
+.fae-recommended-services-container{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.fae--gift-voucher-transfer-form {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gifts-voucher-page-price-tag {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+  bottom: 10px;
+  left: 15px;
+  @include flex(center, center);
+}
+.fae-serviceVouchers-ExpireVoucher{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fae--tabs { 
+  justify-content: initial; 
+}
+
+
+@include mobile {
+  .fae--voucher-card-page-unit-container {
+    width: 100%;
+  }
+  .fae-recommended-services-image{
+    width: 100%;
+    height: auto;
+  }
+  .fae-recommended-services{
+    padding: 14px;
+  }
+  .fae-voucherbottom-vocherprice { 
+    margin: 33px 9px 0; 
+ }
+ .fae-voucherNumber-imagsec { 
+   width: 50px;
+ }
+ .fae-giftvouchersdetailspage-alpnum {
+    width: initial !important; 
+    font-size: 13px !important; 
+    padding-bottom: 4px;
+    text-align: left;
+    padding-left: 13px !important;
+    line-height: 26px !important;
+  }
+  .fae-voucherbottom-vocherprice{ 
+    margin: 27px 0px 0; 
+  }
+} 
+.fae-vouchertitleassign{
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fae-voucherNumber{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.fae-gifvoucherdetailpage-profileimg{
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 2px #fff;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.fae-voucherNumber-imagsec{
+  display: flex;
+  flex-direction: row;  
+}
+.fae-voucherNumber-rightsec{
+  text-align: end;
+  justify-content: end;
+  margin-left: auto;
+}
+.fae-voucherNumber-textbold{
+  width: 167px;
+  margin: 8px 10px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.fae-voucherNumber-textpara{
+  width: 167px;
+  height: 39px;
+  margin: 5px 0 6px 10px;
+}
+.fae-giftvouchersdetailspage-alpnum{
+  width: 106px;
+  height: 23px;
+  margin: 5px 0 0 0px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #4a4a4a;
+}
+.fae-giftvouchersdetailspage-vouchernum{
+  width: 103px;
+  height: 17px;
+  margin: 0px 0 7px 0px;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #6c6c6c;
+}
+.fae-vouchertitleassign-birthday{
+  width: 87px;
+  height: 20px;
+  // margin: 0 752px 6px 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+}
+.fae-vouchertitleassign-birthdaypara{
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #707070;
+  flex-wrap: wrap !important;
+}
+.fae-voucherbottom-vocherprice{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  margin: 90px 0px 0;
+  padding: 13px 17px 12px 20px;
+  border-radius: 4px;
+  background-color: #f7f7f7 !important;
+}
+.fae-voucherbottom-buttonside{
+  margin-left: auto;
+  background-color: #f7f7f7 !important;
+  margin: 13px 0 0 0;
+}
+.fae-voucherbottom-voucherbutton{
+  float: right;
+  height: 34px;
+  margin: 5px 0 0 0; 
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16); 
+}
+.fae-voucherbottom-price-500{
+  width: 100%;
+  background-color: #f7f7f7 !important;
+}
+.fae-voucher-price{
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  padding: 15px 0 0 0;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6c6c6c;
+}
+.fae-voucher-500{
+  width: 100%;
+  height: auto;
+  padding: 5px 0 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #db0406;
+}
+.fae-recommended-services-container .fae--service-card-image-container{
+  width: 100%;
+}

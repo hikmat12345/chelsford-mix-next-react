@@ -1,0 +1,12 @@
+@import "../../../App.scss";
+
+.fae--auto-complete-container {
+  @include flex(center, none);
+  flex-direction: column;
+  // gap: 5px;
+  width: 95%;
+}
+
+.MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+  font-size: 12px;
+}

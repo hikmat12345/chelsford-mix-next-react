@@ -1,0 +1,36 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--privacy-policy-page-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+  width: 60%;
+}
+.fae--privacy-policy-page-container h1 {
+  font-size: 17px;
+  padding: 7px 1px;
+}
+.fae--privacy-policy-page-container h2 {
+  font-size: 15px;
+  padding: 7px 1px;
+}
+.fae--privacy-policy-page-container p, .fae--privacy-policy-page-container ul {
+  font-size: 14px;
+  padding: 8px 0px;
+}
+@include tablet {
+  .fae--privacy-policy-page-container {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--privacy-policy-page-container {
+    width: 95%;
+    padding-top:10px;
+  }
+  .fae--privacy-policy-page-container h3{
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.fae--phone-input-container {
+  @include flex(center, none);
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  width: 95%;
+}

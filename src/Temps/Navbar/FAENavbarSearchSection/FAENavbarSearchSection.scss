@@ -1,0 +1,73 @@
+@import "../../../App.scss";
+@import "../../../mediaQueries.scss";
+
+.fae--navbar-search-section-container {
+  @include flex(none, center);
+  width: 100%;
+  color: #ffffff;
+}
+
+.fae--navbar-logo-wrapper {
+  @include flex(flex-start, flex-start);
+  width: 15%;
+  gap: 5px;
+}
+
+.fae--navbar-search-section-auth {
+  width: 15%;
+}
+
+.fae--navbar-search-section-search-container {
+  @include flex(center, center);
+  width: 70%;
+}
+
+.fae--navbar-search-section-search {
+  @include flex(none, center);
+  width: 80%;
+}
+
+.fae--navbar-search-section-auth {
+  @include flex(flex-end, center);
+  gap: 10px;
+  width: 15%;
+}
+
+.fae--navbar-search-section-auth-item {
+  cursor: pointer;
+}
+
+.fae--navbar-search-section-auth-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+}
+
+.fae--navbar-search-section-user-signed-in {
+  @include flex(flex-end, center);
+  gap: 10px;
+  width: 15%;
+  cursor: pointer;
+}
+.auto-complete-search-bar {
+  background-color: white;
+  padding: 2px !important;
+}
+
+@include tablet {
+  .fae--navbar-logo-wrapper {
+    display: none;
+  }
+  .fae--navbar-search-section-user-signed-in {
+    display: none;
+  }
+  .fae--navbar-search-section-auth {
+    display: none;
+  }
+  .fae--navbar-search-section-search-container {
+    width: 100%;
+  }
+  .fae--navbar-search-section-search {
+    width: 95%;
+  }
+}

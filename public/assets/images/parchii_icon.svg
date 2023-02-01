@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143.306" height="46.4" viewBox="0 0 143.306 46.4">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.796" y1="-2.027" x2="0.237" y2="2.751" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#930000"/>
+      <stop offset="0.168" stop-color="#af0000"/>
+      <stop offset="0.363" stop-color="#c90000"/>
+      <stop offset="0.563" stop-color="#dc0000"/>
+      <stop offset="0.772" stop-color="#e70000"/>
+      <stop offset="1" stop-color="#eb0000"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_84" data-name="Group 84" transform="translate(-1381.072 -3026.025)">
+    <path id="Path_64" data-name="Path 64" d="M1520.707,3031.179l3.671-2.578-3.671-2.577H1384.741l-3.669,2.577,3.669,2.578-3.669,2.578,3.669,2.578-3.669,2.579,3.669,2.577-3.669,2.578,3.669,2.577-3.669,2.578,3.669,2.577-3.669,2.579,3.669,2.577-3.669,2.579,3.669,2.577-3.669,2.578,3.669,2.578-3.669,2.577,3.669,2.578h135.966l3.671-2.578-3.671-2.577,3.671-2.578-3.671-2.578,3.671-2.577-3.671-2.579,3.671-2.577-3.671-2.579,3.671-2.577-3.671-2.578,3.671-2.577-3.671-2.578,3.671-2.577-3.671-2.579,3.671-2.578Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

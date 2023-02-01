@@ -1,0 +1,72 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--session-selection-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary; 
+    padding-bottom: 20rem;
+
+}
+
+.fae--session-selection-page-wrapper {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.session-selection-page-table {
+  width: 100%;
+  @include flex(center, center);
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.session-selection-page-wrapper {
+  @include flex(space-between, center);
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.session-selection-page-wrapper-header {
+  @include flex(space-between, center);
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.session-selection-page-name-and-quantity {
+  @include flex(center, center);
+  gap: 10px;
+}
+
+.session-selection-page-quantity {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  @include flex(center, center);
+  background-color: #e8e8e8;
+}
+
+.session-selection-page-item {
+  @include flex(center, center);
+  width: 30%;
+}
+
+@include tablet {
+  .fae--session-selection-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--session-selection-page-wrapper {
+    width: 95%;
+  }
+  .fae--service-location-page-container {
+    padding-bottom: 20rem !important;
+  } 
+}

@@ -1,0 +1,38 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--profile-page-elements-wrapper {
+  width: 100%;
+  @include flex(center, center);
+}
+
+.fae--profile-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+  background-color: white;
+  padding: 5px -1px 91px;
+  border-radius: 4px;
+  box-shadow: initial;
+}
+
+.fae--profile-page-text-field {
+  width: 95%;
+  background-color: #fff;
+}
+
+.fae--profile-title-wrapper {
+  @include flex(flex-start, center);
+  gap: 20px;
+}
+
+@include tablet {
+  .fae--profile-page-elements-wrapper {
+    flex-direction: column;
+    gap: $default-section-gap;
+  }
+  .fae--profile-page-text-field {
+    width: 100%;
+  }
+}

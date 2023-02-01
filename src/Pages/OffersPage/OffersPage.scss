@@ -1,0 +1,43 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--offers-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--offers-page-wrapper {
+  width: 55%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--offers-page-services-wrapper {
+  width: 100%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+@include smallDesktop {
+  .fae--offers-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include tablet {
+  .fae--offers-page-wrapper {
+    width: 90%;
+  }
+}
+
+@include mobile {
+  .fae--offers-page-wrapper {
+    width: 95%;
+  }
+  .fae--offer-service-card-name div:nth-child(1) p {
+    
+    font-size: 13px !important;
+ }
+}

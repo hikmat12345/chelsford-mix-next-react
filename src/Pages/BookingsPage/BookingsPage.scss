@@ -1,0 +1,11 @@
+@import "../../App.scss";
+
+.fae-bbokings-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+.tabs-active-tab {
+  background-color: #1e185f !important;
+}

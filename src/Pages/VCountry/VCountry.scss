@@ -1,0 +1,82 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+.fae-vouchers-page-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.change-country-tab {
+  background-color: #f4f4f417;
+  color: #040404;
+  padding: 9px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #00000012;
+}
+.change-icon{ 
+  
+    float: right;
+    color: #599137; 
+}
+ 
+ 
+
+  .popup-content {
+  width: 256px; 
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute !important;
+  left: 0;
+  font-size: 18px;
+  right: 0;
+}
+.close {
+  float: right;
+  top: 0;
+  position: absolute;
+  right: 7px;
+  font-size: 31px;
+  cursor: pointer;
+}
+.popup-arrow { display: none;}
+[data-popup=tooltip].popup-overlay {
+  background: #46333338;
+}
+.popup-sure-btn {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  text-align: right;
+  padding: 6px 16px;
+  width: 30px;
+  margin-left: auto;
+  float: right;
+  cursor: pointer;
+  margin-top: 13px;
+  position: absolute;
+  bottom: 11px;
+  right: 18px;
+}
+.popup-content-con{
+    display: grid;
+ } 
+#popup-root .popup-content {
+  top: 40%;
+  bottom: 40%;
+  height: 65px;
+}
+.change-icon svg { 
+  font-size: 15px;
+}
+.fae-change-country-popup {
+  justify-content: center;
+  padding: 10px 41px;
+}
+
+@include onlyDesktop {
+  .change-country-tab { 
+    width: 60%;
+  }
+ }

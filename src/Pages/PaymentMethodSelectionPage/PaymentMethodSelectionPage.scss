@@ -1,0 +1,159 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae-paynow-container{
+    width: 600px;
+    height: auto;
+    padding: 10px;
+}
+.fae-paynow-logo{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    justify-content: center; 
+}
+.fae-paynow-container h3, p {
+    margin: initial !important; 
+}
+.fae-paynow-logo h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding:0 5px 0 5px; 
+} 
+.fae-paynow-card-above{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px 0 10px 0;
+
+}
+.fae-paynow-invoice{
+    display: flex;
+    flex-direction: column;
+}
+.fae-paynow-created-on{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    text-align: end;
+}
+.fae-paynowlogin-card{
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.fae-paynowlogin-card-top{
+    display: flex;
+    flex-direction: row;
+    background-color: #fbe5e6;
+    padding: 20px 15px 20px 15px;
+    border-radius: 5px;
+}
+.fae-paynow-invoice-form{
+    display: flex;
+    flex-direction: column;
+}
+.fae-paynow-invoice-desc{
+    display: flex;
+    flex-direction: row;
+}
+.fae-paynow-description{
+    display: flex;
+    flex-direction: column;
+}
+.fae-paynow-price{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+.fae-paynowlogin-payby{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.fae-paynowlogin-phoneinput{
+    padding: 0px;
+    padding-bottom: 10px;
+}
+.fae-signin-input{
+    font-size: 30px;
+    position: relative;
+    font-weight: bold;
+}
+.fae-paynowlogin-loginbtn{
+    margin-bottom: 50px;
+}
+.fae-paynowlogin-paybydeb{
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+.fae-paynowlogin-paybydeb-title{
+    color: #444444;
+    opacity: 1;
+    color: #444444;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.fae-paynowlogin-payimg{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.fae-paynowlogin-payimg-img{
+    width: 50px;
+    padding: 0 5px 0 5px;
+}
+.fae-paynowlogin-paylogin{
+    padding-bottom: 20px;   
+}
+.fae-pay-process-btn{
+    width: 100%;
+    padding: 13px 0px;
+    font-size: 20px;
+    margin: 10px 0px;  
+}
+
+
+
+
+
+
+
+@include mobile {
+    .fae-paynowlogin-card-top { 
+        padding: 8px 15px 10px 15px; 
+    }
+    .fae-paynowlogin-payby { 
+        margin-top: 19px;
+        margin-bottom: 15px;
+    }
+    .fae-paynowlogin-loginbtn {
+        margin-bottom: 31px;
+    }
+    .fae-paynowlogin-loginbtn .fae-button, .fae-paynowlogin-paylogin button { 
+        padding: 10px !important;
+    }    
+    .fae-paynowlogin-loginbtn  .fae--text { 
+        font-size: 17px !important;
+    }
+    .payment-method #zsiq_float img.grayscl {
+        display: none;
+    }
+    .fae-paynowlogin-paybydeb-title { 
+        font-size: 14px !important;
+       }
+      .fae-paynowlogin-payby .fae--text {
+        font-size: 15px !important; 
+       }
+  }
+  

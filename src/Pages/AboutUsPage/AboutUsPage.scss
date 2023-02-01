@@ -1,0 +1,45 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--about-us-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+  width: 60%;
+}
+
+.fae--about-us-page-services-description {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fae--about-us-descriptions-and-images {
+  @include flex(center, center);
+  gap: 40px;
+}
+
+.fae--about-us-descriptions-and-images-mid-section {
+  @include flex(center, center);
+  gap: 40px;
+}
+
+@include tablet {
+  .fae--about-us-main-container {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--about-us-main-container {
+    width: 95%;
+  }
+  .fae--about-us-descriptions-and-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .fae--about-us-descriptions-and-images-mid-section {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}

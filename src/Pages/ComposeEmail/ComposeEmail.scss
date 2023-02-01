@@ -1,0 +1,13 @@
+@import "../../App.scss";
+
+.fae--compose-email-main-container {
+  width: 100%;
+  @include flex(center, none);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--compose-mail-send-button {
+  width: 200px;
+  height: 30px;
+}

@@ -1,0 +1,115 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--service-location-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--service-location-page-wrapper {
+  width: 50%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--all-addresses-addresses-wrapper {
+  width: 100%;
+  @include flex(space-between, none);
+  flex-wrap: wrap;
+  row-gap: $default-section-gap;
+  flex-direction: column;
+}
+
+.fae--all-addresses-adrress-bar-wrapper {
+  width: 100%;
+  padding: 10px 10px;
+  @include flex(center, flex-start);
+  flex-direction: column;
+  gap: 10px;
+}
+.fae-fully-booked {
+  background-color: #ec1e27;
+  color: white;
+  padding: 5px !important;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.fae--all-addresses-page-original-address {
+  font-size: 14px;
+  font-weight: 300;
+}
+#status-not-active .fae--all-addresses-adrress-bar-wrapper-clinics-addresses , #status-not-active .fae--all-addresses-adrress-bar-wrapper-clinics-addresses {
+  background-color: #d3d1d17a;
+}
+.fae--all-addresses-notes-text {
+  @include flex(center, center);
+  gap: 5px;
+}
+
+.fae--all-addresses-adrress-bar-wrapper-clinics-addresses {
+  width: 100%;
+  padding: 10px 10px;
+  @include flex(center, flex-start);
+  flex-direction: column;
+  gap: 10px;
+  border: solid 0.5px #ec1e27;
+}
+
+.fae--clinic-addresses-radius {
+  width: 100%;
+  @include flex(flex-start, center);
+  gap: 20px;
+}
+
+.clinics-addresses-main-container-for-each-unit {
+  @include flex(center, center);
+  gap: 2px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.line-break {
+  border-bottom: solid 1px #ededed;
+  padding-bottom: 10px;
+}
+.fae-address-selection-msg{
+  font-weight: 500;
+}
+.clinic-addresses-line-addresse-and-map-address-wrapper {
+  width: 100%;
+  @include flex(space-between, center);
+}
+.fae-address-selection-second-msg{
+  font-weight: 500;
+  margin-right: auto;
+
+}
+.map-address {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 3px;
+}
+.fae-address-title{
+  font-weight: bold;
+  color: black;
+}
+@include tablet {
+  .fae--service-location-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--service-location-page-wrapper {
+    width: 95%;
+  }
+  .fae--all-addresses-adrress-bar-wrapper {
+    width: 96% !important;
+    padding: 10px 7px !important;
+  }
+  .fae-address-selection-msg{
+    text-align: center;
+    padding-bottom: 7px;
+  }
+}

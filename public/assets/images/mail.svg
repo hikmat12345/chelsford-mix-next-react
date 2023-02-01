@@ -1,0 +1,13 @@
+<svg id="mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_33326" data-name="Path 33326" d="M0,0H20V20H0Z" fill="#dc0000"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_536" data-name="Mask Group 536" clip-path="url(#clip-path)">
+    <g id="mail-line_13_" data-name="mail-line (13)">
+      <path id="Path_33460" data-name="Path 33460" d="M0,0H20V20H0Z" fill="none"/>
+      <path id="Path_33461" data-name="Path 33461" d="M2.5,2.5h15a.833.833,0,0,1,.833.833V16.667a.833.833,0,0,1-.833.833H2.5a.833.833,0,0,1-.833-.833V3.333A.833.833,0,0,1,2.5,2.5ZM16.667,6.032,10.06,11.948,3.333,6.013v9.82H16.667ZM3.759,4.167l6.292,5.552,6.2-5.552Z" fill="#dc0000"/>
+    </g>
+  </g>
+</svg>

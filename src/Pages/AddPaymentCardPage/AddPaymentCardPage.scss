@@ -1,0 +1,40 @@
+
+  
+  .alert {
+    text-align: center;
+    margin-top: 20px;
+  }
+ 
+  .card-input-field{
+    width: 98%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    margin: 10px 0px;
+  }
+  .fae-payment-card-btn{
+    padding: 15px 50px;
+  }
+  .card-input-field:focus{outline: none;}
+  .fae--shadow-box{margin-bottom: 20px;}
+  label{font-size: 12px;}
+  .PaymentForm{width: 100%;}
+  .card-detail-container{
+    box-shadow: 1px 3px 7px #adadb0;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .card-heading{
+    padding: 5px;
+    color: #444444;
+  }
+  .fae-payment-card-page .fae--user-info-page-layout-pages-data {
+    margin: 6px 22px;
+    box-shadow: 0px 0px 8px 3px #1c1c1c24;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+  .billing-detail{display: flex; gap: 10px;}
+  .billing-detail div{width: 100%;}

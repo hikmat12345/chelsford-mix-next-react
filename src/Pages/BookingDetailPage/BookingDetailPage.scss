@@ -1,0 +1,275 @@
+@import "../../App.scss";
+
+.fae--booking-detail-page-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fae--booking-detail-page-avatar-price-wrapper {
+  @include flex(center, center);
+  width: 100%;
+  background-color: #1e185f;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.fae--booking-details-page-top-info-bar {
+  @include flex(flex-start, center);
+  gap: $default-section-gap;
+  width: 95%;
+}
+
+.line-break {
+  border-bottom: solid 1px #ededed;
+  padding-bottom: 10px;
+}
+.fae-consent-form{
+  background-color: initial;
+  border: initial;
+  cursor: pointer;
+}
+.fae--booking-detail-page-name-price-wrapper {
+  @include flex(space-between, center);
+  width: 95%;
+}
+
+.fae--booking-detail-page-day-time-wrapper {
+  width: 95%;
+}
+
+.fae--booking-detail-page-duration-wrapper {
+  width: 95%;
+}
+
+.fae--booking-detail-page-address-wrapper {
+  width: 95%;
+}
+
+.fae--booking-detail-page-date-time {
+  @include flex(flex-start, center);
+  gap: 100px;
+  // padding-left: 5px;
+}
+
+// .fae--booking-detail-page-duration {
+//   // padding-left: 5px;
+// }
+
+// .fae--booking-detail-page-address {
+//   // padding-left: 5px;
+// }
+
+// .fae--booking-detail-page-label {
+//   background-color: #f8f8f8;
+//   width: fit-content;
+//   padding: 2px 5px;
+//   border-radius: 2em;
+// }
+
+.fae--booking-detail-page-info-headers {
+  font-weight: 100;
+}
+
+.fae--booking-detail-page-info-booking-text {
+  font-size: 14px;
+}
+
+.sessions-details {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  @include flex(center, center);
+}
+
+.active-sessions {
+  background-color: #939191;
+  color: white;
+  font-weight: 700;
+}
+
+.completed-sessions {
+  background-color: rgba(255, 243, 243, 1);
+}
+
+.completed-sessions-stroke {
+  width: 30px;
+  height: 1px;
+  background-color: rgba(190, 100, 100, 1);
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.non-active-sessions {
+  background-color: rgba(244, 244, 244, 1);
+}
+
+// .checked-sessions {
+//   background-color:  #ccc;;
+// }
+
+.fae--booking-sessions-wrapper {
+  @include flex(flex-start, center);
+  gap: 10px;
+}
+
+.fae--booking-detail-page-action-buttons-wrapper {
+  @include flex(space-evenly, center);
+  width: 100%;
+}
+
+.fae--bokking-detail-action-button {
+  @include flex(center, center);
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.fae--booking-details-page-consent-button {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+//images and videos
+.fae--service-attributes-uploaded-images-or-videos-wrapper {
+  width: 95%;
+  @include flex(center, flex-start);
+  flex-direction: column;
+  gap: 5px;
+}
+
+.line-break {
+  border-bottom: solid 1px #ededed;
+  padding-bottom: 10px;
+}
+
+.fae--services-attributes-page-already-uploaded-images-and-videos {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.fae--service-attributes-custom-image-or-video-wrapper {
+  width: 100%;
+  height: 150px;
+  @include flex(center, center);
+}
+
+.fae--service-attributes-custom-image-or-video-wrapper-main-container {
+  width: 49%;
+  position: relative;
+}
+
+.fae--service-attributes-custom-image-or-video-wrapper
+  .fae--service-card-image-container {
+  height: inherit;
+  display: grid;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.notes-video-and-images-detail-page-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup-content {
+  width: 427px !important; 
+  border-radius: 5px;
+  padding: 22px !important;
+  position: absolute !important;
+  left: 0;
+  font-size: 18px;
+  right: 0;
+}
+.close {
+  float: right;
+  top: 0;
+  position: absolute;
+  right: 7px;
+  font-size: 31px;
+  cursor: pointer;
+}
+.popup-arrow { display: none;}
+[data-popup=tooltip].popup-overlay {
+  background: #46333338;
+}
+.popup-sure-btn {
+  border: none;
+  outline: initial;
+  background-color: initial;
+  color: #f21607;
+  border-radius: 4px;
+  text-align: right;
+  padding: 5px;
+  border: initial;
+  margin-left: auto;
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 36px;
+  margin-top: 5px;
+}
+
+.popup-sure-btn:focus { 
+  outline: 0px !important;
+}
+.popup-content-con{
+    display: grid;
+ } 
+#popup-root .popup-content {
+  top: 40%;
+  bottom: 40%;
+  height: 160px;
+}
+ 
+.fae-reason-input {
+  width: 100%;
+  border: initial;
+  border-bottom: 1px solid;
+}
+.fae-popup-title {
+  font-weight: 500; 
+  font-size: 15px !important;
+  padding-bottom: 4px;
+}
+.fae-popup-message{
+  font-size: 13px;
+}
+.fae-reason-input:focus-visible{ 
+  outline: initial;
+  border-bottom: 1px solid;
+}
+
+.change-icon svg { 
+  font-size: 15px;
+}
+.fae-booking-cancel-btn img { 
+  display: block;
+}
+@include onlyDesktop {
+  .change-country-tab { 
+    width: 60%;
+  }
+ }
+ @include mobile {
+  .fae-booking-cancel-message-popup-content {
+    left: 0px !important;
+   }
+ }
+ 

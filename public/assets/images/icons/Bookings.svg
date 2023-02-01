@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2907" data-name="Rectangle 2907" width="24" height="24" fill="#ec1e27"/>
+    </clipPath>
+  </defs>
+  <g id="Bookings" clip-path="url(#clip-path)">
+    <g id="todo-line">
+      <path id="Path_29357" data-name="Path 29357" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_29358" data-name="Path 29358" d="M17,2h3a1,1,0,0,1,1,1V21a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1V3A1,1,0,0,1,4,2H7V0H9V2h6V0h2Zm0,2V6H15V4H9V6H7V4H5V20H19V4ZM7,8H17v2H7Zm0,4H17v2H7Z" fill="#ec1e27"/>
+    </g>
+  </g>
+</svg>

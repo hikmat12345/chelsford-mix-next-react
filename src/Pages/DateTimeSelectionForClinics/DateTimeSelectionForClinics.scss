@@ -1,0 +1,24 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--date-time-selection-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae-date-time-selection-container-width {
+  width: 98%;
+}
+
+.fae--date-time-selection-button {
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+}
+
+@include mobile {
+  .fae--date-time-selection-main-container { 
+    padding-bottom: 9rem;
+  }
+}

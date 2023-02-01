@@ -1,0 +1,1095 @@
+.bghjHX {
+    overflow: hidden;
+    margin: auto !important;
+    width: 75%;
+    display: block;
+  }
+  
+  /* contnent header css  */
+  
+  .main-text{
+    top:263px;
+     color: white;
+     position:relative;
+  }
+  
+  .main-text h3 {
+    color: white !important;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .main-text p {
+    color: white !important;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .main-sect .row{ 
+     padding-top: 26%;
+     word-wrap: wrap;
+  }
+  .main-btns{
+     background-color: white;
+     border: 2px solid #C7AD3F;
+     width: 100%;
+     height: 80px;
+     border-radius: 4px;
+     outline:none;
+  }
+  /* .main-btns:hover{
+     background-color: #C7AD3F;
+  } */
+  .bi-calendar{
+     width: 40px;
+     height: 40px;
+     color: #C7AD3F;
+  }
+  .main-sect img {
+    width: 36px !important;
+    height: 37px;
+    top: 4px;
+    margin-right: 20px;
+    position: relative !important;
+  }
+  #you-talk-with ul {
+    list-style: none;
+  }
+  .main-btns-4{
+     background-color: #C7AD3F !important;
+     color: white;
+  }
+  .owl-next, .owl-prev {
+    background-color: #f9f4f4;
+    padding: 2px 16px;
+    border-radius: 3rem;
+    font-size: 23px;
+    border: 1px solid;
+  }
+  .owl-next {
+    position: relative;
+    right: -141px;
+  }
+  .owl-nav {
+    margin-top: -32px;
+    margin-left: -3px;
+  }
+  .course_module_label .label-circle span {
+    background-color: #d9bd3e;
+    color: #1e185f !important;
+    /* width: 59px; */
+    margin: 0px auto 0px auto;
+    border-radius: 2rem;
+    /* height: 29px; */
+    margin-top: 0px !important;
+    font-size: 16px !important;
+    padding: 8px 12px;
+  }
+  .cblt-btn {
+    background-color: #1e185f !important;
+    display: block;
+    margin: 41px auto;
+    bottom: 20px;
+    padding: 5px 16px;
+  }
+  .complete_beauty ul h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #231F4F !important;
+  }
+  .complete_beauty ul p {
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #19172F;
+    opacity: 0.5;
+  }
+  /* cutoff text  */
+  .cutoff-text{
+    --max-lines:18;
+    --line-height:1.6;
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow:hidden;
+    position:relative;
+    scroll-behavior: smooth;
+    font-size: 17px;
+    color: #02020294;
+  }
+  
+  .cutoff-text ::before{
+    content: "";
+    position:absolute;
+    height:calc(2em * var(--line-height));
+    width:100%;
+    bottom:0;
+    pointer-events: none;
+    /* background:linear-gradient(to bottom, transparent, white);  */
+  } 
+  .expand-btn {
+    appearance: none;
+    /* border: 1px solid #0000004d; */
+     border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 15px;
+    outline: initial;
+    background-color: white;
+    padding: 0px 0rem 0.5rem !important;
+    color: #1e185f;
+  }
+  
+
+  .expand-btn:hover{
+  background-color:#cccccc87; 
+  }
+  .expand-btn::before{
+  content:"Read More >";
+  }
+  .expand-btn:checked::before{
+   content:"Read Less";
+  }
+  .cutoff-text:has(+ .expand-btn:checked){
+  max-height:none;
+  } 
+  .active-tab:after {
+    /* cursor: pointer;
+    margin: 0;
+    right: 0;
+    top: 10px;
+    border-left-color: #ffffff !important;
+    border-right: 0;
+    margin-right: 27px;
+    padding: 0;
+    content: "";
+    position: absolute;
+    height: 0;
+    border: 12px solid transparent;
+    border-bottom: 0;
+    margin-top: 2px;
+    transform: rotateZ(223deg); */
+  } 
+  .tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+  }
+  #your-talk li{
+   display:flex
+  }
+  .main-btns {
+    background-color: #e7e7e7;
+  }
+  @media only screen and (max-width: 768px) {
+     .main-sect{
+         height: 560px;
+         position: relative;
+     }
+     .main-sect .row{ 
+         padding-top: 10px;
+     }
+   }
+   /* main-section end */
+  
+   /* start section */
+    .my-text-sect p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        color: #000000;
+        font-size: 18px;
+    }
+   @media only screen and (max-width: 768px) { 
+      .home__section__3{
+        width: 90%;
+        margin: auto;
+      }
+     .row{
+       margin:initial !important;}
+     
+     .my-text-sect p {
+       padding: 34px 17px;
+       margin-left: 0px;
+       margin-right: 0px;
+       font-size: 12px;
+      }
+      .banner-card-col:nth-child(4){
+        display:none;
+      }
+     .my-text-sect .col{
+         padding: 0px;
+         margin: 0px;
+     }
+     .my-text-sect{
+         padding: 0px;
+     }
+     .course_module .row{
+      padding:2px !important;
+     }
+     #complete_beauty { 
+        padding: 6px 0px !important;
+      }
+      #complete_beauty .container-fluid  { 
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+      #complete_beauty h2 { 
+          font-size: 20px !important;
+          line-height: 51px !important; 
+          padding: 20px 12px !important;
+          text-align:center;
+          margin:auto;
+          
+       }
+      #complete_beauty artical p , #complete_beauty artical input {  
+          padding: 11px 12px !important;
+      }
+      .expand-btn { 
+          margin-left: 13px !important;
+          border: 1px solid #5c56981f;
+      }
+  
+      input[type=checkbox].expand-btn:focus{
+          outline: 0px auto -webkit-focus-ring-color;
+          outline-offset: -2px;
+      }
+      #you-talk-with 
+        {  
+            width: 100%;
+            background-image: url(https://chelsford.com/public/banners/remote-learning-back-to-school-girl-student-study.png) !important;  
+            background-repeat: no-repeat;
+            background-position: 64% -7%;
+            min-height: 543px !important;
+            background-size: cover; 
+            padding: 5px 16px 21px 9px !important;
+         }
+          
+        .custom-container-overlay { 
+            padding: 0rem!important;
+        }
+        .custom-container {
+          width: 96%!important; 
+        }
+        #your-talk h2 {
+          padding-bottom: 28px!important; 
+          font-weight: 600!important;
+          font-size: 25px!important;
+          line-height: 31px!important; 
+          padding-top: 66px!important;
+        } 
+        .content-feature-courses .coursesContainer .course-card {
+          width: 100% !important;
+          height: 189px!important; 
+          padding: 3px 20px!important; 
+        }
+       
+        .learn-more{ 
+          /* padding: 2rem !important;
+          min-height: 470px !important  */
+       }
+       .get-qualified { 
+          padding: 3rem 2rem !important;  
+          top: 0rem !important;
+        }
+        .complete_beauty ul h3 { 
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 21px; 
+        }
+        .main-sect img {
+          width: 23px;
+          height: 22px;
+          top: 4px;
+          margin-right: 4px;
+          padding: 3px; 
+          background-color: white;
+       }
+      .banner-boxes-tex {
+          font-size: 11px;
+       }
+       #main-sect .container{
+         padding:0px !important;
+       }
+       .main-btns-4{
+        display:none;
+       }
+       .complete_beauty_quality{
+        margin-bottom:initial !important;
+       }
+       #your-talk { 
+        background-position: 30% 84% !important; 
+      }
+       
+      #your-talk { 
+        min-height: 538px !important;
+      }
+      .iconDiv { 
+        padding-bottom: 4px !important;
+      }
+      .main-sect{ 
+        background-position: 36% 45%;  
+        height: 222px !important; 
+      }
+      .main-text {
+          top: 56px !important; 
+      }
+      .banner-card-row { 
+          top: 59px !important; 
+      }
+      .course-overlay { 
+          height: 222px !important;
+       }
+      .main-btns {
+        height: 53px !important; 
+        background-color: #fff !important;
+      }
+      .main-sect p.banner-boxes-text { 
+          font-size: 12px; 
+      } 
+  
+      .main-sect p.banner-boxes-text span {
+          font-size: 11px; 
+          font-weight: bold !important; 
+          float: left;
+      }
+      .main-text { 
+       padding: 8px;
+      }
+      .course_module_label p { 
+        padding: 16px 0 16px 0 !important;
+        font-size: 12px;
+      }
+      #complete_beauty artical p, #complete_beauty artical input { 
+          display: none;
+      }
+      #complete_beauty artical p.cuttabletext, #complete_beauty artical input.cuttabletext { 
+          display: block !important;
+      }
+      .main-sect .banner-card-col p  {
+        overflow:hidden;
+        width:100%;
+      }
+      .banner-card-col {
+          width: 33% !important; 
+      }
+      .complete_beauty_quality ul {
+          margin: 0 !important;
+          padding: 16px 16px 1px !important;
+      }
+     
+      #you-talk-with .row ul {
+          overflow: overlay;
+          width: 100%;
+          display: flex;
+          padding-bottom: 26px;
+      }
+      /* .active-tab:before {
+        content: ".";
+        position: relative;
+        top: -14px;
+        padding: 2px;
+        color: #d9bd3e;
+        background-color: #d9bd3e;
+        border-radius: 56rem 3rem 31px 30px;
+      } */
+      .description, .you-talk-with h2 {
+          position: relative;
+          z-index: 99;
+      }
+      /* #you-talk-with{  
+        background: #b2d5e6b8 !important; 
+      } */
+      .course-info-bgimg { 
+        z-index: -1;
+      }
+     .tablinks {
+        width: 197px !important;
+      }
+      .bookingContainer {
+        display: none;
+      }
+      .contact-source { 
+        position: fixed;
+        left: 0;
+        bottom: 15px;
+        width: 95%;
+        display:block !important; 
+        height: 51px;
+        margin:auto;
+        z-index: 999;
+      }
+  
+      .contact-btns{
+        display:flex !important; 
+      }
+      .contact-source .btn.btn-default { 
+        padding: 7px 9px !important;
+      }
+      .contact-source button a{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        color: #FFFFFF;
+        background-color: #1E185F;
+        font-size: 16px;
+        line-height: 19px; 
+        text-align: center; 
+        height: 50px;
+        }
+        .contact-source .btn.btn-default:nth-child(1){
+          width:14%;
+          border: 0.5px solid #FFFFFF;
+          border-radius: 44px;
+        }
+        .contact-source .btn.btn-default:nth-child(2){
+          width:72%;
+          border: 0.5px solid #FFFFFF;
+          border-radius: 12px;
+        }
+        .contact-source .btn.btn-default:nth-child(3){
+          width:14%;
+          border: 0.5px solid #FFFFFF;
+          border-radius: 44px;
+        }
+        .clientName {
+            margin-left: 0% !important; 
+        } 
+        .carousel {
+          margin: 4px auto !important; 
+         }
+         .wrapper { 
+          padding: 12px;
+      } 
+      #complete_beauty .row { 
+          flex-direction: column-reverse;
+      }
+      
+      h2.d-sm-none.d-md-block {
+          display: none !important;
+      }
+      .innerControl { 
+        margin-left: 5rem;
+     }
+     .complete_beauty_quality span {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 40px;
+          text-align: center;
+          color: #231F4F;
+       }
+       .complete_beauty ul p { 
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          color: #19172F;
+          opacity: 0.5;
+          margin: inherit;
+       }
+       .active-tab:after{
+        display:none;
+       }
+       .only-show-on-desktop{
+           display:none;
+        }
+        .only-show-on-mobile{
+         display:initial !important;
+        }
+        .tick-icon {
+          /* width: 123% !important; */
+          
+          height: 44px; 
+          margin-right: 9px !important;
+        }
+        #you-talk-with .description.py-2 {
+         display:none;
+     }
+    /* .banner-card-col {
+       min-width: 138px;
+    } */
+  }
+  #you-talk-with .row ul::-webkit-scrollbar { 
+    width: 0%; 
+    height:0%;
+  }
+  #you-talk-with{ 
+    width: 100%;
+    padding: 62px 200px 40px 200px;
+     background-image:url(https://chelsford.com/public/banners/remote-learning-back-to-school-girl-student-study.png);
+    background-repeat: no-repeat;
+    background-position: 64% -7%;
+    min-height: 613px;
+    background-size: cover;
+  }
+  .content-feature-courses .coursesContainer .course-card p { 
+          margin-bottom: 2px !important;
+          font-size: 16px;
+          line-height: 17px !important; 
+      }
+      
+  .content-feature-courses .coursesContainer .course-card a {
+    margin-left: auto;
+  }
+  h2.d-md-none.d-lg-block {
+    display: none !important;
+  }
+  .main-sect .banner-card-col p span {
+    font-weight: bold; 
+    color: #1e185f;
+  }
+  .main-sect .banner-card-col p {
+    width:100%;
+  }
+  .clientName { 
+    padding-top: 0px !important;
+  }
+   /* End of Section */
+    p.banner-boxes-tex, .main-sect p.banner-boxes-text {
+        text-align: left;
+    }
+   /* Start of Section Course Module  */
+   #complete_beauty artical p.cuttabletext, #complete_beauty artical input.cuttabletext { 
+        display: none;
+    }
+   #Course_module{
+     width: 100%;
+     height: auto;
+     background-color: #F2F2F2;
+   }
+   .course_module h4 {
+    color: #1E185F !important;
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 19px;
+  }
+   .course_module_label{
+     width: 100%;
+     height: auto;
+     background-color: white;
+     text-align: center;
+     padding-top: 20px;
+   } 
+  
+   .course_module_label p{
+     color: #1E185F;
+     /* padding: 5px 0 5px 0; */
+   }
+   #complete_beauty h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #1E1855 !important;
+    padding: 14px 3px 8px;
+  }
+  
+   .chevron-arrow {
+    background-color: #D9D9D9;
+    border-radius: 60px;
+    text-align: center;
+    justify-content: center;
+    width: 51px;
+    margin: auto;
+    height: 51px;
+  }
+   /* <End of Section */
+  
+   /* Start Complete Beauty Section */
+    
+    #complete_beauty {
+        background-color: white;
+        color: #1E185F;
+        padding: 27px 42px 25px 42px;
+    }
+   .cblt-btn{
+    background-color:#F2F2F2;
+   }
+   .tablinks {
+    transition: 0.3s;
+    background: #ffffff96;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 6%) !important;
+    border-radius: 22px;
+    outline: initial;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E185F;
+    border: initial;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+    padding: 7px 19px;
+  }
+  .tabs p{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 6%);
+    border-radius: 22px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    padding: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #19172F;
+  }
+  .tabcontent {
+  display: none; 
+  }
+  .tablinks:focus{
+  outline:none;
+  }
+  .active-tab{
+  background: #d9bd3eba;
+  color:white;
+  }
+  .you-talk-with h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    color: #1E185F !important;
+  }
+  
+  .course-info-bgimg {
+    width: 100%;
+    position: absolute;
+    top: -139px;
+  } 
+  
+  /* .course-overlay{ */
+    /* background-image: url('../../../public/assets/contentDetailPageImg/course-detail-overlay.png');  */
+    /* background-repeat: no-repeat;
+    background-size: cover; 
+    height: 470px;
+  }
+  #main-sect{ */
+    /* background-image: url('../../../public/assets/contentDetailPageImg/chelsford banner-01.jpg');  */
+  /* } */
+  .main-sect p.banner-boxes-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #1E185F !important;
+  }
+  .main-sect p.banner-boxes-text span{ 
+    font-size: 16px; 
+    padding-top:3px;
+    font-weight: bold;
+    overflow:hidden;
+    color:#1e185f;
+  }
+  .banner-card-col .main-btns div {
+    overflow: hidden;
+  }
+  .custom-container {
+    width: 61%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+    .custom-container-overlay {
+        padding: 6rem;
+    }
+  .you-talk-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4D4D54;
+    opacity: 0.7;
+  }
+  #your-talk h2 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 58px;
+      text-align: center;
+      color: #1E185F;
+  }
+  .get-qualified {
+     
+    padding: 3rem 4rem;
+    background: rgb(223 230 255 / 88%); 
+  }
+  .courses-page-section-6 .row { 
+      padding: 42px;
+  }
+  
+  .content-feature-courses .coursesContainer .course-card {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 213px;
+    align-items: left;
+    justify-content: center;  
+    margin: 6px;
+    padding: 3px 20px;
+    border-radius: 8px;
+  }
+  .content-feature-courses .row {
+    width: 100%; 
+  }
+  .content-feature-courses .coursesContainer .course-card a{
+  text-align:right;
+  }
+  .remaining-boxes-show, .show-text{
+    display:flex !important;
+  }
+  .main-btns { 
+    height: 70px; 
+  }
+  .coursesDiscriptionCol h2 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 40px;
+      letter-spacing: 0.025em;
+      color: #1E185F !important;
+      padding-bottom: 10px;
+    }
+  .banner-card-row {
+      display: flex;
+      top: 277px;
+      position: relative;
+  }
+  /* .banner-card-col {
+      width: 100%;
+  } */
+  .banner-card-col {
+    width: 25%;
+  }
+  .contact-source{
+  display:none;
+  }
+  .innerControl { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .you-talk-remaining-text {
+    transition: 0.4s;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 20px;
+    color: #848484;
+    opacity: 0.7;
+  }
+  
+  .active-accordion, .you-talk-remaining-text:hover {
+    background-color: #ffffffdb;
+  }
+  
+  .panel { 
+  text-align:center;
+  margin-top: 4px !important;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  }
+  .ui-tooltip-content {
+    font-size:14px;
+    padding:7px;
+  }
+  .chevron-arrow i {
+    font-size: 21px !important;
+  }
+  #Course_Details, #Teaching_Assessments {
+    height: 397px;
+    overflow-y: scroll;
+  }
+  #Course_Details::-webkit-scrollbar, #Teaching_Assessments::-webkit-scrollbar {
+    width: 5px; 
+    background: rgb(117, 117, 117);
+  }
+   
+                .wrapper {
+                  position:relative; 
+                  margin: 0 auto; 
+                  overflow:hidden;
+                }
+               .wrapper p {
+                  position: absolute;
+                  left: 100%;
+                  width: 100%;
+                  top: 0;
+                  transition: left 1.4s, opacity .5s ease;
+                  font-family: 'Roboto';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 22px;
+                  color: #19172F;
+                  opacity: 0.6;
+                }
+                .wrapper p.activeText {
+                  position:relative;
+                  left:0;
+                  opacity:1;
+                }
+                .wrapper p.slideLeft {
+                  left:-100%;
+                  opacity:0;
+                }
+                .wrapper ul {
+                  margin:0;
+                  padding:0;
+                  text-align:center;
+                }
+               .wrapper ul li {
+                  list-style:none;
+                }
+                .dot {
+                  border-radius:100px;
+                  background:#7f8c8d;
+                  display:inline-block;
+                  text-align:center;
+                  cursor:pointer;
+                  width: 16px;
+                  height: 16px;
+                  left: calc(50% - 16px/2 - 334px);
+                  top: 1829px; 
+                  background: #1E185F;
+                }
+                .wrapper .active {
+                    background: #c3cbcc;
+                }
+                
+                .hbox-active{
+                  width:100% !important;
+                  display:initial;
+                  transition:0.7s;
+                }
+                .hbox-hidden{
+                  display:none;
+                  transition:0.7s;
+                }
+                .iconContainer i { 
+                    font-size: 20px !important;
+                }
+                .iconContainer {   
+                    width: 39px !important;
+                    height: 38px !important;
+                }
+                .hbox-active .main-btns {
+                        background-color: #D9BD3E;
+                 }
+                 .box-extra{
+                    display:none;
+                 }
+                 .active-box-extra {
+                    display: initial !important;
+                    position: relative;
+                    top: -10px;
+                    left: 7%;
+                }
+   
+                .only-show-on-mobile{
+                  display:none;
+                }
+                .tick-icon {
+                  width: 30px; 
+                  height: 44px;
+                  padding: 6px;
+                  border-radius: 3rem;
+                  margin-right: 30px;
+              }
+  
+  
+  
+   
+  
+  /* what next *************************************************888 */
+  .content-feature-courses .coursesContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 4;
+    align-items: center;
+    justify-content: center;
+  }
+  .tick-icon span { 
+    background-color: #d7d7d7;
+    padding: 3px 5px 5px;
+    border-radius: 3rem;
+  }    
+  .content-feature-courses-update {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .content-feature-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  
+  .content-feature-courses .headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-feature-courses .headerContainer h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #110B57 !important;
+    padding-bottom: 20px;
+  }
+  
+  .content-feature-courses .coursesContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 4;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-feature-courses .coursesContainer .course-card:nth-child(1) {
+    background: linear-gradient(180deg, #A4C438 0%, #657728 100%);
+  } 
+  .content-feature-courses .coursesContainer .course-card {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 213px;
+    align-items: left;
+    justify-content: center;
+    margin: 6px;
+    padding: 3px 20px;
+    border-radius: 8px;
+  }
+  .iconDiv {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .iconContainer {
+    width: 39px !important;
+    height: 38px !important;
+  }
+  .iconContainer {
+    background: rgba(0, 0, 0, 0.14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  .iconContainer i {
+    font-size: 20px !important;
+  }
+  .iconContainer i {
+    color: white;
+    font-size: 30px;
+  }
+  .content-feature-courses .coursesContainer .course-card a {
+    text-align: right;
+  }
+  .content-feature-courses .coursesContainer .course-card a {
+    margin-left: auto;
+  }
+  .content-feature-courses .coursesContainer .course-card a {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    /* color: #D9BD3E !important; */
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  
+  
+  
+  .content-feature-courses .coursesContainer div:nth-child(2) {
+    background: #F3F7FF;
+    border-radius: 8px;
+  }
+  .content-feature-courses .coursesContainer div:nth-child(2) {
+    background: linear-gradient(180deg, #F8E388 0%, #EAC832 100%);
+  }
+  
+  .content-feature-courses .coursesContainer div:nth-child(3) {
+    background: linear-gradient(180deg, #86E8F4 0%, #2EA4B4 100%);
+  }
+  .content-feature-courses .coursesContainer div:nth-child(3) {
+    background: #E7EDFC;
+    border-radius: 8px;
+  }
+  
+  .iconDiv {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  
+  .iconContainer {
+    width: 39px !important;
+    height: 38px !important;
+  }
+  .iconContainer {
+    background: rgba(0, 0, 0, 0.14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  .iconContainer i {
+    font-size: 20px !important;
+  }
+  
+  
+  .contact-source button { 
+    background-color: #1e185f; 
+  }
+    .contact-source button a { 
+        text-decoration: none;
+    }
+    .fae--free-consultation-container button{
+        background-color: #d9bd3e !important;
+    }

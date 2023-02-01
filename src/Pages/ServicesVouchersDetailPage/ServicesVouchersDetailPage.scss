@@ -1,0 +1,82 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--services-vouchers-page-main-container {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.fae--voucher-card-page-unit-container {
+  width: 49%;
+  background-size: 100% 100%;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  @include flex(space-evenly, center);
+  flex-direction: column;
+}
+ .fae-recommended-services-container{ 
+    margin: 0 0 20px;
+    border-radius: 4px; 
+ }
+ .fae-recom-services-names{
+  width: 275px;
+  height: 40px;
+  margin: 10px 21px 15px 0;
+  padding: 10px 1.5px;
+  border-radius: 5px;
+  color: black;
+  background-color: #f7f7f7;
+}
+.fae-voucher-detail-banner-stuff {
+  position: relative;
+  bottom: 102px;
+  color: white;
+  text-align: right;
+  margin-left: auto;
+  font-size: 19px;
+  right: 3rem;
+}
+.fae-voucher-service-detail-price {
+  color: #e1be6b; 
+  font-weight: bold;
+}
+.fae-recommended-services {
+  padding: 25px ;
+  width: 100%;
+}
+@include mobile {
+  .fae--voucher-card-page-unit-container {
+    width: 100%;
+  }
+  .fae-recommended-services-container .fae--service-card-image-container {
+ padding: 4px;
+  }
+  .fae--voucher-card-page-unit-container {
+    min-height: 150px;
+  }
+  .fae-voucher-detail-banner-stuff {
+      position: relative;
+      bottom: 46px;
+      margin-left: auto;
+      font-size: 13px;
+      left: 0rem;
+      right: 3px;
+      margin-right: 15px;
+   }
+  .fae-serviceVouchers-ExpireVoucher {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+   }
+ .fae-voucher-detail-banner-stuff div {
+  font-size: 9px;
+ } 
+ .fae--user-info-page-layout-pages-data {
+  margin: 6px 0px;
+  padding: 2px;
+}
+.fae-recom-services-names {
+  width: 100%; 
+ }
+}

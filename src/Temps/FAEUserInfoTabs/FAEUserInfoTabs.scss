@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.fae--user-info-tabs-main-container {
+  width: 377px;
+  margin: 6px;
+  border-radius: 5px;
+  // background-color: $secondary-bg; 
+}
+
+.fae-sidebar-icon {
+  padding: 0px 9px 0px 1px;
+  color: #1e185f;
+  width: 26px;
+}
+.fae--user-info-tab {
+  text-decoration: none;
+  cursor: pointer;
+  height: 49px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 11px 3px 18px 3px;
+  border-bottom: 2px solid #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a9a9a9;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.fae--tabs.service-voucher p:last-child{
+   margin-left: auto;
+ }
+.active-tab {
+  border-left: rgb(34, 0, 112) solid 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}

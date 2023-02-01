@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.fae--add-address-page-google-map {
+  width: 95%;
+}
+
+.fae--add-address-page-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fae--add-address-button {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+}

@@ -1,0 +1,145 @@
+@import "../../../App.scss";
+@import "../../../mediaQueries.scss";
+.fae--account-dropdown {
+  @include flex(none, center);
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.fae--account-dropdown-list {
+  @include flex(center, none);
+  grid-gap: 10px;
+  flex-direction: column;
+  padding: 15px;
+  min-width: 200px;
+}
+
+
+.fae--account-dropdown-list-item {
+  @include flex(none, center);
+  grid-gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 11px 10px;
+}
+
+.fae--account-dropdown-list-item svg {
+  font-size: 18px;
+  color: $primary-bg;
+}
+
+.fae--account-dropdown-btn {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.fae--account-dropdown-btn svg {
+  color: #444444;
+}
+
+.fae--account-dropdown-btn:hover {
+  background-color: $primary-bg;
+  color: #ffffff;
+}
+
+.fae--account-dropdown-btn:hover svg {
+  color: #ffffff;
+}
+
+
+
+
+@media (max-width:"600px") {
+    .fae--account-dropdown-list { 
+      padding: 0px;
+      min-width: 260px !important; 
+      // box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.16);
+    }
+    .fae-mobile-menue-list-container{
+      padding:4px 20px 20px 20px;
+      min-height: 490px;
+    }
+    .fae--account-dropdown-list-item{
+      padding: 10px 0px 12px 0px;
+      border-bottom: solid 1px #eee;
+    }
+    .fae-mobile-popover .MuiPopover-paper{  
+      max-width: initial;
+      min-width: 16px;
+      max-height: initial;
+      min-height: 16px;
+      /* overflow-x: hidden; */
+      top: 0 !important;
+      overflow-y: auto;
+      right: 0; 
+      min-height: 721px;
+    }
+    .fae-mobile-menue.fae-mob-header img {
+      display: block;
+      margin: auto;
+    }
+    .fae-mob-pic{ 
+        border-radius: 50%;
+        width: 111px;
+        height: 113px;    
+    }
+    .fae-login-signup-btns {
+      display: flex; 
+      position: absolute;
+      bottom: 97px;
+      width: 88%;
+      z-index: 9999999;
+    }
+    .fae-login-signup-btns .Login, .fae-login-signup-btns .SignUp {
+      flex: auto;
+      text-align: center;
+      margin: auto;
+      display: block;
+    }
+    .fae-login-signup-btns .Login {
+      padding: 9px 29.8px 9px 31.2px;
+      border-radius: 5px;
+      background-color: #eee; 
+    }
+    .fae-login-signup-btns .Login p{  
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color:#ec1e27;
+    }
+    .fae-login-signup-btns .SignUp {
+      padding: 9px 29.8px 9px 31.2px;
+      border-radius: 5px;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+      background-color: #ec1e27; 
+    }
+    .fae-login-signup-btns .SignUp p{ 
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff;
+    }
+    .fae-user-name{
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      padding-top: 5px;
+      font-size: 16px;
+    }
+}
+.fae-mobile-menue.fae-mob-header {
+  padding: 20px 35px 20px 35px;
+  background-color: #1e185f;
+}

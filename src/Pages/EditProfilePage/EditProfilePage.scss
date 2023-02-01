@@ -1,0 +1,43 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--edit-profile-page-container {
+  @include flex(center, center);
+}
+
+.fae--edit-profile-page-wrapper {
+  width: 70%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--edit-profile-page-form-wrapper {
+  width: 100%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--edit-profile-page-form-button {
+  width: 200px;
+  height: 40px;
+}
+.fae--edit-title{
+  padding-bottom: 30px;
+}
+.fae--edit-profile-page-field {
+  background-color: #f9f9f9;
+}
+
+@include tablet {
+  .fae--edit-profile-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--edit-profile-page-wrapper {
+    width: 100%;
+  }
+}

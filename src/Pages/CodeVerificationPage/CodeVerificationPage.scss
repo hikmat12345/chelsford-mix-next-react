@@ -1,0 +1,18 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--code-verification-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--code-verification-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--code-verification-page-container {
+  padding-bottom: 19rem;
+}

@@ -1,0 +1,7 @@
+@import "../../App.scss";
+
+.add-voucher-main-container {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}

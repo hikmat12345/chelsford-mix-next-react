@@ -1,0 +1,112 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--services-vouchers-page-main-container {
+  @include flex(space-between, center);
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.fae--voucher-card-page-unit-container {
+  width: 49%;
+  background-size: 100% 100%;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  @include flex(space-evenly, center);
+  flex-direction: column;
+}
+
+.services-voucher-page-buttton {
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 0, 0, 1),
+    rgba(147, 15, 15, 1)
+  );
+  height: 35px;
+  border-radius: 2em;
+}
+.fae-serviceVouchersPageTopbtn{
+  justify-content: end;
+  text-align: end;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+}
+.fae-flexcardslist{
+  display: flex;
+  flex-direction: row;
+  padding: 2px 10px;
+  // margin: auto;
+  flex-wrap: wrap;
+}
+.fae-serviceVouchers-ExpireVoucher {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  padding: 12px 17px;
+  border-bottom: 1px solid #F1F1F1;
+}
+.fae-expiredvouchertext{ 
+  // height: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal; 
+  text-align: left;
+  color: #4a4a4a;
+}
+.fae-resultvouchertext{
+  width: 91px;
+  height: 17px;
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: right;
+  color: #a9a9a9;
+
+}
+.fae-add-voucher{
+  background-color: #dc0000;
+  color: white;
+  padding: 9px 12px 8px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: none;
+}
+.fae--user-info-page-layout-pages-data {
+  margin: 6px 22px; 
+  box-shadow: 0px 0px 8px 3px #1c1c1c24;
+  border-radius: 8px;
+  background-color: white;
+} 
+
+@include mobile {
+  .fae--voucher-card-page-unit-container {
+    width: 100%;
+  }
+  .fae--voucher-card-page-unit-container {
+    min-height: 150px;
+  }
+  .fae-flexcardslist{ 
+    padding: initial; 
+  } 
+  .fae--user-info-page-layout-pages-data {
+    margin: 6px 0px;
+    padding: 10px;
+  }
+  .fae-vouchers-page-main-container .fae--tabs-tab-size {
+    height: 25px !important;
+    font-size: 13px !important;
+    padding: 0px 4px;
+    margin: 0px !important;
+}
+}

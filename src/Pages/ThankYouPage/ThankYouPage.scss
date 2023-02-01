@@ -1,0 +1,63 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--thank-you-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--thank-you-page-wrapper {
+  width: 60%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: $default-section-gap;
+}
+
+.fae--thank-you-card {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 0.5px solid #dedede;
+  width: 100%;
+  @include flex(center, center);
+  flex-direction: column;
+}
+
+.fae--thank-you-page-booking-detail {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 30px;
+  width: -webkit-fill-available;
+  @include flex(center, flex-start);
+  flex-direction: column;
+  gap: 50px;
+}
+
+.fae--thank-you-text {
+  color: #ec1e27;
+  font-size: 35px;
+}
+
+.fae--thank-you-message {
+  text-align: center;
+}
+
+.fae--thank-you-service-name {
+  text-align: center;
+  font-size: 16px;
+  height: 47px;
+  @include flex(center, center);
+  border-bottom: 0.5px solid #dedede;
+  width: 100%;
+}
+
+@include tablet {
+  .fae--thank-you-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--thank-you-page-wrapper {
+    width: 90%;
+  }
+}

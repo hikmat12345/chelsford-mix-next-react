@@ -1,0 +1,8 @@
+@import "../../../App.scss";
+
+.fae--service-location-card-container {
+  width: 95%;
+  @include flex(none, center);
+  gap: 20px;
+  cursor: pointer;
+}

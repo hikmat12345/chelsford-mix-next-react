@@ -1,0 +1,76 @@
+@import "../../App.scss";
+@import "../../mediaQueries.scss";
+
+.fae--sub-services-page-container {
+  @include flex(center, center);
+  background-color: $container-bg-primary;
+}
+
+.fae--sub-services-page-wrapper {
+  width: 50%;
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 30px;
+}
+.fae--sub-service-main-container{
+  position: relative;
+}
+.fae--sub-service-wrapper img {
+  width: 239px; 
+}
+.fae--sub-service-discount-text {
+  position: absolute;
+  top: 0;
+  left: 7px;
+} 
+.fae--discounted-price-text, .fae--price-text-original-price {
+  font-weight: 600;
+}
+.fae-img-empty-plc img {
+  display: none;
+}
+@include tablet {
+  .fae--sub-services-page-wrapper {
+    width: 80%;
+  }
+}
+
+@include mobile {
+  .fae--sub-services-page-wrapper {
+    width: 95%;
+  }
+  .fae--sub-service-wrapper img {
+    width: 130px;
+  }
+  .fae--sub-services-page-container{
+    padding-top: 10px;
+  }
+  .fae--sub-services-page-wrapper { 
+    gap: 15px;
+  }
+  .fae--price-tag {  
+    gap: 6px;
+    display: block;
+  } 
+  .fae-img-empty-plc{ 
+    padding: 20px 10px 12px 11px; 
+  }
+  .fae--sub-service-wrapper .fae--sub-service-card-content p:nth-child(1) {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .fae-img-empty-plc .fae--sub-service-card-content {
+    padding-right: 96px !important;
+    line-height: 17px;
+    padding-top: 6px;
+  }
+  .fae--service-location-page-container {
+    padding-bottom: 20rem !important;
+  }
+}
+
+@include onlyDesktop {
+ .fae--sub-services-page-container {
+  padding-bottom: 4rem;
+  } 
+}

@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import "./mediaQueries.scss";
+
+* {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+a {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.red-text {
+  color: #dc0000;
+}
+
+.dpr {
+  padding-right: 1%;
+}
+
+.dpl {
+  padding-left: 1%;
+}
+
+.dpb {
+  padding-bottom: 30px;
+}
+
+.dpt {
+  padding-top: 30px;
+}
+
+.dp {
+  padding: 1%;
+}
+// colors 
+$default-button-bg: #dc0000;
+$primary-button-bg: #d8d8d8;
+$gray-bg-color: #f5f5f5cc;
+$primary-text-color: black;
+$secondary-text-color: #444444;
+
+$primary-bg: #dc0000;
+$advertisement-bg: #f1e5e9;
+$iMac-frame-color: #222222;
+
+$secondary_bg_color: #ff0000cc;
+$white-color: #ffffff;
+$gray-color: #858585;
+
+// font-families
+$font-poppinns:"Poppins";
+
+
+$default-section-gap: 10px;
+
+$default-side-padding: 1%;
+
+@mixin flex($propert1, $property2) {
+  display: flex;
+  justify-content: $propert1;
+  align-items: $property2;
+}
+
+$container-bg-primary: rgba(244, 244, 244, 1);
+
+.CookieConsent div {
+  flex: none !important;
+  margin: 6px !important;
+}
+
+.CookieConsent {
+  justify-content: center !important;
+  opacity: 0.9;
+}
+.pb{
+  padding-bottom: 10px;
+}
+.pl{
+  padding-left: 10px;
+}
+.pt{
+  padding-top: 10px;
+}
+.pr{
+  padding-right: 10px;
+}
+.pointer {
+  cursor: pointer;
+}
+.ResultEmpty { 
+  padding: 5% 0%;
+} 
+html {
+  scroll-behavior: smooth;
+}
+.fae--shadow-box.shadow-box-padding.auto-complete-search-bar {
+  height: 37px;
+} 
+.fae--navbar-search-section-user-signed-in{
+  cursor: initial;
+}
+.fae--nav-bar-items-for-mobile-container{
+  background-color: initial !important;
+}
+@include mobile {
+  .fae--footer-social-link {
+    width: 35px;
+  }
+  .CookieConsent div {
+    width: 70% !important;
+  }
+
+  .CookieConsent {
+    display: block !important;
+  }
+  .fae--mobile-nav-bar-actions-wrapper .fae--account-dropdown-container:nth-child(1) .fae--account-dropdown .MuiSvgIcon-root{
+    font-size: 23px !important;
+  }
+  
+  .fae--shadow-box.shadow-box-padding.auto-complete-search-bar {
+    height: initial;
+    border-radius: 6px;
+  }
+  .fae--nav-bar-items-for-mobile-container { 
+      padding: 13px 7px; 
+  }
+  .fae--navbar-items-logo-for-mobile-wrapper img{
+    width: 21px;
+  }
+  .fae--footer-links { 
+    row-gap: 3px;
+  } 
+  .fae--footer-link {
+      width: 45%;
+  }
+  .summary-info-text {
+    font-size: 12px !important;
+  }
+}
+
+.fae--navbar-items-section-dropdown-items p { 
+  color: #1e185f; 
+  margin-bottom: initial !important;
+}
+.fae--navbar-items-section-dropdown-items{
+  p, svg{
+    color: #1e185f; 
+  }
+}
+.fae--navbar-items-section-items-container, .fae--navbar-search-section-container, .fae--navbar-items-section-greeting {
+  display: none !important; 
+}
+.fae--navbar {  
+  height: 0px;
+  padding: 0px;
+  background-color: #1e185f !important; 
+  
+}
+.fae--navbar-items-section-dropdown-items { 
+  margin-top: 7px;
+}
+.fae--navbar-items-section-dropdown-items { 
+  margin-left: auto;
+}
+ 
+.fae--account-dropdown-list p {
+  margin-bottom: initial;
+  position: relative;
+  top: 0px;
+  color: black;
+}
+.fae-button {
+  background-color: #1e185f !important;
+  color: white;
+}

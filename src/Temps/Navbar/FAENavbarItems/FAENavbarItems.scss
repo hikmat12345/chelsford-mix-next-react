@@ -1,0 +1,17 @@
+@import "../../../App.scss";
+
+.fae--navbar-items-container {
+  @include flex(space-around, none);
+  width: 100%;
+}
+
+.fae--navbar-items-item {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fae--navbar-items-divider {
+  width: 1px;
+  background-color: #ffffff;
+}
