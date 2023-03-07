@@ -7,6 +7,7 @@ import {
   FAETextField,
 } from "@findanexpert-fae/components";
 import React, { useEffect, useState } from "react";
+import { FaFacebookF, FaInstagram, FaPhone, FaTwitter, FaYoutube, MdEmail, MdLocationOn } from "react-icons/fa";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { bindActionCreators } from "redux";
@@ -49,7 +50,7 @@ const ContactUsPage = ({
   useEffect(() => {
     if (messageSent) {
       setOpen(true);
-      setContent("Message Sent");
+      setContent("Message sent, our specialist will contact you shortly.");
     }
   }, [messageSent]);
   const handleSubmit = (e) => {
@@ -74,7 +75,7 @@ const ContactUsPage = ({
         </div>
     </div>
 
-<div className="container contact-form-section">
+  <div className="container contact-form-section">
     <div className="row">
         <div className="formContainer">
             <div className="contentContainer">
@@ -224,8 +225,70 @@ const ContactUsPage = ({
             </div>
           </div>
       </div>
-      </div>
-      <FAEDialogueBox
+   </div>
+
+     {/**************************** * contact-feature ************************/}
+
+     <div className="contact__feature">
+          <div className="sec__one">
+            <div className="sec__two">
+              <h2>Speak to us</h2>
+              <p>Our knowledgeable careers advisors is available to answer your questions and give you peace of mind knowing we've got your back. Following are the ways to contact us with your questions or concerns. So don't wait, let's talk about your future goals.</p>
+            </div>
+            <div className="social__main">
+              <div className="sm__one">
+                <h3 className="">Let's Go Social</h3>
+                <p className="">Follow us on social media</p>
+                <div className="">
+                  <ul className= "__links">
+                    <li>
+                      <a href="https://www.facebook.com/liatraininguk/" target="_blank"><FaFacebookF color='black' /></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/LaserTrainingUK" target="_blank"><FaTwitter color='black' /></a>
+                    </li>
+                    <li>
+                      <a href="https://instagram.com/chelsfordinstitute" target="_blank"><FaInstagram color='black' /></a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/channel/UCLOQkMw8kYSIZu8HcePE79w" target="_blank"><FaYoutube color='black' /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="__phone">
+                <div className="__phone_sec">
+                  <div className="iconContainer">
+                    <FaPhone color='white' size={26} />
+                  </div>
+                </div>
+                <p>Phone:</p>
+                <h3>0800 955 0054</h3>
+              </div>
+              <div className="__email">
+                <div className="__phone_sec">
+                  <div className="iconContainer">
+                    {/* <MdEmail color='white' size={28} /> */}
+                  </div>
+                </div>
+                <p>Email</p>
+                <h3>team@chelsford.com</h3>
+              </div>
+              <div className="__address">
+                <div className="__phone_sec">
+                  <div className="iconContainer">
+                    {/* <MdLocationOn color='white' size={30} /> */}
+                  </div>
+                </div>
+                <p>Address:</p>
+                <h3 className="text-2xl">50 Mark Lane (First Floor)
+                   London EC3R 7QR</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+   <FAEDialogueBox
         open={open}
         content={content}
         buttons={[

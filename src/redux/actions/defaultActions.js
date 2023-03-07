@@ -11,7 +11,17 @@ export const getUserLocation = () => {
     verb: "GET",
   });
 };
-
+// export const setSignInResponseToEmpty = () => {
+//   // return {
+//   //   type: "GET_USER_LOCATION_DATA",
+//   // };
+ 
+// return fetchAction({
+//   type: "GET_USER_LOCATION_DATA",
+//   endpoint: `https://api.ipgeolocation.io/ipgeo?apiKey=${GEO_LOCATION_API_KEY}`,
+//   verb: "GET",
+// });
+// }
 export const getUserLocationId = (userCountry) => {
   return fetchAction({
     type: "GET_USER_LOCATION_ID",

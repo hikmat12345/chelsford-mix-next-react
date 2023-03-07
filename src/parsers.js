@@ -109,7 +109,7 @@ export const faeServicesParser = (data) => {
       hasSubServices,
       appliedPercentage = 0,
     }) => ({
-      name: serviceName?.length >20? serviceName.substring(0, 20)+"...":serviceName,
+      name: serviceName,
       src: imagePath,
       price: maxPrice,
       currencySymbol: currencySymbol,
@@ -123,7 +123,7 @@ export const faeServicesParser = (data) => {
             // hasSubServices
             //   ? `/${replaceSpaces(serviceName, "-")}/services`
             //   :
-            `/services/${replaceSpaces(serviceName, "-")}`,
+            `/course/${replaceSpaces(serviceName, "-")}`,
         }),
     })
   );

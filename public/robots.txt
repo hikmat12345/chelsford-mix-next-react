@@ -1,6 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+Allow:
 
-
-sitemap: https://www.expert.one/sitemap.xml
+sitemap: https://chelsford.com/sitemap.xml

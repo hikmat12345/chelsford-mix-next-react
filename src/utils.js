@@ -77,6 +77,12 @@ export const getFileSrcFromPublicFolder = (name) => {
 export const getFileSrcFromPublicFolderSpcialLHR = (name) => {
   return `${process.env.PUBLIC_URL}/assets/specialLHR/${name}`;
 };
+export const getFileSrcFromPublicFolderLandingPage =(name)=>{
+  return `${process.env.PUBLIC_URL}/assets/landingPage/${name}`; 
+}
+export const getFileSrcFromPublicFolderOther =(name)=>{
+  return `${process.env.PUBLIC_URL}/assets/contentDetailPageImg/${name}`; 
+}
 //validate-input
 export const validateInput = (regex, value) => {
   return new RegExp(regex).test(value);

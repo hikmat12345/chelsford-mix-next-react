@@ -171,12 +171,12 @@ const ProfilePage = ({
                 }
               />
             </div>
-            <FAEText
+            {/* <FAEText
               onClick={() => setOpen(true)}
               style={{ cursor: "pointer" }}
               secondary>
               Change Password
-            </FAEText>
+            </FAEText> */}
           </div>
           <div className="fae--profile-page-elements-wrapper">
             <FAETextField

@@ -771,3 +771,391 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************** START OF CONTACT US CSS ****************************************/
+.contactUs__container {
+    width: 100%;
+  }
+  .iconContainer {
+    background: rgba(0, 0, 0, 0.14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  } 
+  .contactUs__container p {
+    font-family: 'Roboto' !important;
+    /* font-style: normal; */
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #A2A2A2;
+    margin: 5px;
+  }
+  .contactUs__container h2 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 35px;
+    color: #110B57 !important;
+  }
+  .contactUs__container h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: none;
+    text-align: center !important; 
+    color: #1F105A;
+  }
+  .contactFormInput {
+    background: #F3F7FF !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    height: 53px !important;
+    border: none;
+    padding: 15px;
+    border: 1px solid #ced4da;
+  }
+  .banner__sec {
+    margin-bottom: 4rem !important;
+  }
+  .contactFormArea {
+    background: #F3F7FF;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    color: #555;
+  }
+  .get__in__touch {
+    width: 100%;
+  }
+  .sec__one {
+    margin: 20px;
+  }
+  
+  .sec__two {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* flex justify-evenly flex-col md:flex-row */
+  }
+  .sec__three {
+    width: 40%;
+    /* w-full md:w-5/12 */
+  }
+  .sbmt__btn {
+  
+    /* "bg-[#D9BD3E] text-white rounded-lg py-2 float-right w-full md:w-1/5 mb-3 md:mb-0" */
+    background: #D9BD3E;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 5px;
+    float: right;
+    width: 40%;
+    margin-bottom: 0px;
+    border: none;
+  }
+  
+  .contact__feature {
+    /* flex flex-col bg-[#F3F7FF] justify-center p-3 */
+    display: flex;
+    flex-direction: column;
+    background: #F3F7FF;
+    justify-content: center;
+    padding: 8PX;
+  }
+  .text-white {
+    color: white !important;
+  }
+  .contact__feature .sec__one {
+    margin: 10px;
+  }
+  .contact__feature .sec__two {
+    /* flex flex-col justify-center text-center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .social__main {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 30px;
+    grid-gap: 14px;
+}
+  .sm__one {
+    /* flex flex-col bg-[#1F105A] justify-center rounded-l-lg w-full md:w-1/4 text-center h-60 */
+    display: flex;
+    background-color: #E7EDFC;
+    justify-content: center;
+    border-radius: 10px;
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    min-height: 60px;
+    flex-direction: column;
+  }
+  .sm__one, .__address, .__email, .__phone{
+    border-radius: 10px;
+  }
+  .sm__one:hover, .__address:hover, .__email:hover, .__phone:hover{
+    background: #1F105A;
+    color: white;
+  }
+  
+  .__links {
+    /* 'flex space-x-5 justify-center mr-10' */
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    margin-right: 10px;
+    list-style: none;
+  }
+  .__phone {
+    /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+    background: #E7EDFC;
+    align-items: center;
+    padding: 30px;
+    width: 25%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .__phone_sec {
+    /* flex justify-center pb-3 */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+  
+  .__email {
+    /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+    background: #E7EDFC;
+    align-items: center;
+    padding: 30px;
+    width: 25%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .__address {
+    /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+    background: #DFE7FB;
+    align-items: center;
+    padding: 30px;
+    width: 25%;
+    text-align: center;
+  }
+  .get__qualified__sec {
+    background: #E7EDFC;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .qua__one {
+    /* flex flex-col md:flex-row justify-center w-full md:w-11/12 px-2 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+  }
+  .qua__two {
+    /* flex flex-col mx-2 w-100 md:w-70 */
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* width: 80%; */
+  }
+  .btn__div {
+    /* flex flex-col w-30 pt-4 */
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-top: 15px;
+  }
+  .btn__date {
+    /* bg-[] py-3 px-5 rounded text-white text-center */
+    background: #D9BD3E;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    align-items: center;
+  }
+  .__links a {
+    margin-left: 15px;
+  }
+  .bnr__ {
+    display: none;
+  }
+  .bnr__D {
+    display: contents;
+  }
+  .form__align {
+    // align-items: center;
+    // text-align: center;
+    // vertical-align: middle;
+  }
+  .sm__one div, .sm__one h3, .sm__one li{
+    color: black;
+}
+  @media (max-width: 768px) {
+    .form__align {
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+      }
+    
+    .bnr__ {
+        display:  contents;
+      }
+      .bnr__D {
+display: none;
+      }
+    .btn__div {
+      /* flex flex-col w-30 pt-4 */
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 15px;
+    }
+    .qua__two {
+      /* flex flex-col mx-2 w-100 md:w-70 */
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+      margin-right: 8px;
+      width: 100%;
+    }
+    .qua__one {
+      /* flex flex-col md:flex-row justify-center w-full md:w-11/12 px-2 */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+    }
+    .__address {
+      /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+      background: #DFE7FB;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      
+    }
+    .__email {
+      /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+      background: #E7EDFC;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+    }
+    .__phone {
+      /* bg-[#eceff4] items-center p-10 w-100 md:w-1/4 text-center */
+      background: #eceff4;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+  
+    }
+    .sm__one {
+      /* flex flex-col bg-[#1F105A] justify-center rounded-l-lg w-full md:w-1/4 text-center h-60 */
+      display: flex;
+      background: #E7EDFC;
+      justify-content: center;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      min-height: 60px;
+      flex-direction: column;
+      padding: 30px;
+  
+    }
+    
+    .social__main {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+    }
+    .contact__feature .sec__one {
+      margin: 3px;
+    }
+    .contactFormInput {
+      background: #F3F7FF !important;
+      border-radius: 6px !important;
+      margin-bottom: 10px !important;
+      width: 100% !important;
+      height: 40px !important;
+      border: none;
+      padding: 15px;
+      border: 1px solid #ced4da;
+    }
+    .banner__sec {
+        margin-bottom: 0rem !important;
+    }  
+  
+    .sec__one {
+      margin: 5px;
+    }
+    .sec__two {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+     }
+     .sec__three {
+      width: 100%;
+      /* w-full md:w-5/12 */
+    }
+    .sbmt__btn {
+  
+      /* "bg-[#D9BD3E] text-white rounded-lg py-2 float-right w-full md:w-1/5 mb-3 md:mb-0" */
+      background: #D9BD3E;
+      color: white;
+      border-radius: 6px;
+      padding: 8px 0px;
+      float: right;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  /******************************** END OF CONTACT US CSS ****************************************/
+  

@@ -18,8 +18,7 @@ export default function Testimonial() {
                     </div>
                     <div className='sec__width'>
                         <p>
-                            <FaQuoteRight size={30} color = "#1F105A" /><br/>
-                            Aesthetic Laser Clinic is very well set up to do training as it is a working clinic with excellent facilities. The trainers were very welcoming and friendly which in turn creates a good atmosphere in which to learn. I would recommend them for training and treatments.
+                             Aesthetic Laser Clinic is very well set up to do training as it is a working clinic with excellent facilities. The trainers were very welcoming and friendly which in turn creates a good atmosphere in which to learn. I would recommend them for training and treatments.
                         </p>
                         <div className="arrows__sec">
                             <a onClick={() => { document.querySelector('.carousel .control-next.control-arrow').click(); }}>
@@ -44,8 +43,7 @@ export default function Testimonial() {
                     </div>
                     <div className='sec__width'>
                         <p>
-                            <FaQuoteRight size={30} color = "#1F105A" /><br/>
-                            After passing this course I was able to set up my own professional laser clinic within 4 weeks I was confident in buying my own equipment, making consent forms, advice sheets and everything else that is needed and I now have a very successful business!
+                             After passing this course I was able to set up my own professional laser clinic within 4 weeks I was confident in buying my own equipment, making consent forms, advice sheets and everything else that is needed and I now have a very successful business!
                         </p>
                         <div className="arrows__sec">
                             <a onClick={() => { document.querySelector('.carousel .control-next.control-arrow').click(); }}>
@@ -69,8 +67,7 @@ export default function Testimonial() {
                     </div>
                     <div className='sec__width'>
                         <p>
-                            <FaQuoteRight size={30} color = "#1F105A" /><br/>
-                            I found the training very thorough, very interesting and very informative and helpful. I now am able to carry on lasering using the new techniques that I have learnt and will be quite happy to carry out laser hair removal and skin rejuvenation. I would feel extremely confident.               
+                             I found the training very thorough, very interesting and very informative and helpful. I now am able to carry on lasering using the new techniques that I have learnt and will be quite happy to carry out laser hair removal and skin rejuvenation. I would feel extremely confident.               
                         </p>
                         <div className="arrows__sec">
                             <a onClick={() => { document.querySelector('.carousel .control-next.control-arrow').click(); }}>

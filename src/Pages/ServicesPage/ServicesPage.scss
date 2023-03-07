@@ -12,7 +12,16 @@
   flex-direction: column;
   gap: 5px;
 }
-
+.cfd-courses-list .fae--vertical-image {
+  // width: 20% !important;
+  /* flex: auto; */
+  margin: 12px;
+}
+.cfd-courses-list {
+  width: 75%;
+  margin: auto;
+  margin-top: -71px;
+}
 .fae--services-page-services-container {
   width: 98%;
 }
@@ -27,6 +36,10 @@
    } 
  }
  @include mobile {
+  .cfd-courses-list {
+    width: 98%;
+    margin: -16px auto auto !important;
+  }
  .fae--service-card-text-mobile {
    font-size: 16px;
   }

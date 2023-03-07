@@ -18,6 +18,7 @@ import { faeServicesParser } from "../../parsers";
 import "./ServicesPage.scss";
 import { FAEText } from "@findanexpert-fae/components/dist/stories/FAEText/FAEText";
 import { FAELoading } from "@findanexpert-fae/components/dist/stories/FAELoading/FAELoading";
+import  ChelsFordTrainingCard  from "../../components/trainings/ChelsFordTrainingCard";
  
 const loaderImage = getFileSrcFromPublicFolder("loader.GIF");
 const placeholder = getFileSrcFromPublicFolder("placeholder.jpg");
@@ -62,11 +63,24 @@ export const ServicesPage = ({
                   height: "200px",
                   type: "video",
                 }}
-                services={faeServicesParser(services)}
+                services={faeServicesParser(services.slice(0,4))}
                 primary
                 placeholder={placeholder}
               />
-         
+            <div className="cfd-courses-list">
+            <FAEVerticalScrollServices
+                className="fae--services-page-services-container"
+                loading={loading}
+                loaderProps={{
+                  loaderImage,
+                  height: "200px",
+                  type: "video",
+                }}
+                services={faeServicesParser(services.slice(4,19))}
+                primary
+                placeholder={placeholder}
+              />
+            </div>
            {!loading && Array.isArray(services) ? (services?.length !==0? "":<FAEText className="ResultEmpty" subHeading style={{textAlign: "center"}}><img src={getFileSrcFromPublicFolder("result not found-img.png")} /></FAEText>):"" }
        
           </>

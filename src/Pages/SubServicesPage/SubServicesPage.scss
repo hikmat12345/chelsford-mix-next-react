@@ -29,6 +29,9 @@
 .fae-img-empty-plc img {
   display: none;
 }
+.fae--services-page-container .fae--vertical-image {
+  width: 24% !important;
+}
 @include tablet {
   .fae--sub-services-page-wrapper {
     width: 80%;
@@ -36,6 +39,10 @@
 }
 
 @include mobile {
+  .fae--sub-services-page-wrapper .fae--title-container .fae--text {
+    padding-top: 39px; 
+    text-transform: capitalize;
+}
   .fae--sub-services-page-wrapper {
     width: 95%;
   }

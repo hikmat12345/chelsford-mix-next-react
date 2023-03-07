@@ -11,8 +11,15 @@
     top:263px;
      color: white;
      position:relative;
+     /* text-transform: capitalize; */
   }
-  
+  .tabcontent::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .tabcontent { 
+    max-height: 253px;
+    overflow-y: scroll;
+}
   .main-text h3 {
     color: white !important;
     font-family: 'Roboto';
@@ -88,7 +95,13 @@
     margin-top: 0px !important;
     font-size: 16px !important;
     padding: 8px 12px;
-  }
+    font-weight: 600;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    width: 41px;
+}
   .cblt-btn {
     background-color: #1e185f !important;
     display: block;
@@ -116,7 +129,7 @@
   }
   /* cutoff text  */
   .cutoff-text{
-    --max-lines:18;
+    --max-lines:27;
     --line-height:1.6;
     max-height: calc(var(--max-lines) * 1em * var(--line-height));
     line-height: var(--line-height);
@@ -141,23 +154,26 @@
     /* border: 1px solid #0000004d; */
      border-radius: 0.25em;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: bold;
     outline: initial;
     background-color: white;
     padding: 0px 0rem 0.5rem !important;
     color: #1e185f;
+    margin: auto;
+    display: block;
   }
   
 
   .expand-btn:hover{
-  background-color:#cccccc87; 
+  /* background-color:#cccccc87;  */
   }
-  .expand-btn::before{
-  content:"Read More >";
-  }
-  .expand-btn:checked::before{
-   content:"Read Less";
-  }
+  /* .expand-btn::before{
+  content:"View More ›";
+  } */
+  /* .expand-btn:checked::before{
+   content:"View Less";
+  } */
   .cutoff-text:has(+ .expand-btn:checked){
   max-height:none;
   } 
@@ -178,6 +194,11 @@
     margin-top: 2px;
     transform: rotateZ(223deg); */
   } 
+  .py-2.description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+}
   .tab-switch:checked + label + .tab-content {
   z-index: 2;
   opacity: 1;
@@ -189,7 +210,43 @@
   .main-btns {
     background-color: #e7e7e7;
   }
+  @media only screen and (min-width: 768px) {
+    .cutoff-text {
+      --max-lines: 68;
+    }
+   .fae--vertical-scroll-services .fae--vertical-image:nth-child(5),  .fae--vertical-scroll-services .fae--vertical-image:nth-child(6),  .fae--vertical-scroll-services .fae--vertical-image:nth-child(7) {
+      width: 9% !important;
+   }
+  }
   @media only screen and (max-width: 768px) {
+    .coursesDiscriptionCol h2 { 
+      font-size: 29px !important;
+    }
+    .description{ 
+      font-size: 17px;
+    }
+    .fw-bold {
+      font-weight: initial !important;
+      font-size: 18px;
+      padding-left: 37px !important;
+    }
+    .read-more-btn { 
+      font-size: 15px;
+    }
+    .cutoff-text {
+      --max-lines: 200;
+      line-height: 25px !important;
+  }
+    .course_module_label {
+     min-height: 133px !important; 
+    }
+    .fae-mob-course-info-desc {
+      color: #474646;
+      font-size: 14px; 
+    }
+    .header-secion {
+      top: -24px;
+     }
      .main-sect{
          height: 560px;
          position: relative;
@@ -201,27 +258,45 @@
    /* main-section end */
   
    /* start section */
-    .my-text-sect p {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        text-align: center;
-        color: #000000;
-        font-size: 18px;
-    }
+   .my-text-sect p {
+    font-size: 18px;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #6c6c6c;
+  }
    @media only screen and (max-width: 768px) { 
+   
+    artical br {
+      padding: 5px;
+      height: 6px;
+      content: "";
+      margin: 0em;
+      display: block;
+      font-size: 0%;
+  }
+  
+  
       .home__section__3{
-        width: 90%;
+        width: 92%;
         margin: auto;
       }
      .row{
        margin:initial !important;}
      
-     .my-text-sect p {
-       padding: 34px 17px;
-       margin-left: 0px;
-       margin-right: 0px;
-       font-size: 12px;
+       .my-text-sect p {
+        padding: 55px 12px 17px;
+        margin-left: 0px;
+        margin-right: 0px;
+        scroll-behavior: smooth;
+        font-size: 17px;
+        color: #02020294;
+        text-align: center !important;
+      }
+      .course_module h4 {
+        font-weight: bold !important;
+        font-size: 30px;
+        line-height: 0px !important;
       }
       .banner-card-col:nth-child(4){
         display:none;
@@ -231,33 +306,44 @@
          margin: 0px;
      }
      .my-text-sect{
-         padding: 0px;
+      padding: 0px;
      }
      .course_module .row{
       padding:2px !important;
      }
-     #complete_beauty { 
-        padding: 6px 0px !important;
-      }
-      #complete_beauty .container-fluid  { 
+     #complete_beauty {
+      padding: 28px 0px 0px !important;
+     }
+     #complete_beauty .container-fluid  { 
         padding-right: 0px !important;
         padding-left: 0px !important;
+        text-align: center;
+     }
+     #complete_beauty artical{
+      text-align: left;
+     }
+     .contact-source .btn.btn-default:active {
+      background-color: #1e185f;
+     }
+     #complete_beauty h2 {
+        font-size: 27px !important;
+        line-height: 39px !important;
+        padding: 14px 12px !important;
+        text-align: center;
+        margin: auto;
+        display: block;
+        width: 100% !important;
+        position: relative;
+        top: -16px;
+     }
+      #complete_beauty artical p, #complete_beauty artical input {
+        padding: 11px 12px 0px 12px !important;
       }
-      #complete_beauty h2 { 
-          font-size: 20px !important;
-          line-height: 51px !important; 
-          padding: 20px 12px !important;
-          text-align:center;
-          margin:auto;
-          
-       }
-      #complete_beauty artical p , #complete_beauty artical input {  
-          padding: 11px 12px !important;
-      }
-      .expand-btn { 
-          margin-left: 13px !important;
-          border: 1px solid #5c56981f;
-      }
+      .expand-btn {
+        margin-left: 13px !important;
+        border: none;
+        margin: auto !important; 
+    }
   
       input[type=checkbox].expand-btn:focus{
           outline: 0px auto -webkit-focus-ring-color;
@@ -266,10 +352,9 @@
       #you-talk-with 
         {  
             width: 100%;
-            background-image: url(https://chelsford.com/public/banners/remote-learning-back-to-school-girl-student-study.png) !important;  
-            background-repeat: no-repeat;
+             background-repeat: no-repeat;
             background-position: 64% -7%;
-            min-height: 543px !important;
+            min-height: 516px !important;
             background-size: cover; 
             padding: 5px 16px 21px 9px !important;
          }
@@ -293,12 +378,17 @@
           padding: 3px 20px!important; 
         }
        
-        .learn-more{ 
-          /* padding: 2rem !important;
-          min-height: 470px !important  */
+        .learn-more {
+          padding: 0px;
+      }
+      #partners .container {
+        padding: 0;
+       }
+       .font_mob_sec { 
+        font-size: 32px !important;
        }
        .get-qualified { 
-          padding: 3rem 2rem !important;  
+          padding: 2rem 1rem !important;  
           top: 0rem !important;
         }
         .complete_beauty ul h3 { 
@@ -307,15 +397,18 @@
           line-height: 21px; 
         }
         .main-sect img {
-          width: 23px;
-          height: 22px;
-          top: 4px;
-          margin-right: 4px;
-          padding: 3px; 
-          background-color: white;
-       }
-      .banner-boxes-tex {
-          font-size: 11px;
+          width: 25px !important;
+          height: 27px;
+          top: 1px;
+          margin-right: 0px;
+          padding: 3px;
+          background-color: #ffffff75;
+          border-radius: 6px;
+        }
+       
+       .banner-boxes-tex {
+        font-size: 11px;
+        padding: 0px !important;
        }
        #main-sect .container{
          padding:0px !important;
@@ -341,17 +434,18 @@
         height: 222px !important; 
       }
       .main-text {
-          top: 56px !important; 
-      }
+        top: 80px !important;
+       }
       .banner-card-row { 
-          top: 59px !important; 
+          top: 60px !important; 
       }
       .course-overlay { 
           height: 222px !important;
        }
-      .main-btns {
-        height: 53px !important; 
+       .main-btns {
+        height: 53px !important;
         background-color: #fff !important;
+        min-height: 63px;
       }
       .main-sect p.banner-boxes-text { 
           font-size: 12px; 
@@ -365,10 +459,10 @@
       .main-text { 
        padding: 8px;
       }
-      .course_module_label p { 
-        padding: 16px 0 16px 0 !important;
-        font-size: 12px;
-      }
+      .course_module_label p {
+        padding: 38px 3px 16px 3px !important;
+        font-size: 15px;
+     }
       #complete_beauty artical p, #complete_beauty artical input { 
           display: none;
       }
@@ -378,9 +472,11 @@
       .main-sect .banner-card-col p  {
         overflow:hidden;
         width:100%;
+        margin: initial;
       }
       .banner-card-col {
-          width: 33% !important; 
+          width: 33% !important;
+          padding: 1px !important; 
       }
       .complete_beauty_quality ul {
           margin: 0 !important;
@@ -390,7 +486,7 @@
       #you-talk-with .row ul {
           overflow: overlay;
           width: 100%;
-          display: flex;
+          display: block;
           padding-bottom: 26px;
       }
       /* .active-tab:before {
@@ -422,7 +518,7 @@
         position: fixed;
         left: 0;
         bottom: 15px;
-        width: 95%;
+        width: 100%;
         display:block !important; 
         height: 51px;
         margin:auto;
@@ -434,6 +530,9 @@
       }
       .contact-source .btn.btn-default { 
         padding: 7px 9px !important;
+      }
+      .contact-source .btn.btn-default:hover { 
+        background-color: #1e185f !important; 
       }
       .contact-source button a{
         font-family: 'Roboto';
@@ -450,11 +549,13 @@
           width:14%;
           border: 0.5px solid #FFFFFF;
           border-radius: 44px;
+          height: 50px;
         }
         .contact-source .btn.btn-default:nth-child(2){
           width:72%;
           border: 0.5px solid #FFFFFF;
           border-radius: 12px;
+          color: #fff !important;
         }
         .contact-source .btn.btn-default:nth-child(3){
           width:14%;
@@ -504,7 +605,7 @@
         display:none;
        }
        .only-show-on-desktop{
-           display:none;
+           display:none !important;
         }
         .only-show-on-mobile{
          display:initial !important;
@@ -529,12 +630,17 @@
   #you-talk-with{ 
     width: 100%;
     padding: 62px 200px 40px 200px;
-     background-image:url(https://chelsford.com/public/banners/remote-learning-back-to-school-girl-student-study.png);
-    background-repeat: no-repeat;
+     background-repeat: no-repeat;
     background-position: 64% -7%;
     min-height: 613px;
     background-size: cover;
   }
+  #you-talk-with.course-information-sec{  
+    padding: 62px 120px 40px 120px; 
+  }
+  .course-information-sec p.home-tabs-sub-header,  .course-information-sec .home-head-title{
+    color: #F2F2F2 !important;
+   }
   .content-feature-courses .coursesContainer .course-card p { 
           margin-bottom: 2px !important;
           font-size: 16px;
@@ -548,9 +654,11 @@
     display: none !important;
   }
   .main-sect .banner-card-col p span {
-    font-weight: bold; 
+    font-weight: bold;
     color: #1e185f;
-  }
+    font-size: 15px ;
+   }
+   
   .main-sect .banner-card-col p {
     width:100%;
   }
@@ -565,11 +673,12 @@
    #complete_beauty artical p.cuttabletext, #complete_beauty artical input.cuttabletext { 
         display: none;
     }
-   #Course_module{
-     width: 100%;
-     height: auto;
-     background-color: #F2F2F2;
-   }
+    #Course_module {
+      width: 100%;
+      height: auto;
+      background-color: #F2F2F2;
+      padding-bottom: 10px !important;
+    }
    .course_module h4 {
     color: #1E185F !important;
     font-family: 'Roboto' !important;
@@ -578,26 +687,30 @@
     font-size: 30px;
     line-height: 19px;
   }
-   .course_module_label{
-     width: 100%;
-     height: auto;
-     background-color: white;
-     text-align: center;
-     padding-top: 20px;
-   } 
+  .course_module_label {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    min-height: 167px;
+    margin-bottom: 10px;
+    position: relative;
+}
   
-   .course_module_label p{
-     color: #1E185F;
-     /* padding: 5px 0 5px 0; */
-   }
-   #complete_beauty h2 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
-    color: #1E1855 !important;
-    padding: 14px 3px 8px;
-  }
+.course_module_label p {
+  color: #1E185F;
+  padding: 58px 0 5px 0;
+}
+#complete_beauty h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 47px;
+  color: #1E1855 !important;
+  padding: 14px 3px 8px;
+  width: 60%;
+}
   
    .chevron-arrow {
     background-color: #D9D9D9;
@@ -615,20 +728,23 @@
     #complete_beauty {
         background-color: white;
         color: #1E185F;
-        padding: 27px 42px 25px 42px;
+        padding: 27px 7px 25px 42px;
     }
    .cblt-btn{
     background-color:#F2F2F2;
    }
+   .fae--service-card-image-container img {
+    border-radius: 10px;
+   }
    .tablinks {
     transition: 0.3s;
-    background: #ffffff96;
+    background: #ffffff;
     box-shadow: 0px 4px 15px rgb(0 0 0 / 6%) !important;
     border-radius: 22px;
     outline: initial;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: #1E185F;
@@ -637,39 +753,44 @@
     width: 100%;
     text-align: left;
     padding: 7px 19px;
-  }
-  .tabs p{
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgb(0 0 0 / 6%);
-    border-radius: 22px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    padding: 14px;
-    font-size: 16px;
-    line-height: 22px;
-    color: #19172F;
-  }
+}
+.tabs p {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 6%);
+  border-radius: 22px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  padding: 14px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #19172F;
+  min-height: 108px;
+  overflow-x: hidden;
+  padding: 19px !important;
+}
+/* .btn:hover {
+  background-color: #d9bd3e !important;
+} */
   .tabcontent {
   display: none; 
   }
   .tablinks:focus{
-  outline:none;
+    outline:none;
   }
-  .active-tab{
-  background: #d9bd3eba;
-  color:white;
+  .active-tab {
+    background: #D9BD3E;
+    color: white;
   }
   .you-talk-with h2 {
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 40px;
     line-height: 58px;
-    color: #1E185F !important;
-  }
-  
+    color: #1E185F;
+    font-size: 32px;
+ }  
   .course-info-bgimg {
     width: 100%;
     position: absolute;
@@ -704,31 +825,32 @@
     overflow: hidden;
   }
   .custom-container {
-    width: 61%;
+    width: 86%;
     margin: auto;
     box-sizing: border-box;
   }
     .custom-container-overlay {
-        padding: 6rem;
+        padding: 4rem;
     }
-  .you-talk-btn {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #4D4D54;
-    opacity: 0.7;
-  }
-  #your-talk h2 {
+    .you-talk-btn {
+      opacity: 0.7;
+      padding-bottom: 12px;
       font-family: 'Roboto';
       font-style: normal;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 58px;
-      text-align: center;
-      color: #1E185F;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #4D4D54;
   }
+  #your-talk h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 59px;
+    text-align: center;
+    color: #1E185F;
+ }
   .get-qualified {
      
     padding: 3rem 4rem;
@@ -823,8 +945,14 @@
   }
   #Course_Details, #Teaching_Assessments {
     height: 397px;
-    overflow-y: scroll;
+    padding: 0px;
+    overflow-x: hidden;
   }
+  .coursesContainer .col-md-12.py-2 {
+    padding-bottom: 0.5rem!important;
+    min-height: 190px;
+    position: relative;
+  } 
   #Course_Details::-webkit-scrollbar, #Teaching_Assessments::-webkit-scrollbar {
     width: 5px; 
     background: rgb(117, 117, 117);
@@ -899,8 +1027,8 @@
                     height: 38px !important;
                 }
                 .hbox-active .main-btns {
-                        background-color: #D9BD3E;
-                 }
+                   background-color: #D9BD3E !important;
+                  }
                  .box-extra{
                     display:none;
                  }
@@ -915,11 +1043,12 @@
                   display:none;
                 }
                 .tick-icon {
-                  width: 30px; 
-                  height: 44px;
+                  width: 48px;
+                  height: 48px;
                   padding: 6px;
                   border-radius: 3rem;
                   margin-right: 30px;
+                  background-color: #EAF0F4;
               }
   
   
@@ -936,7 +1065,7 @@
     justify-content: center;
   }
   .tick-icon span { 
-    background-color: #d7d7d7;
+    background-color: #EAF0F4;
     padding: 3px 5px 5px;
     border-radius: 3rem;
   }    
@@ -964,11 +1093,11 @@
   .content-feature-courses .headerContainer h2 {
     font-family: 'Roboto' !important;
     font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: bold;
+    font-size: 30px;
     line-height: 47px;
     color: #110B57 !important;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
   
   .content-feature-courses .coursesContainer {
@@ -979,9 +1108,7 @@
     align-items: center;
     justify-content: center;
   }
-  .content-feature-courses .coursesContainer .course-card:nth-child(1) {
-    background: linear-gradient(180deg, #A4C438 0%, #657728 100%);
-  } 
+ 
   .content-feature-courses .coursesContainer .course-card {
     display: flex;
     flex-direction: column;
@@ -1042,22 +1169,7 @@
   
   
   
-  
-  .content-feature-courses .coursesContainer div:nth-child(2) {
-    background: #F3F7FF;
-    border-radius: 8px;
-  }
-  .content-feature-courses .coursesContainer div:nth-child(2) {
-    background: linear-gradient(180deg, #F8E388 0%, #EAC832 100%);
-  }
-  
-  .content-feature-courses .coursesContainer div:nth-child(3) {
-    background: linear-gradient(180deg, #86E8F4 0%, #2EA4B4 100%);
-  }
-  .content-feature-courses .coursesContainer div:nth-child(3) {
-    background: #E7EDFC;
-    border-radius: 8px;
-  }
+
   
   .iconDiv {
     display: flex;
@@ -1093,3 +1205,11 @@
     .fae--free-consultation-container button{
         background-color: #d9bd3e !important;
     }
+
+   .course-overlay .container {
+      max-width: 1357px;
+  }
+   .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}

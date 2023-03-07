@@ -29,8 +29,8 @@ const AboutUsPage = () => {
         <div className="fae--about-us-main-container dpt dpb">
             <FAETitle
               label={
-                <FAEText subHeading bold>
-                  <span   style={{color: "#d9bd3e"}}> About </span>  <span   style={{color: "#1f105a"}}>Us</span>
+                <FAEText className="fae-about-header" subHeading bold>
+                  <span   style={{color: "#d9bd3e"}} > About </span>  <span   style={{color: "#1f105a"}}>Us</span>
                 </FAEText>
               }
               logo={getFileSrcFromPublicFolder("title_logo.svg")}

@@ -1,6 +1,8 @@
 @import "../../App.scss";
 @import "../../mediaQueries.scss";
 
+
+
 .fae--service-content-page-container {
   @include flex(none, none);
   flex-direction: column;
@@ -63,4 +65,166 @@
     grid-gap: 70px;
     gap: 15px;
  }
+}
+
+.sec_mob
+{
+  display: none;
+}
+
+.font_mob_sec
+{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 58px;
+/* identical to box height, or 416% */
+text-align: center;
+color: #1E185F;
+}
+.font_para_mob
+{
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #19172F;
+}
+.banner-card .btn, .btn:first-child:active {
+  background-color: #f2f2f2;
+}
+.banner-card .btn :hover{
+  border: #c7ad3f;
+}
+.read-more-btn {
+    background: initial;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    color: #1e1855;
+}
+button.read-more-btn:focus {
+  outline: initial !important;
+  outline: initial;
+}
+.tick-icon img {
+  width: 27px;
+  height: 35px;
+}
+
+.tabs.col-md-9 .tabcontent:nth-child(4), #Study_Options_{
+  max-height: 251px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 700px) {
+  .btn_custom.btn:hover{
+    background-color: #fff;
+  }
+  .cfd-courses-list {
+      width: 96%;
+      margin: auto;
+      margin-top: -5px;
+  } 
+  .cfd-courses-list .fae--vertical-image {
+      width: 100% !important; 
+      margin: 0px;
+  }
+  .fae--services-page-container {
+    width: 95%;
+  }
+  .main-sect .banner-card-col p span { 
+    font-size: 11px !important;
+  }
+  .main-btns {
+    padding: 0px;
+  }
+  .sec_pc {
+     display: none;
+  }
+  .sec_mob
+    {
+      display: block;
+    }
+
+    .btn_custom
+    {
+      background-color: white;
+      color: black;
+    } 
+    .background_image_walk {
+      background-image: url(https://chelsford.com/public/banners/remote-learning-back-to-school-girl-student-study.png);
+      background-position: 100% 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0px 16px; 
+      margin-top: 22px !important;
+  }
+  .background_image_walk #example-collapse-text {
+        background-color: white;
+        font-size: 16px;
+        color: #494949;
+        border-radius: 3px;
+    }
+    .btn_custom1
+    {
+      background-color: white;
+      color: black;
+    }
+    #your-talk
+    {
+      display: none;
+    }
+    .mob_coll
+    {
+      font-family: 'Roboto' !important;
+      font-style: normal;
+      font-weight: 700 !important;
+      font-size: 30px;
+      text-align: center;
+      line-height: 47px;
+      color: #110B57 !important;
+      padding-bottom: 20px;
+    }
+    .custom_oicon
+    {
+      background: #D9D9D9;
+    opacity: 0.5;
+    height: 5vh;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 50px;
+    }
+    #example-collapse-text {
+      background-color: white;
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 0px;
+    }
+    #example-collapse-text:focus {
+      color: #fff;
+      background-color: #D9BD3E;
+      border-color: none;
+  }
+  .font_para_mob {
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    color: #6c6c6c; 
+    line-height: 24px;
+  }
+  .font_mob_sec{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 58px; 
+    text-align: center; 
+    color: #1E185F; 
+    
+  }
 }

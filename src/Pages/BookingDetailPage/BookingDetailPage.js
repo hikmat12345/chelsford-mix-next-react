@@ -94,7 +94,8 @@ const BookingDetailPage = ({
       totalSession,
       completeSession,
       bookingId, 
-      paymentStatus
+      paymentStatus,
+      status
       // bookedSession,
     } = bookingDetails;  
   const conversation = useSelector((state) =>
@@ -165,8 +166,7 @@ const BookingDetailPage = ({
       setNotesMessage("The reason input is required!")
     }
   }; 
-  console.log(state,bookingDetails, 'sessionFlag')
-  const clickDeleteBookintHandler= (userId, bookingId)=>{
+   const clickDeleteBookintHandler= (userId, bookingId)=>{
        setOpenDeletePopUp(true) 
       // deleteBooking({bookingId, sessionId })  
   } 
@@ -218,16 +218,16 @@ const BookingDetailPage = ({
                         : "Looking for suitable provider..."}
                     </FAEText>
                   </div> 
-                  {completeSession > 0 ? (
+                  {/* {completeSession > 0 ? (
                     <FAEText subHeading primary>
                       Already Paid
                     </FAEText>
-                  ) : (
+                  ) : ( */}
                     <FAEText subHeading primary>
                       {currencySymbol}
                       {amount}   / {paymentStatus}
                     </FAEText>
-                  )}
+                  {/* )} */}
                   {/* <FAEText subHeading primary>
                     Already Paid
                   </FAEText> */}

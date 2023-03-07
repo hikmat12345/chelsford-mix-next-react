@@ -34,7 +34,7 @@ const SubServicesPage = ({
    const searchData = useParams();
   const serviceName = addSpaces(searchData?.service, "-");
   const location = useLocation();
-     console.log(searchData,location, 'searchData')
+  console.log(searchData,location, 'searchData')
 
   const { mainService, voucherId, selected_country_id }  = location?.state == undefined ? {mainService:JSON.parse(searchData?.mainService), voucherId:JSON.parse(searchData?.voucherId), selected_country_id:JSON.parse(searchData?.selected_country_id)}: location?.state;
 
@@ -42,13 +42,11 @@ const SubServicesPage = ({
   userCountryId = (selected_country_id == undefined || selected_country_id ==null) ? userCountryId : JSON.parse(selected_country_id)
   console.log(searchData,selected_country_id, userCountryId, "userCountryId")
   useEffect(() => {
-    if (userCountryId !== "") {
-      getSubServices({
+       getSubServices({
         serviceName,
-        userCountryId,
-        isMainService: mainService ?? false,
+        userCountryId:1,
+        isMainService: mainService ?? true,
       });
-    }
   }, [getSubServices, mainService, serviceName, userCountryId]);
   const isProfileCompleted =  getCookies("customer_details") !== undefined && getCookies("customer_details").isProfileCompleted;
   const userSignedInStatus = (userId !== "" && userId !== undefined) || getCookies("userId") !== undefined ? true : false;
@@ -97,8 +95,7 @@ const SubServicesPage = ({
       : sendwithStates(`/booking/${replaceSpaces(filteredName, "-")}/address-selection`, false, getRedirectCredential)
   };
   const handleSubServiceClicked = async (selectedSubService) => {
-    console.log(selectedSubService, 'selectedSubService')
-    const filteredName =replaceSymbolToSpace(serviceName, " ")
+     const filteredName =replaceSymbolToSpace(serviceName, " ")
      await !isProfileCompleted && userSignedInStatus  ? history.push({
           pathname: "/profile/edit",
             state: { next: history.location.pathname },

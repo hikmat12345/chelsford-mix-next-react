@@ -31,7 +31,21 @@ export const navBarDropDownInfo = {
       icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
       onClick: () => history.push("/about-us"),
     },
-    
+    // {
+    //   label: "Laser Courses",
+    //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+    //   onClick: () => history.push("/laser"),
+    // },
+    // {
+    //   label: "Beauty Courses",
+    //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+    //   onClick: () => history.push("/beauty"),
+    // },
+    // {
+    //   label: "Medical Courses",
+    //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+    //   onClick: () => history.push("/medical"),
+    // },
     // { 
     //   label: "Legal", 
     //   icon: <img src={getFileSrcFromPublicFolder("Legal.svg")} />,
@@ -218,6 +232,21 @@ export const mobileMenu = [
     icon: <img src={getFileSrcFromPublicFolder("Contact Us.svg")} />,
     onClick: () => history.push("/contact-us") 
   },
+  // {
+  //   label: "Laser Courses",
+  //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+  //   onClick: () => history.push("/laser"),
+  // },
+  // {
+  //   label: "Beauty Courses",
+  //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+  //   onClick: () => history.push("/beauty"),
+  // },
+  // {
+  //   label: "Medical Courses",
+  //   icon:  <img src={getFileSrcFromPublicFolder("About Expert.svg")} />,
+  //   onClick: () => history.push("/medical"),
+  // },
     
 ];
 

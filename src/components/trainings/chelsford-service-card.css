@@ -1,0 +1,20 @@
+.btn_price
+{
+    background-color: #D9BD3E;
+    border: 1px solid #D9BD3E;
+    font-size: 90%;
+    font-weight: 400 !important;
+    color: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+}
+
+.font_cardd
+{
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 19px;
+letter-spacing: 0.005em;
+}

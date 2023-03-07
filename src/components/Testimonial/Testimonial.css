@@ -49,6 +49,8 @@
     color: #2e2e2e;
     padding: 0px 15px 1px 0px;
     margin: 2px 0px 0px 15px;
+    position: relative;
+    left: 2px;
   }
   
   .testimonials_ section {

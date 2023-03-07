@@ -13,6 +13,15 @@
   flex-direction: column;
   gap: 5px;
 }
+.fae--about-us-main-container p {
+  color: #626262;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 0px 10px;
+}
+.fae-about-header{ 
+    font-size: 25px !important;
+}
 
 .fae--about-us-descriptions-and-images {
   @include flex(center, center);
@@ -31,6 +40,9 @@
 }
 
 @include mobile {
+  .sub-heading { 
+    padding-top: 12px;
+  }
   .fae--about-us-main-container {
     width: 95%;
   }

@@ -1,0 +1,325 @@
+.body_all{
+  background-color: #eff7fa;
+}
+.headerContainer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.headerContainer__heading {
+ font-family: "Roboto" !important;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 40px;
+ line-height: 47px;
+ color: #110b57 !important;
+ margin-top: 3%;
+}
+.course-information-sec{
+  overflow-x: scroll;
+ }
+ .react-multi-carousel-dot-list {
+  display: none;
+ }
+ .headerContainer__text {
+  
+  padding: 1px 170px 6px 170px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #1E185F;
+  opacity: 0.6;
+}
+.iframes_all{
+ width: 70% !important;
+ margin-left: 16%;
+ height: 70vh;
+ margin-bottom: 5%;
+}
+.courses__videos::-webkit-scrollbar {
+ width: 102px;
+ height: 20px;
+ scroll-behavior: auto;
+}
+.courses__videos {
+ justify-content: center;
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ overflow: auto;
+ overflow-x: scroll;
+ scroll-behavior: smooth;
+ margin-top: 0%;
+ margin-bottom: 5%;
+}
+.slider_wrapper {
+ display: flex;
+ transition: transform 0.6s ease;
+ animation: moveSlideshow 30s linear infinite;
+ overflow-x: scroll;
+} 
+ .react-multi-carousel-dot-list {
+  display: none;
+ }
+.slider {
+ width: 100%;
+ position: relative;
+ /* overflow: hidden; */
+}
+.slider__wrapper {
+ display: flex;
+ transition: transform 0.6s ease;
+}
+.slider__item {
+ flex: 0 0 20%;
+ max-width: 17%;
+}
+.coursesBox {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 253px;
+  height: 98%;
+  padding: 10px;
+  margin: auto;
+}
+ .iframes_all {
+  width: 60% !important;
+  margin-left: 16%;
+  height: 66vh;
+  margin-bottom: 5%;
+  margin: auto;
+  display: block;
+  padding-bottom: 2rem;
+  border-radius: 6px;
+}
+.slider__video {
+ cursor: pointer;
+ height: 114px;
+}
+ 
+.slider__video {
+ cursor: pointer;
+ height: 116px;
+}
+.contentContainer {
+ padding: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 100%;
+}
+.contentContainer {
+ overflow: hidden;
+ height: auto;
+ padding: 5px 15px;
+}
+.contentContainer__text {
+  font-family: "Roboto" !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  color: #0c083b !important;
+  padding-bottom: 1px;
+  margin: 6px 0px 0px;
+}
+.contentContainer {
+   overflow: hidden;
+   padding: 0px 0px;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+ }
+.discription {
+ font-size: 12px;
+ line-height: 21px;
+ font-family: "Roboto" !important;
+ font-style: normal;
+ font-weight: 300;
+ color: #353535 !important;
+ overflow: hidden;
+ margin-right: 7%;
+ margin-top: 0%;
+ padding:0px 12px;
+}
+@media screen and (max-width: 768px) {
+  .popularCourses .slider__wrapper {
+    justify-content: center;
+    transform: translateX(57%);
+  }
+  .footer__container__1__content {
+    margin-bottom: 30px;
+  }
+  .headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .headerContainer__heading {
+    font-family: "Roboto" !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 47px;
+    color: #110b57 !important;
+    text-align: center;
+    padding: 1px 5px 1px 5px;
+  }
+.slider__video {
+    cursor: pointer;
+    height: 114px;
+    font-family: "Roboto" !important;
+  }
+
+  .headerContainer__text {
+    font-family: "Roboto" !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #7d7d7d !important;
+    text-align: center;
+    padding: 5px;
+  }
+.courses__videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+  .slider_wrapper {
+    /* transform: translateX(9199.89%); */
+    box-sizing: border-box;
+  }
+  .slider__item {
+    transform: translateX(10%);
+    flex: 0 0 80%;
+    max-width: 32%;
+    margin: 0px 58px;
+}
+.coursesBox { 
+  }
+  .contentContainer {
+    overflow: hidden;
+    height: auto;
+
+    font-family: "Roboto" !important;
+  }
+.contentContainer__text {
+    font-family: "Roboto" !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0c083b !important;
+    padding-bottom:  0px;
+    text-decoration: none !important;
+    margin: 0%;
+  }
+.discription {
+    font-family: "Roboto" !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 26px;
+    color: #353535 !important;
+    margin-left: 1.5%;
+    margin-right: 1%;
+  }
+
+}
+@media screen and (max-width: 900px) {
+  .show-on-desktop{
+      display: none;
+   }
+  }
+@media screen and (max-width: 600px) {
+ 
+  .slider_wrapper {
+    justify-content: center;
+    transform: translateX(3%);
+}
+  .slider_wrapper {
+    display: flex;
+    transition: none;
+    animation: none;
+  }
+  .contentContainer__text { 
+    font-size: 20px;
+    line-height: 23px;
+    color: #0c083b !important;
+    padding-bottom: 0px;
+    text-decoration: none !important;
+}
+.iframes_all{
+  width: 100% !important;
+  margin: auto !important;
+  height: 100% !important;
+}
+.react-multiple-carousel__arrow { 
+  background: #E0E8F2 !important;
+}
+  /* .react-multi-carousel-item iframe { 
+    width: 100% !important;
+}*/
+.react-multi-carousel-item { 
+  height: 310px !important;
+  }
+}
+
+
+
+
+.react-multiple-carousel__arrow {
+  position: absolute;
+  outline: 0;
+  transition: all .5s;
+  border-radius: 35px;
+  z-index: 1000;
+  border: 0;
+  background: #E0E8F2 !important;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+ 
+  cursor: pointer;
+}
+.react-multiple-carousel__arrow:hover{
+  background-color: black !important;
+  width: 50px;
+  height: 50px;
+}
+.react-multi-carousel-dot button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+  padding: 5px 5px 5px 5px;
+  box-shadow: none;
+  transition: background .5s;
+  border-width: 2px;
+  border: none !important;
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  outline: 0;
+  cursor: pointer;
+  background: rgb(202, 201, 201);
+}
+.react-multi-carousel-dot--active button {
+  background: #110b57 !important;
+}

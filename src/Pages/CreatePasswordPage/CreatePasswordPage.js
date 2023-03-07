@@ -174,7 +174,7 @@ import { useLocation } from 'react-router-dom';
                          {window.screen.width>600?
                         <FAEImage className="fae-login-desktop-logo" src={getFileSrcFromPublicFolder("expert_logo_full.PNG")}/>
                         : <>
-                            <FAEImage className="fae-mobile-logo" src={getFileSrcFromPublicFolder("mobile_expert_logo.PNG")}/>
+                            <FAEImage className="fae-mobile-logo" src={getFileSrcFromPublicFolder("expert_logo_full.PNG")}/>
                             <FAETitle
                                 className="fae-mobile-login-title"
                                 label="Expert"

@@ -17,7 +17,11 @@
   flex-direction: column;
   gap: 30px;
 }
-
+.fae--price-text-original-price { 
+  font-weight: bold;
+  position: relative;
+  top: -1px;
+}
 @include tablet {
   .fae--training-selection-page-wrapper {
     width: 80%;
@@ -32,7 +36,7 @@
     font-size: 10px !important;
     font-weight: bold !important;
   }
-  .fae-training-grid {
-    display: block !important;
-  }
+  // .fae-training-grid {
+  //   display: block !important;
+  // }
 }

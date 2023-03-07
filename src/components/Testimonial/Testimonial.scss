@@ -33,8 +33,9 @@
     line-height: 27px;
     text-align: left;
     color: #7d7d7d !important;
-    padding: 15px 12px 25px 25px;
+    padding: 0px 12px 25px 25px;
   }
+  
   .testimonials_ p svg {
      margin-bottom: 10px;
   }
@@ -92,6 +93,11 @@
   }
   
   // @media (max-width: 768px)
+  @media only screen and (min-width: 900px) {
+    .arrows__sec{
+      padding-left: 20px;
+    }
+  }
   @media only screen and (max-width: 900px) {
     .testimonials_ {
       padding: 0px !important;

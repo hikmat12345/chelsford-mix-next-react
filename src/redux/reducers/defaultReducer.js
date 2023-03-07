@@ -18,7 +18,8 @@ const defaultReducer = (state = initialState, action) => {
     case "GET_USER_LOCATION_DATA_RESPONSE":
       return {
         ...state,
-        userCountry: payload.country_code2,
+          userCountry: payload.country_code2,
+        // userCountry:"GB",
         userLat: payload.latitude,
         userLng: payload.longitude,
       };
@@ -30,17 +31,21 @@ const defaultReducer = (state = initialState, action) => {
     case "GET_USER_LOCATION_ID_RESPONSE":
       return {
         ...state,
-        // userCountryId: 1,
-        userCountryId: payload.countryDetail.id,
-        userCurrencyCode: payload.countryDetail.currencyCode,
+        //  userCountryId: 1,
+       userCountryId: payload.countryDetail.id,
+        // userCurrencyCode: "GBP",
+
+       userCurrencyCode: payload.countryDetail.currencyCode,
       };
     case "CHANGE_USER_LOCATION_ID_RESPONSE":
       return {
         ...state,
         // userCountryId: 1,
-        userCurrencyCode:payload.currencyCode,
-        userCountry:payload.userCountry,
-        userCountryId: payload.countryId, 
+        userCurrencyCode: payload.currencyCode,
+        // userCurrencyCode:"GBP",
+         userCountry:payload.userCountry,
+        // userCountry:"GB",
+         userCountryId: payload.countryId, 
       };
     case "GET_USER_LOCATION_ID_ERROR":
       return { ...state, error: payload };

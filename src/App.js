@@ -286,7 +286,7 @@ const App = ({
       ];
 
   useEffect(() => {
-    getUserLocation();
+     getUserLocation();
   }, [getUserLocation]);
 
   useEffect(() => {
@@ -371,7 +371,7 @@ const App = ({
             {...navBarData}
             // new in navbar 
             userProfileImage={ getCookies("customer_details")?.imagePath ==""? getFileSrcFromPublicFolder("profile-avatar.PNG"):getCookies("customer_details")?.imagePath}
-            userProfileAvatarImage={getFileSrcFromPublicFolder("logo.PNG")}
+            userProfileAvatarImage={getFileSrcFromPublicFolder("expert_logo_full.png")}
             userCompleteName={
               getCookies("customer_details") !== undefined
                 ? `${getCookies("customer_details")?.firstName}  ${getCookies("customer_details")?.lastName}`
@@ -447,7 +447,7 @@ const App = ({
               auth={true}
             />
             <FAEGuardedRoute
-              path="/services/:service"
+              path="/course/:service"
               component={ServiceContentPage}
               exact
               auth={true}

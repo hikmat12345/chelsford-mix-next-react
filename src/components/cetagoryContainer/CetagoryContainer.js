@@ -7,13 +7,13 @@ import "../chelsfordCSS.css"
       <div className="cetagoryContainer__ro">
         <div className="contentContainer">
           <div className="headContenter">
-            <h2 className="headContenter__text">Popular Courses</h2>
+            <h2 className="headContenter__text">Popular Courses at Chelsford</h2>
             <p className="headContenter__text2">
               Our extensive range of courses are cleverly designed for you to
               achieve your goals. Some of the most in demand courses we offer.
             </p>
           </div>
-          <ServicesPage con_padding_props={30}   propsCountryId={1} propsIndustryName={"Laser-Training"}/>
+          <ServicesPage con_padding_props={1}   propsCountryId={1} propsIndustryName={"Laser-Training"}/>
           {/* <div className="home_Feature">
             <div role="listbox">
               <div className="item">

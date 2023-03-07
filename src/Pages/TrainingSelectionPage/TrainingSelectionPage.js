@@ -45,7 +45,7 @@ const TrainingSelectionPage = ({
   const location = useLocation();
   const {
     state: { serviceId, voucherId },
-  } = location;
+  } = location ;
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
   const [loader, setLoader] = useState(false);
@@ -88,7 +88,7 @@ const TrainingSelectionPage = ({
     <>
       <div className="fae--training-selection-page-main-container dpt dpb">
         <div className="fae--training-selection-page-wrapper" style={doPadding}>
-          <FAETitle label={serviceName} />
+          <FAETitle style={{textTransform:"capitalize"}} label={serviceName} />
           {loading || loader ? (
             <FAELoading loaderImage={loaderImage} height="200px" type="svg" />
           ) : (
@@ -142,14 +142,14 @@ const TrainingSelectionPage = ({
                           display: "flex", 
                            }}
                            className="fae-training-grid">
-                          <FAEText >
-                            Starting
+                          <FAEText style={{paddingRight:"3px"}} >
+                            Starting 
                           </FAEText>
                           <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text" >{trainingStartDate}</FAEText>
                         </div>
                         <div style={{  display: "flex", textAlign: "end" }} className="fae-training-grid">
-                          <FAEText>
-                            Ending
+                          <FAEText style={{paddingRight:"3px"}}>
+                            Ending 
                           </FAEText>
                           <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text">{trainingEndDate}</FAEText>
                         </div>
@@ -203,12 +203,29 @@ const TrainingSelectionPage = ({
                           paddingTop:20,
                           borderBottom:"1px solid #00000057"
                          }} className="fae-training-grid" >
+                        <div>
+                          <FAEText style={{    paddingRight:"15px" }}>
+                            Detail:
+                          </FAEText>
+                         </div>
+                        <div style={{    paddingLeft:"15px" }}> 
+                          <FAEText  style={{fontSize:14, fontWeight:"bold"}}  className="fae-training-bolder-text">{trainingDescription}</FAEText>
+                        </div>
+                      </div>
+                      <div
+                        style={{
+                          width: "80%",
+                          display: "flex",
+                          paddingBottom:20,
+                          paddingTop:20,
+                          borderBottom:"1px solid #00000057"
+                         }} className="fae-training-grid" >
                          <div >
-                          <FAEText >
-                             Location
+                          <FAEText style={{ paddingRight:"15px" }}>
+                             Location:
                            </FAEText> 
                           </div >
-                          <div style={{ textAlign: "center", margin:"auto" }}> 
+                          <div style={{ }}> 
                             <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text">{location}</FAEText>
                           </div>
                         </div>
@@ -222,14 +239,14 @@ const TrainingSelectionPage = ({
                         }}  >
                         <div style={{
                           display: "flex",}} className="fae-training-grid">
-                           <FAEText >
-                              Remaining Seats
+                           <FAEText style={{paddingRight:"3px"}}>
+                              Remaining Seats 
                             </FAEText>
                             <FAEText style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text" >{availableSeats}</FAEText>
                         </div>
                         <div style={{ display: "flex", textAlign: "end" }} className="fae-training-grid">
-                          <FAEText  >
-                            Price
+                          <FAEText style={{paddingRight:"3px"}} >
+                            Price.
                           </FAEText>
                           <FAEPrice
                            style={{fontSize:14, fontWeight:"bold"}} className="fae-training-bolder-text"
@@ -240,7 +257,7 @@ const TrainingSelectionPage = ({
                                 : 0
                               }
                             currencySymbol={currencySymbol}
-                          />
+                          /><FAEText style={{paddingLeft:"3px"}}> Plus VAT </FAEText>
                         </div>
                       </div> 
                     </FAEShadowBox>

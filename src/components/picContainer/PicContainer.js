@@ -19,8 +19,8 @@ const PicContainer = () => {
   const onSbmit = (e) => {
     e.preventDefault()
     setSuccessMsg("Sending...")
-    postRequest({ email, customerName, message, subject }).then(res => {
-      setSuccessMsg("Message Sent Successfully")
+    postRequest({ email, customerName, message, subject , isChelsford: true}).then(res => {
+      setSuccessMsg("Message sent, our specialist will contact you shortly.")
       setCustomerName('')
       setEmail('')
       setSubject('')
@@ -82,7 +82,7 @@ const PicContainer = () => {
 
       <div className="bannerContent2">
         <div className="form__container">
-          <h2 className="form__heading">Get in Touch</h2>
+          <h1 className="form__heading"><strong>Get in Touch</strong></h1>
           <form onSubmit={onSbmit} className="form__elements">
             <div className="inputDiv">
               <input
@@ -104,7 +104,7 @@ const PicContainer = () => {
               <input
                 className="form__inputs"
                 type="text"
-                placeholder="Subject"
+                placeholder="Contact Number"
                 onChange={onNumberChange}
                 value={subject}
                 required

@@ -78,7 +78,9 @@
     }
     .fae-mobile-menue.fae-mob-header img {
       display: block;
-      margin: auto;
+      margin: auto; 
+        width: 87px;
+    
     }
     .fae-mob-pic{ 
         border-radius: 50%;
@@ -112,14 +114,14 @@
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color:#ec1e27;
+      color:#1e185f;
     }
     .fae-login-signup-btns .SignUp {
       padding: 9px 29.8px 9px 31.2px;
       border-radius: 5px;
-      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
-      background-color: #ec1e27; 
-    }
+       background-color: #1e185f;
+      margin-left: 5px;
+  }
     .fae-login-signup-btns .SignUp p{ 
       text-align: center;
       font-size: 12px;

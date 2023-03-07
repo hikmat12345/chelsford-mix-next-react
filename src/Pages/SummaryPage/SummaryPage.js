@@ -105,7 +105,7 @@ const SummaryPage = ({
   const [discountCodeClicked, setdiscountCodeClicked] = useState(false);
   const [discountCode, setDiscountCode]=useState("")
   const [useDiscountCodeIcon,  setUseDiscountCode]=useState(false)
-
+  const [popupBtnName, setPopupBtnName]=useState("Ok")
   const {
     address, 
     price,
@@ -171,7 +171,10 @@ const SummaryPage = ({
     setLoader(true)
     applyDiscountCodeObjectEmpty() 
     if((defaultPaymentMethodId[0]?.id =="" ||  defaultPaymentMethodId[0]?.id ==null ||  defaultPaymentMethodId[0]?.id ==undefined) && userCountryId !==171){
-      FAEToaster({message:"Please select or add your payment card.", toaster:"error"})
+      setContent("Please select or add your payment card.");
+      setOpen(true);
+      setPopupBtnName("Select Card") 
+      return
     } 
         if (freeConsultation) { 
             saveCodBooking({
@@ -187,6 +190,14 @@ const SummaryPage = ({
               selectedSessions,
             });
         } else {
+          Getinvoice({ 
+            salesOrderNumber:salesOrder?.salesOrders?.salesOrderNumber,
+            cartId:cartId,
+            bookingId:bookingId,
+            userId:JSON.parse(getCookies("userId")),
+            // provider id 0 bcoz sajid said it's optional
+            providerId:0 
+          })
           bookingId == "" ? alert("Booking Id can't be empty"): 
           paymentMethod === "cash"  ?  
           saveCodBooking({
@@ -232,14 +243,7 @@ const SummaryPage = ({
             transactionId:transactionId,
             userId:getCookies("userId") 
           }).then((res)=>{ 
-            Getinvoice({ 
-                salesOrderNumber:salesOrder?.salesOrders?.salesOrderNumber,
-                cartId:cartId,
-                bookingId:bookingId,
-                userId:JSON.parse(getCookies("userId")),
-                // provider id 0 bcoz sajid said it's optional
-                providerId:0 
-              })
+           
             if(res?.error !==true && res?.statusCode !==1){
               
                   createBooking({
@@ -399,6 +403,7 @@ const applyVoucherCode=  ()=>{
   } 
  }, [discountPayload?.error, discountCodeClicked])
  
+
   return (
     <>
       <div className="random-design-container dpt dpb">
@@ -824,9 +829,7 @@ const applyVoucherCode=  ()=>{
                         history.push({
                           pathname: "/payment-details/add-card",
                           state: { ...state, redirectedUrl: pathname },
-                        })
-                      }
-                    >
+                        }) }>
                       Confirm Booking
                     </FAEButton>   
                 :
@@ -849,8 +852,13 @@ const applyVoucherCode=  ()=>{
         content={content}
         buttons={[
           {
-            label: "Ok",
+            label: popupBtnName,
             onClick: () => {
+              popupBtnName ==="Select Card" ? history.push({
+                pathname: "/payment-details",
+                state: { ...state, redirectedUrl: pathname },
+              })
+              :
                setLoader(false)
                setOpen(false);
             },

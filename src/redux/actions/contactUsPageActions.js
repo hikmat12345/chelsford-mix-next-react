@@ -13,6 +13,7 @@ export const sendMessage = ({ email, customerName, message, subject }) => {
       customerName,
       body: message,
       subject,
+      isChelsford: true
     }),
   });
 };
